@@ -1,0 +1,106 @@
+.filter-button,
+.filter-button-brand,
+.filter-button-large {
+  display: block;
+  text-decoration: none;
+  color: $ash;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border, background-color .2s;
+
+  &:hover,
+  .selected {
+    color: theme-color("primary");
+    border-color: theme-color("primary");
+    text-decoration: none;
+  }
+}
+
+$filter-button-size: 45px;
+$filter-button-icon-size: $filter-button-size / 2;
+
+.filter-button {
+  @include clearfix();
+
+  height: $filter-button-size;
+  line-height: $filter-button-size;
+
+  .filter-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: $filter-button-size;
+    height: 100%;
+    background-color: $secondary-background-color;
+    border-right: 1px solid $border-color;
+
+    .svg-icon {
+      width: $filter-button-icon-size;
+      height: $filter-button-icon-size;
+    }
+  }
+
+  .filter-button-label {
+    @include text-overflow();
+
+    height: 100%;
+    margin-left: $filter-button-size;
+    padding-left: $default-spacing;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .75rem;
+  }
+
+  &:hover,
+  .selected {
+    .filter-button-icon {
+      color: $white;
+      background-color: theme-color("primary");
+      border-color: theme-color("primary");
+    }
+  }
+}
+
+$filter-button-brand-size: 55px;
+
+.filter-button-brand {
+  padding: $default-spacing-2;
+  height: $filter-button-brand-size;
+  filter: saturate(0%);
+
+  &:hover,
+  &.selected {
+    filter: saturate(100%);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+$filter-button-lg-size: 100px;
+
+.filter-button-large {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: $filter-button-lg-size;
+
+  .svg-icon {
+    width: $filter-button-lg-size / 2.5;
+    height: $filter-button-lg-size / 2.5;
+  }
+
+  .filter-button-large-label {
+    margin-top: $default-spacing-2;
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

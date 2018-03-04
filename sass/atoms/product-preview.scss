@@ -1,0 +1,29 @@
+.product-preview {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: $white;
+  padding: $default-spacing-2;
+
+  &:hover, &:active, &:visited {
+    text-decoration: none;
+  }
+
+  .badge {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+
+  .product-preview-image {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-preview-title {
+    display: block;
+    font-weight: $bold-font-weight;
+    font-size: $copy-font-size;
+  }
+}

@@ -1,0 +1,75 @@
+//$rotated-label-width: 60px;
+$rotated-label-height: 150px;
+
+.table th,
+.table td {
+  vertical-align: inherit;
+  border-top: none;
+}
+
+.table thead th {
+  border-bottom: none;
+  padding: 0;
+  position: relative;
+
+  &.rotate-label {
+    min-width: 60px;
+
+    & div {
+      height: $rotated-label-height;
+      white-space: nowrap;
+      position: absolute;
+      margin: -$rotated-label-height*2/3 0 0 $rotated-label-height/5-1;
+      padding: $default-spacing*2 0 0 0;
+      -webkit-writing-mode: vertical-lr; /* old Win safari */
+      writing-mode: vertical-lr;
+      writing-mode: tb-lr;
+      transform: scale(-1,-1) rotate(45deg);
+      border-right: 1px solid $border-color;
+    }
+    // &:before {
+    //   position: absolute;
+    //   content: '';
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   transform: skew(-45deg);
+    //   transform-origin: bottom left;
+    // }
+  }
+  
+  
+
+  // Rotated Table Column Headers
+  // https://css-tricks.com/rotated-table-column-headers/
+  /*
+  &.rotate-label {
+    width: $rotated-label-width;
+    padding: 0;
+
+    > div {
+      position: relative;
+      width: $rotated-label-width;
+    }
+
+    > div > span {
+      position: absolute;
+      display: block;
+      width: $rotated-label-height;
+      border-bottom: 1px solid $border-color;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transform: rotate(-45deg) translateY(28px) translateX(58px);
+      transform-origin: bottom left;
+    }
+  }
+  */
+}
+
+.table .rotate-label-cell {
+  text-align: center;
+  padding: 0 $default-spacing;
+  border-left: 1px solid $border-color;
+}

@@ -1,0 +1,23 @@
+.breadcrumb-nav-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb-nav {
+  margin-top: $default-spacing;
+  height: 42px;
+  margin-bottom: $default-spacing;
+  background-color: $secondary-background-color;
+  border-radius: 0 $border-radius $border-radius 0;
+
+  .row [class^="col-"] {
+    position: static;
+  }
+
+  .breadcrumb {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+  }
+}

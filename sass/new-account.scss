@@ -1,0 +1,88 @@
+.new-account-overlay {
+  @include stretch();
+
+  display: flex;
+  background-color: $secondary-background-color;
+  overflow-y: scroll;
+}
+
+.new-account {
+  width: 400px;
+  margin: auto;
+
+  .new-account-header {
+    text-align: center;
+    padding-bottom: $default-spacing-4;
+  }
+
+  .new-account-body {
+    padding: $default-spacing-6;
+    border-radius: $border-radius-lg;
+    background-color: $white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+
+    form {
+      margin-bottom: 0;
+    }
+
+    legend {
+      text-align: center;
+    }
+
+    .form-text {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.8571rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .new-account-footer {
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding: $default-spacing-3 $default-spacing-2;
+    }
+
+    a {
+      color: $ash;
+      font-size: 0.75rem;
+    }
+  }
+
+  .new-account-social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .new-account {
+    .new-account-social-login {
+      .btn {
+        width: calc(33% - #{$default-spacing-1});
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .new-account {
+    .new-account-social-login {
+      flex-direction: column;
+
+      .btn {
+        margin-bottom: $default-spacing-3;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

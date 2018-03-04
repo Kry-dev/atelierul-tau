@@ -1,0 +1,113 @@
+include mixins.pug
+
+mixin category-selector(collapsed = true)
+  .category-selector(class = collapsed ? 'collapsible' : '')
+    if collapsed
+      .category-selector-header(data-toggle="collapse", data-target=".category-selector-items")
+        i.fa.fa-bars
+        | Categorii scule
+        i.fa.fa-chevron-down
+    else
+      .category-selector-header
+        i.fa.fa-bars
+        | Categorii scule
+    .category-selector-items(class = collapsed ? 'collapse' : '')
+      .category-selector-item
+        .category-selector-button(id="scule-electrice-button")
+          +icon('hand-drill')
+          | Scule electrice
+          i.fa.fa-chevron-right
+        .category-selector-menu(aria-labelledby="scule-electrice-button")
+          .category-selector-menu-items
+            h4 Aparate de măsură
+            ul
+              li
+                a(href="#") Nivele laser cu linii
+              li
+                a(href="#") Nivele laser cu puncte
+              li
+                a(href="#") Nivele laser rotative
+              li
+                a(href="#") Nivele optice
+              li
+                a(href="#") Receptoare
+              li
+                a(href="#") Telemetre
+              li
+                a(href="#") Teodolite electronice
+              li
+                a(href="#") Goniometre si clinometre
+              li
+                a(href="#") Suporturi, stative și accesorii
+            h4 Aparate de măsură
+            ul
+              li
+                a(href="#") Nivele laser cu linii
+              li
+                a(href="#") Nivele laser cu puncte
+              li
+                a(href="#") Nivele laser rotative
+              li
+                a(href="#") Nivele optice
+            h4 Aparate de măsură
+            ul
+              li
+                a(href="#") Nivele laser cu linii
+              li
+                a(href="#") Nivele laser cu puncte
+              li
+                a(href="#") Nivele laser rotative
+              li
+                a(href="#") Nivele optice
+              li
+                a(href="#") Receptoare
+              li
+                a(href="#") Telemetre
+              li
+                a(href="#") Teodolite electronice
+              li
+                a(href="#") Goniometre si clinometre
+              li
+                a(href="#") Suporturi, stative și accesorii
+          .category-selector-menu-extra
+            h4 Aparate de măsură
+            ul
+              li
+                a(href="#") Nivele laser linii
+              li
+                a(href="#") Nivele laser puncte
+              li
+                a(href="#") Nivele laser
+              li
+                a(href="#") Nivele optice
+              li
+                a(href="#") Receptoare
+              li
+                a(href="#") Telemetre
+              li
+                a(href="#") Teodolite electro
+              li
+                a(href="#") Goniometre
+              li
+                a(href="#") Suporturi
+      .category-selector-item
+        .category-selector-button(id="scule-de-mana-button")
+          +icon('wrench-screwdriver')
+          | Scule de mână
+          i.fa.fa-chevron-right
+        .category-selector-menu(aria-labelledby="scule-de-mana-button")
+          | You know the drill...
+      .category-selector-item
+        .category-selector-button(id="aparate-utilaje-button")
+          +icon('multimeter')
+          | Aparate și utilaje
+          i.fa.fa-chevron-right
+        .category-selector-menu(aria-labelledby="aparate-utilaje-button")
+          | You know the drill...
+      .category-selector-item
+        .category-selector-button(id="piese-accesorii-button")
+          +icon('drill-sencondary')
+          | Piese și accesorii
+          i.fa.fa-chevron-right
+        .category-selector-menu(aria-labelledby="piese-accesorii-button")
+          | You know the drill...

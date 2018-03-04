@@ -1,0 +1,39 @@
+extends layout.pug
+
+block content
+  .new-account-overlay
+    .new-account
+      .new-account-header
+        img(src=require('../assets/logo.png'), width='282', height='52')
+      .new-account-body
+        form(action='')
+          legend Salut!
+          .form-text
+            p Poți crea un cont pe AtelierulTau.ro chiar acum.
+            p Pentru început, completează adresa de email de mai jos.
+          .form-group
+            label(for='email') Adresa de email
+            input#email.form-control(value='', placeholder='', type='text')
+          .form-group
+            button.btn.btn-at.btn-block
+              | Continuă
+              i.fa.fa-chevron-right
+          .form-group
+            p.divider sau intră în cont cu
+          .form-group.new-account-social-login
+            button.btn.btn-facebook
+              i.fa.fa-facebook
+              | Facebook
+            button.btn.btn-twitter
+              i.fa.fa-twitter
+              | Twitter
+            button.btn.btn-google-plus
+              i.fa.fa-google-plus
+              | Google+
+      ul.new-account-footer
+        li
+          a(href) ANPC
+        li
+          a(href) Date cu caracter personal
+        li
+          a(href) Despre cookie-uri

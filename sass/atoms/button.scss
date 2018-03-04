@@ -1,0 +1,87 @@
+// Exends and overrides Bootstrap buttons
+
+.btn {
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.btn-secondary {
+  color: $ash;
+}
+
+.btn-facebook {
+  @include button-variant($facebook-color, $white);
+  i {
+    margin-right: $default-spacing-2;
+  }
+}
+
+.btn-twitter {
+  @include button-variant($twitter-color, $white);
+
+  i {
+    margin-right: $default-spacing-2;
+  }
+}
+
+.btn-google-plus {
+  @include button-variant($google-plus-color, $white);
+
+  i {
+    margin-right: $default-spacing-2;
+  }
+}
+
+.btn-facebook,
+.btn-twitter,
+.btn-google-plus {
+  padding: $input-btn-padding-y $default-spacing-1;
+}
+
+.btn-at {
+  @include button-variant($darkred, $white);
+
+  position: relative;
+  overflow: hidden;
+  border: none;
+  text-transform: uppercase;
+  padding-right: 65px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    bottom: -1px;
+    left: calc(100% - 45px);
+    background-color: $orange;
+    transform: skewX(-15deg);
+  }
+
+  i:last-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $ash;
+    right: 15px;
+    z-index: 1;
+    font-size: 1.2rem;
+  }
+}
+
+.btn-icon {
+  @include button-variant(transparent, transparent);
+
+  color: $light-icon-color;
+
+  &:hover {
+    color: $light-icon-color;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}

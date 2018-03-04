@@ -1,0 +1,137 @@
+extends layout.pug
+
+include mixins.pug
+include category-selector.pug
+
+block content
+  include header.pug
+  .main.container
+    .row
+      .main-sidebar.col-3.hidden-sm-down
+        .sidebar-section
+          +category-selector(false)
+        .sidebar-section
+          h5 După întrebuințare
+          ul.usage-filter
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('drill')
+                span.filter-button-label Găurire
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('screwdriver')
+                span.filter-button-label Înșurubare
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('saw')
+                span.filter-button-label Tăiere
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('rasp')
+                span.filter-button-label Șlefuire
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('circular-saw')
+                span.filter-button-label Frezare
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('paint')
+                span.filter-button-label Vopsire
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('scissors')
+                span.filter-button-label Tuns
+            li
+              a.filter-button(href='#')
+                span.filter-button-icon
+                  +icon('ruler-and-pencil')
+                span.filter-button-label Măsurare
+        .sidebar-section
+          h5 După materialul prelucrat
+          ul.material-filter
+            li
+              a.filter-button-large(href='#')
+                +icon('wood')
+                span.filter-button-large-label Lemn
+            li
+              a.filter-button-large(href='#')
+                +icon('metal')
+                span.filter-button-large-label Metal
+            li
+              a.filter-button-large(href='#')
+                +icon('stone')
+                span.filter-button-large-label Piatra
+        .sidebar-section
+          h5 După brand
+          ul.brand-filter
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/bosch.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/makita.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/makita.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/skil.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/bosch.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/makita.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/skil.jpg'))
+            li
+              a.filter-button-brand(href='#')
+                img(src=require('../assets/brands/bosch.jpg'))
+      .main-content.col-md-9.col-sm-12
+        .main-carousel
+          a(href='#')
+            img(src=require('../assets/carousel-slide.png'), alt='First slide')
+          a(href='#')
+            img(src=require('../assets/carousel-slide.png'), alt='Second slide')
+          a(href='#')
+            img(src=require('../assets/carousel-slide.png'), alt='Third slide')
+        .main-products
+          ul.nav.nav-tabs(role='tablist')
+            li.nav-item
+              a.nav-link.active(data-toggle='tab', href='#promotii', role='tab') Promotii
+            li.nav-item
+              a.nav-link(data-toggle='tab', href='#produse-noi', role='tab') Produse noi
+            li.nav-item
+              a.nav-link(data-toggle='tab', href='#recomandari', role='tab') Recomandari
+          .tab-content
+            #promotii.tab-pane.active(role='tabpanel')
+              ul.main-product-list
+                each val, index in Array(12).fill(0)
+                  li
+                    include atoms/product-preview-large.pug
+            #produse-noi.tab-pane(role='tabpanel')
+              ul.main-product-list
+                each val, index in Array(12).fill(0)
+                  li
+                    include atoms/product-preview-large.pug
+            #recomandari.tab-pane(role='tabpanel')
+              ul.main-product-list
+                each val, index in Array(12).fill(0)
+                  li
+                    include atoms/product-preview-large.pug
+
+  .main-related
+    .container
+      include related-products.pug
+  .main-recently-viewed
+    .container
+      include related-products.pug
+  include footer.pug

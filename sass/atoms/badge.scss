@@ -1,0 +1,40 @@
+// Exends and overrides Bootstrap badges
+
+.badge {
+  text-transform: uppercase;
+  padding: $default-spacing-2;
+}
+
+.badge-angle {
+  border-radius: 0;
+  padding: $default-spacing-3;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -7px;
+    bottom: 0;
+    transform: skew(-20deg);
+    width: 14px;
+  }
+}
+
+.badge-discount {
+  @include badge-variant($orange);
+
+  border-radius: 0;
+  color: $ash;
+}
+
+.badge-new {
+  @include badge-variant($green);
+}
+
+.badge-popular {
+  @include badge-variant($blue);
+}
+
+.badge-secondary {
+  @include badge-variant($gray-600);
+}

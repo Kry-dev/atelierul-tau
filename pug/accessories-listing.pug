@@ -1,0 +1,107 @@
+extends layout.pug
+
+block content
+  include header.pug
+
+  include breadcrumb-nav.pug
+
+  // Accessories listing page for tablet and larger resolutions
+  .accessories-listing.container.hidden-sm-down
+    .accessories-listing-header
+      img(src=require('../assets/burghie_sds_plus.jpg'))
+    .row
+      .col-3
+        h3 Filtrează după
+        .accessories-listing-fiters
+          h4 Producător
+          each val, index in Array(4).fill(0)
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox", value="")
+                |  Bosch (88)
+          h4 Diametru (mm)
+          each val, index in Array(4).fill(0)
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox", value="")
+                |  0 - 10 mm (88)
+          h4 Lungime utiă (mm)
+          each val, index in Array(4).fill(0)
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox", value="")
+                |  0 - 150 mm (88)
+          h4 Adecvat pentru beton armat
+          .btn-group
+            button.btn.btn-secondary Da
+            button.btn.btn-secondary Nu
+      .col-9
+        .accessories-listing-items
+          table.table.table-striped
+            thead
+              tr
+                th Producător
+                th.rotate-label 
+                  div Diametru (mm)
+                th.rotate-label 
+                  div Lungime utilă (mm)
+                th.rotate-label 
+                  div Lungime totală (mm)
+                th.rotate-label 
+                  div Beton armat
+                th
+                th
+            tbody
+              each val, index in Array(12).fill(0)
+                tr
+                  td Bosch
+                  td.rotate-label-cell 4
+                  td.rotate-label-cell 50
+                  td.rotate-label-cell Multi Construction
+                  td.rotate-label-cell Metal
+                  td.price-cell
+                    .badge.badge-secondary În stoc furnizor
+                    span.price-over 3<sup>92</sup>Lei
+                    .badge.badge-discount -12%
+                  td
+                    button.btn.btn-at.btn-block
+                      | Adaugă în coș
+                      i.fa.fa-cart-plus
+
+  // Accessories listing page for mobile
+  .accessories-listing-mobile-header.hidden-md-up
+    nav.navbar.navbar-light.sticky-top
+      button.btn.btn-secondary
+        i.fa.fa-chevron-left
+        | &nbsp;Burghie și accesorii
+      span.navbar-brand Burghie SDS Plus
+      button.btn.btn-secondary
+        | 3 Filtre aplicate&nbsp;
+        i.fa.fa-filter
+
+  .accessories-listing-mobile-items.container.hidden-md-up
+    each val, index in Array(12).fill(0)
+      .accessories-listing-item
+          .item-details
+            span Makita D-00016
+            span
+              .badge.badge-success In stoc
+              | 4<sup>99</sup>Lei
+          .item-details
+            span Diametru (mm)
+            span 4
+          .item-details
+            span Lungime utilă (mm)
+            span 50
+          .item-details
+            span Lungime totală (mm)
+            span 110
+          .item-details
+            span Beton armat
+            span NU
+
+          button.btn.btn-at.btn-block
+            | Adaugă în coș
+            i.fa.fa-cart-plus
+
+  include footer.pug

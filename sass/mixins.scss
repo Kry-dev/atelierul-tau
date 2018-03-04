@@ -1,0 +1,66 @@
+@mixin centered() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin stretch($top: 0, $left: 0, $right: 0, $bottom: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin text-overflow() {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Override Boostrap Badge Mixin
+@mixin badge-variant($bg) {
+  @include color-yiq($bg);
+  background-color: $bg;
+
+  &:after {
+    background-color: $bg;
+  }
+
+  &[href] {
+    @include hover-focus {
+      @include color-yiq($bg);
+      text-decoration: none;
+      background-color: darken($bg, 10%);
+    }
+
+    &:after {
+      background-color: darken($bg, 10%);
+    }
+  }
+}
+
+
+/* Boostrap Visibility Mixin */
+@each $bp in map-keys($grid-breakpoints) {
+  .hidden-#{$bp}-up {
+    @include media-breakpoint-up($bp) {
+      display: none !important;
+    }
+  }
+  .hidden-#{$bp}-down {
+    @include media-breakpoint-down($bp) {
+      display: none !important;
+    }
+  }
+}

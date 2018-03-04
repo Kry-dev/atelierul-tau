@@ -1,0 +1,100 @@
+$lines-to-show: 3; // how many lines to show in the product's title
+$line-height: 1.4;
+
+.product-preview-large {
+  position: relative;
+  display: block;
+  text-align: center;
+
+  &:hover, &:active, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+
+  &:hover .add-to-cart{
+    display: block;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+
+  .badge {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: $normal-font-size;
+  }
+
+  .product-preview-image {
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .product-preview-title {
+    position: relative;
+    display: block;
+
+    padding-bottom: $copy-font-size * $line-height * $lines-to-show;
+    height: $copy-font-size * $line-height * $lines-to-show;
+
+    overflow: hidden;
+
+    transition: all .2s;
+    //transition-delay: .2s;
+    //transition-timing-function: cubic-bezier(.01,1,.5,1);
+
+    .product-preview-title-inner{
+      position: absolute;
+      background: rgba(255,255,255,0.8);
+      //min-height: $copy-font-size * $line-height * $lines-to-show;
+    }
+    
+    h2 {
+      font-weight: 600;
+      padding: 0 $default-spacing;
+      font-size: $copy-font-size;
+      line-height: $line-height;
+      margin: 0;
+    }
+    
+    &:hover {
+      transform: translateY(-$copy-font-size * $line-height * $lines-to-show) translateY(-$default-spacing);
+      overflow: visible;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s;
+      //height: $copy-font-size * $line-height * $lines-to-show;
+    }
+  }
+
+  .product-preview-price {
+    position: relative;
+    margin: 0 $default-spacing;
+    padding: $default-spacing 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid $border-color;
+    
+    s {
+      color: $light-text-color;
+      margin-right: $default-spacing;
+    }
+  }
+
+  .add-to-cart {
+    display: none;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    padding: 0 $default-spacing $default-spacing $default-spacing;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-top: none;
+    z-index: 1;
+  }
+}

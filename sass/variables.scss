@@ -1,0 +1,88 @@
+$white:  #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:  #000;
+
+$ash: #2d3537;
+$yellow: #ffd43d;
+$orange: #ffc600;
+$darkred: #c21920;
+$green: #8DC63F;
+$blue: #187AAD;
+$cyan: #17a2b8;
+$red: #dc3545;
+
+$light-text-color: $gray-700;
+$light-icon-color: $gray-600;
+
+$secondary-background-color: #F2F2F2;
+$secondary-border-color: #E3E7EA;
+
+$border-color: #d6d6d6;
+$border-shadow-color: #BCC1C2;
+$divider-color: #ebebeb;
+
+$hyperlink-color: $darkred;
+$hyperlink-hover-color: darken($hyperlink-color, 10%);
+
+$facebook-color: #3b5998;
+$twitter-color: #00aced;
+$google-plus-color: #dc4e41;
+
+$default-spacing: 1rem;
+$default-spacing-1: .25rem;
+$default-spacing-2: .5rem;
+$default-spacing-3: .75rem;
+$default-spacing-4: $default-spacing;
+$default-spacing-5: 1.25rem;
+$default-spacing-6: 1.5rem;
+
+// Typography
+$page-title-font-size: 32px;
+$title-font-size: 1.714rem; // 24px
+$subtitle-font-size: 1.429rem; // 20px
+$normal-font-size: 1.143rem; // 16px
+$copy-font-size: 1rem; // 14px
+$description-font-size: 0.8571rem; // 12px
+
+$normal-font-weight: 400;
+$semibold-font-weight: 600;
+$bold-font-weight: 700;
+
+$awesome-font-face: 'FontAwesome';
+$fa-var-chevron-down: "\f078";
+$fa-var-chevron-left: "\f053";
+$fa-var-chevron-right: "\f054";
+$fa-var-chevron-up: "\f077";
+$fa-var-angle-down: "\f107";
+$fa-var-angle-left: "\f104";
+$fa-var-angle-right: "\f105";
+$fa-var-angle-up: "\f106";
+
+// Override bootstrap variables
+$theme-colors: (
+  primary: $darkred,
+  secondary: $secondary-background-color,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+);
+
+$border-radius: .2143rem; // 3px
+$border-radius-lg: .2857rem; // 4px
+$border-radius-sm: .2143rem;
+
+$btn-font-weight: $semibold-font-weight;
+
+$input-btn-padding-y: .75rem;
+$input-btn-padding-y-lg: 1rem;

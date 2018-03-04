@@ -1,0 +1,14 @@
+include category-selector.pug
+
+.breadcrumb-nav-wrapper.container.hidden-sm-down
+  .breadcrumb-nav
+    .row
+      .col-3
+        +category-selector(true)
+      .col-9
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="#") Home
+          li.breadcrumb-item
+            a(href="#") Library
+          li.breadcrumb-item.active Data

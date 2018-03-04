@@ -1,0 +1,12 @@
+.related-products
+  p.related-products-title Te-ar putea interesa si...
+
+  .related-products-nav
+    button.btn.btn-secondary.related-products-prev
+      i.fa.fa-angle-left
+    button.btn.btn-secondary.related-products-next
+      i.fa.fa-angle-right
+  ul.related-products-list
+    each val, index in Array(12).fill(0)
+      li.related-product
+        include atoms/product-preview.pug

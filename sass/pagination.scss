@@ -1,0 +1,29 @@
+.pagination-container {
+  display: block;
+  margin: 200px 0;
+
+  background-color: $secondary-background-color;
+
+  .page-link {
+    color: $hyperlink-color;
+    background-color: transparent;
+    border-color: transparent;
+
+    i {
+      margin: 0 10px;
+    }
+  }
+
+  .page-item{
+    &.active .page-link {
+      color: $ash;
+      background-color: $white;
+      border-color: transparent;
+    }
+
+    &.disabled .page-link {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+// Exends and overrides Bootstrap breadcrumbs
+
+.breadcrumb-item + .breadcrumb-item:before {
+  content: $fa-var-angle-right;
+  font-family: $awesome-font-face;
+  padding: 0 $default-spacing;
+  color: $light-icon-color;
+}

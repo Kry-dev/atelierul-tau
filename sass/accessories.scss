@@ -1,0 +1,45 @@
+.accessories {
+  padding-top: $default-spacing;
+  padding-bottom: $default-spacing;
+
+  h2 {
+    margin-bottom: $default-spacing;
+  }
+
+  .accessories-list {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+  }
+
+  .accessory {
+    width: 25%;
+    padding: $default-spacing;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    font-weight: $semibold-font-weight;
+    font-size: $normal-font-size;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .accessories .accessory {
+    width: calc(100% / 3);
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .accessories .accessory {
+    width: 50%;
+  }
+}

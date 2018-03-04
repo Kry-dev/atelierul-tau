@@ -1,0 +1,164 @@
+$social-link-size: 44px;
+
+.footer {
+  @include clearfix();
+
+  position: relative;
+  margin-top: 25px;
+  background-color: $secondary-background-color;
+  border-top: 1px solid $secondary-border-color;
+  font-size: $copy-font-size;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    font-weight: 600;
+  }
+
+  & > .container {
+    padding: 50px 0 40px;
+  }
+
+  .footer-signup {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    .form-control,
+    .btn {
+      box-shadow: 0 2px 0 #E5E6E8;
+    }
+
+    .form-control {
+      width: 450px;
+      text-overflow: ellipsis;
+      font-size: 16px;
+    }
+  }
+
+  .footer-contact {
+    width: 250px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: $default-spacing;
+    }
+  }
+
+  .footer-contact-section {
+    margin-bottom: $default-spacing;
+
+    h4 {
+      font-weight: bold;
+      font-size: $description-font-size;
+      text-transform: uppercase;
+    }
+  }
+
+  .footer-links-list {
+    li {
+      line-height: 1.5rem;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: $copy-font-size;
+      line-height: 3;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-links {
+    position: relative;
+  }
+
+  .footer-links-social {
+    @include clearfix();
+
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+
+    li {
+      float: left;
+      margin-right: $default-spacing-2;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+    li a {
+      display: inline-block;
+      width: $social-link-size;
+      height: $social-link-size;
+      color: $white;
+      font-size: $social-link-size / 2;
+      line-height: $social-link-size;
+      text-align: center;
+      background-color: $hyperlink-color;
+      border-radius: 50%;
+      transition: background-color .3s;
+
+      &:hover {
+        background-color: $hyperlink-hover-color;
+      }
+    }
+  }
+}
+
+.footer-copy {
+  padding: $default-spacing 0;
+  color: $white;
+  font-size: $copy-font-size;
+  background-color: #333;
+}
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    .footer-signup {
+      left: $default-spacing;
+      right: $default-spacing;
+      transform: translateY(-50%);
+
+      .form-control {
+        font-size: $copy-font-size;
+      }
+    }
+
+    .footer-contact {
+      width: 100%;
+      text-align: center;
+    }
+
+    .footer-links {
+      text-align: center;
+    }
+
+    .footer-links-social {
+      margin-top: $default-spacing;
+      font-size: 10px;
+      position: static;
+      display: inline-block;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .footer {
+      .footer-contact-section {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+  }
+}

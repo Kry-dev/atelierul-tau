@@ -1,0 +1,32 @@
+.related-products {
+  position: relative;
+  padding: 35px 0 20px;
+
+  .related-products-title {
+    font-size: $title-font-size;
+  }
+
+  .related-products-nav {
+    position: absolute;
+    right: 0;
+    top: 25px;
+  }
+
+  .related-products-list {
+    @include clearfix();
+
+    background-color: $white;
+    border: 1px solid $border-color;
+    overflow: hidden;
+  }
+
+  .related-product {
+    float: left;
+    width: calc(100% / 6);
+    border-right: 1px solid $border-color;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

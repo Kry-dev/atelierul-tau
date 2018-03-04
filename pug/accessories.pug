@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+  include header.pug
+
+  include breadcrumb-nav.pug
+
+  .accessories.container
+    h2 Accesorii
+    .accessories-list
+      each val, index in Array(11).fill(0)
+        a.accessory(href="#")
+          img(src=require('../assets/polizor.jpg'))
+          span Burgie
+
+  include footer.pug
