@@ -87,6 +87,17 @@
 	p{
 		color: $product-text-color;
 	}
+	&_tel{
+		display: block;
+		font-size: 1.5rem;
+		font-weight: bold;
+		.fa{
+			margin-right: 5px;
+		}
+		&:hover{
+			text-decoration: none;
+		}
+	}
 }
 .productCarousel{
 	max-width: 450px;
