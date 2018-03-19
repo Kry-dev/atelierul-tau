@@ -85,3 +85,27 @@
     box-shadow: none;
   }
 }
+.add-to-cart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 240px;
+  height: 60px;
+  background: linear-gradient(100deg, $darkred 70%, $orange 59%);
+  border-radius: $border-radius;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  padding: 1rem 1.5rem;
+  .fa{
+    color: $black;
+    font-size: 2rem;
+  }
+  &:hover{
+    color: $white;
+    text-decoration: none;
+    background: linear-gradient(100deg, darken($darkred, 10%) 70%, darken($orange, 10%) 59%);
+  }
+}

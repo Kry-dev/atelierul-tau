@@ -22,6 +22,9 @@ $red: #dc3545;
 $light-text-color: $gray-700;
 $light-icon-color: $gray-600;
 
+$dark-text-color: #949A9B;
+$product-text-color: #5C6365;
+
 $secondary-background-color: #F2F2F2;
 $secondary-border-color: #E3E7EA;
 
@@ -89,4 +92,4 @@ $input-btn-padding-y-lg: 1rem;
 
 
 //table
-$table-head-color: #5C6365;
+$table-head-color: $product-text-color;

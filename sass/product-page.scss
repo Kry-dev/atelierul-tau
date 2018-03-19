@@ -1,5 +1,92 @@
-.slick-slide img{
-	width: 100%;
+.product{
+	&_title{
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+	&_id{
+		color: $dark-text-color;
+		font-size:  0.8571rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+	}
+	&_row{
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		margin-bottom: 1rem;
+	}
+	&_price{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 200px;
+		&__old{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		&__count{
+			color: $dark-text-color;
+			width: 45%;
+			font-weight: bold;
+			font-size: 1.429rem;
+			text-decoration: line-through
+		}
+		&__sale{
+			display: flex;
+			position: relative;
+			height: 24px;
+			width: 60%;
+			border-top: 24px solid $orange;
+			border-right: 8px solid transparent;
+			span{
+				position: absolute;
+				top: -24px;
+				left: 5px;
+				font-weight: bold;
+				color: $black;
+				font-size:  0.8571rem;
+				line-height: 24px;
+			}
+		}
+		.price{
+			font-size: 2.857rem;
+			flex-direction: row;
+			justify-content: space-between;
+			sup{
+				margin: 0 4px;
+			}
+		}
+	}
+
+	&_ship{
+		display: flex;
+		width: 50%;
+		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		&__label{
+			width: 30%;
+			color: $dark-text-color;
+			.fa{
+				margin-right: 5px;
+			}
+		}
+		&__label_info{
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.badge{
+		margin-bottom: 1rem;
+	}
+	p{
+		color: $product-text-color;
+	}
 }
 .productCarousel{
 	max-width: 450px;
@@ -25,6 +112,7 @@
 			z-index: 50;
 			height: 80px;
 			width: 40px;
+			background: $white;
 		}
 		.slick-prev{
 			left: 0;
@@ -65,168 +153,6 @@
 	}
 
 }
-
-$evacolor :#CC9933;
-@mixin mQ($arg){
-	@media (max-width: $arg){
-		@content;
-	}
-}
-.margin{
-	@include mQ(767px){
-		margin-bottom:4%;
-	}
-}
-.bg_none{
-	background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%) !important;
-	color: black;
-}
-.bottom{
-	bottom: -30px;
-}
-.caro_bor{
-	border: 1px solid #0a0a0a !important;
-}
-.product_title{
-	p{
-		text-transform: uppercase;
-		font-size: 1.5em;
-		font-weight: 1000;
-	}
-}
-.product_price{
-	p{
-		font-size: 1.5em;
-		color: $evacolor;
-	}
-}
-.border_line{
-	content: "";
-	width: 70%;
-	border-top:1px solid gray;
-}
-.product_desc{
-	.head{
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.lorem{
-		text-align: left;
-	}
-	ul{
-		list-style-type: none;
-		padding-left: 0;
-		li{
-			font-size: 16px;
-			font-weight: bold;
-			&:before{
-				background-color: $evacolor;
-				border-radius: 50%;
-				content: "";
-				display: inline-block;
-				margin-right: 10px;
-				margin-bottom: 2px;
-				height: 10px;
-				width: 10px;
-			}
-		}
-	}
-}
-$bg: #332f35;
-$fg: lighten($bg,20%);
-$borderWidth: 1px;
-.sizes{
-	input[type=radio] {
-		position: absolute;
-		visibility: hidden;
-		display: none;
-	}
-
-	label {
-		color: lighten($bg,40%);
-		display: inline-block;
-		cursor: pointer;
-		font-weight: bold;
-		padding: 5px 40px;
-		margin: 0;
-	}
-
-	input[type=radio]:checked + label{
-		color: lighten($bg,60%);
-		background: $fg;
-	}
-
-	label + input[type=radio] + label {
-		border-left: solid $borderWidth $fg;
-	}
-	.radio-group {
-		border: solid $borderWidth $fg;
-		display: inline-block;
-		margin: 0px;
-		border-radius: 0px;
-		overflow: hidden;
-	}
-}
-$color-1: #000;
-$color-2: #000fff;
-$color-3: #ddd;
-
-.custom-radios {
-
-	div {
-		display: inline-block;
-	}
-
-	input[type="radio"] {
-		display: none;
-
-		+ label {
-			color: #333;
-			font-family: Arial, sans-serif;
-			font-size: 14px;
-
-			span {
-				display: inline-block;
-				width: 40px;
-				height: 40px;
-				margin: -1px 4px 0 0;
-				vertical-align: middle;
-				cursor: pointer;
-				border-radius: 50%;
-				border: 2px solid #FFFFFF;
-				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-				background-repeat: no-repeat;
-				background-position: center;
-				text-align: center;
-				line-height: 44px;
-
-				img {
-					opacity: 0;
-					transition: all .3s ease;
-					margin-top: -25%;
-				}
-			}
-		}
-
-		&#color-1 + label span {
-			background-color: $color-1;
-		}
-
-		&#color-2 + label span {
-			background-color: $color-2;
-		}
-
-		&#color-3 + label span {
-			background-color: $color-3;
-		}
-
-
-		&:checked + label span img {
-			opacity: 1;
-		}
-	}
-}
-.eva{
-	background-color: $evacolor;
-	color: white;
+.slick-slide img{
+	width: 100%;
 }
