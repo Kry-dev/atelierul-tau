@@ -14,9 +14,29 @@
 	margin: 0 auto;
 	overflow: hidden;
 	display: flex;
+	.slick-slider{
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		.slick-arrow{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 50;
+			height: 80px;
+		}
+		.slick-left{
+			left: 0;
+		}
+		.slick-right{
+			right: 0;
+		}
+	}
 	.slick-list{
-		min-width: 600px;
-		padding: 10px 40px;
+		overflow: hidden;
+		height: 80px;
+		//min-width: 600px;
+		padding: 0 40px;
 	}
 	.thumb{
 		float: left;

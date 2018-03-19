@@ -9,24 +9,22 @@ $(document).ready(function() {
     autoplay: false,
     autoplaySpeed: 2000
   });
-  $('.productCarousel .carousel-inner').slick({
-      autoplay: false,
-      autoplaySpeed: 1000,
-      pauseOnHover: true,
-      arrows: false,
-      dots: false,
-      infinite: false,
-      fade: true,
-      asNavFor: '.productThumbCarousel'
-  });
-  $('.productThumbCarousel').slick({
-      slidesToShow: 5,
+  $('.carousel-inner').slick({
+      slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
-      dots: true,
-      infinite: false,
-      focusOnSelect: true,
-      asNavFor: '.productCarousel > .carousel-inner'
+      arrows: false,
+      fade: true,
+      asNavFor: '.productThumbCarousel-list'
+  });
+  $('.productThumbCarousel-list').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: '<button class="btn btn-secondary slick-left"><i class="fa fa fa-angle-left"></i></button>',
+      prevArrow: '<button class="btn btn-secondary slick-right"><i class="fa fa fa-angle-right"></i></button>',
+      asNavFor: '.carousel-inner',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true
   });
 
   // Set up related-products carousels
@@ -40,8 +38,6 @@ $(document).ready(function() {
       infinite: false,
       slidesToShow: 6,
       slidesToScroll: 6,
-      prevArrow: $container.find('.related-products-prev'),
-      nextArrow: $container.find('.related-products-next'),
       responsive: [
         {
           breakpoint: 768,
