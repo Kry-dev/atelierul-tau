@@ -1,0 +1,23 @@
+.product-detail-tabs
+    ul#myTab.nav.nav-tabs(role='tablist')
+        li.nav-item
+            a#Descriere-tab.nav-link.active(data-toggle='tab', href='#Descriere', role='tab', aria-controls='Descriere', aria-selected='true') Descriere
+        li.nav-item
+            a#Specifi-tab.nav-link(data-toggle='tab', href='#Specifi', role='tab', aria-controls='Specifi', aria-selected='false') Specificații tehnice
+        li.nav-item
+            a#Accesorii-tab.nav-link(data-toggle='tab', href='#Accesorii', role='tab', aria-controls='contact',
+            aria-selected='false') Accesorii compatibil
+    #myTabContent.tab-content
+        #Descriere.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='Descriere-tab')
+            h2 Descriere
+            p Motocoasa Ruris 7088 este ideala pentru afanarea si fertilizarea pamantului, pregatirea razoarelor si distrugerea buruienilor.
+            p Motosapele Ruris din gama 7088 sunt echipate cu un motor Kama de 7 CP si sunt eficiente pentru lucrarea suprafetelor de pana
+                | la 5000 mp, cu un randament de aproximativ 500 mp lucrati pe ora si un consum de benzina fara Pb de 0.8 l/ora de
+                | functionare. Alte avantaje ale motosapatoarei sunt: latimea de lucru reglabila a frezelor (500 - 1000 mm), cutia de viteze
+                | cu 2 trepte inainte si 1 inapoi, reglarea turatiei frezelor sau adaptarea la tipul de sol.
+            p Coarne ajustabile stanga/dreapta.
+            include product-detail-table
+        #Specifi.tab-pane.fade(role='tabpanel', aria-labelledby='Specifi-tab')
+            include product-detail-table
+
+        #Accesorii.tab-pane.fade(role='tabpanel', aria-labelledby='Accesorii-tab') 3

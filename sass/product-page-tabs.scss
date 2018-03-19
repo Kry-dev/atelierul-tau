@@ -1,0 +1,35 @@
+.product-detail-tabs{
+	width: 100%;
+	border-radius: $border-radius;
+	.nav-tabs{
+		background: $secondary-background-color;
+		justify-content: center;
+		border: 0;
+		.nav-item{
+			margin-bottom: 0;
+		}
+		.nav-link{
+			padding: .8rem 1rem;
+			&:hover{
+				border: 1px solid transparent;
+			}
+		}
+		.active{
+			border: 1px solid transparent;
+			border-radius: 0;
+		}
+	}
+	.tab-content{
+		padding: 2rem 0;
+		h2,
+		h3{
+			font-weight: bold;
+		}
+		h2,
+		h3,
+		p{
+			margin-bottom: 1rem;
+		}
+	}
+
+}

@@ -73,3 +73,27 @@ $rotated-label-height: 150px;
   padding: 0 $default-spacing;
   border-left: 1px solid $border-color;
 }
+.table{
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  thead{
+    color: #5C6365;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1rem;
+    th{
+      padding: 0.75rem;
+    }
+  }
+  th{
+    width: 40%;
+    color: #5C6365;
+    vertical-align: top;
+    padding: 0.75rem;
+  }
+  td{
+    font-weight: bold;
+    color: inherit;
+    vertical-align: top;
+  }
+}

@@ -5,9 +5,96 @@ block content
 
   include breadcrumb-nav.pug
 
-  .main
-    .row
-      
+  .main.product-detail
+    // images are subject to copyright
+    .container
+      .row
+        .col-md-4.col-sm-6.margin
+          #productCarousel.productCarousel
+            .carousel-inner(role='listbox')
+              .item.active
+                img(src='/assets/product/product-01.png', alt='')
+              .item
+                img(src='/assets/product/product-02.png', alt='')
+              .item
+                img(src='/assets/product/product-01.png', alt='')
+              .item
+                img(src='/assets/product/product-02.png', alt='')
+              .item
+                img(src='/assets/product/product-01.png', alt='')
+
+          #productThumbCarousel.productThumbCarousel.slider-nav
+            .thumb.active(data-target='#productCarousel', data-slide-to='0')
+              img(src='/assets/product/product-01.png', alt='product-prev-01')
+            .thumb(data-target='#productCarousel', data-slide-to='1')
+              img(src='/assets/product/product-02.png', alt='product-prev-02')
+            .thumb(data-target='#productCarousel', data-slide-to='2')
+              img(src='/assets/product/product-01.png', alt='product-prev-03')
+            .thumb(data-target='#productCarousel', data-slide-to='3')
+              img(src='/assets/product/product-02.png', alt='product-prev-04')
+            .thumb(data-target='#productCarousel', data-slide-to='4')
+              img(src='/assets/product/product-01.png', alt='product-prev-05')
+        .col-md-8.col-sm-6
+          .product_title
+            p Motosapa Ruris 751KS, 8.5CP, Motor Kama, 4 timpi, 90cm + Roti de cauciuc, Rarita, Plug reversibil
+          .product_id
+            Cod produs: 70882016
+          .product_price
+            p 2279 Lei
+          .border_line
+          .product_desc
+            p.head Description
+            p.lorem
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              | consequat.
+            ul
+              li Skinny fit
+              li available in three tones
+              li stretchy cotton blend
+              li jacron tag
+          .border_line
+          .sizes
+            h5 SELECT YOUR SIZE
+            .radio-group
+              input#option-one(type='radio', name='selector', checked='checked')
+              label(for='option-one') L
+              input#option-two(type='radio', name='selector')
+              label(for='option-two') XL
+              input#option-three(type='radio', name='selector')
+              label(for='option-three') XXL
+          .border_line
+          .custom-radios
+            h5 Colors
+            div
+              input#color-1(type='radio', name='color', value='color-1', checked='')
+              label(for='color-1')
+                span
+                  img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg', alt='Checked Icon')
+            div
+              input#color-2(type='radio', name='color', value='color-2')
+              label(for='color-2')
+                span
+                  img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg', alt='Checked Icon')
+            div
+              input#color-3(type='radio', name='color', value='color-3')
+              label(for='color-3')
+                span
+                  img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg', alt='Checked Icon')
+          br
+          .form-group
+            label(for='qyt')
+              select.form-control(name='', id='')
+                option(value='') QTY 1
+                option QTY 2
+          .form-group.text-left
+            a(href='#')
+              button.btn.eva(type='submit') Add to my bag
+
+
+
+      include product/product-detail-tabs
 
   .main-recently-viewed
     .container

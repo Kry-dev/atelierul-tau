@@ -9,6 +9,25 @@ $(document).ready(function() {
     autoplay: false,
     autoplaySpeed: 2000
   });
+  $('.productCarousel .carousel-inner').slick({
+      autoplay: false,
+      autoplaySpeed: 1000,
+      pauseOnHover: true,
+      arrows: false,
+      dots: false,
+      infinite: false,
+      fade: true,
+      asNavFor: '.productThumbCarousel'
+  });
+  $('.productThumbCarousel').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      infinite: false,
+      focusOnSelect: true,
+      asNavFor: '.productCarousel > .carousel-inner'
+  });
 
   // Set up related-products carousels
   var $relatedProductsContainers = $('.related-products');
@@ -54,7 +73,6 @@ $(document).ready(function() {
   // Only enable sticky footer on cart page
   if ($cartFooter.length > 0 && $cartServices.length > 0) {
     $(document).scroll(checkOffset);
-
     checkOffset();
   }
 
@@ -76,4 +94,7 @@ $(document).ready(function() {
       $target.parent().addClass('show');
     }
   });
+
+
+
 });
