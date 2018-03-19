@@ -24,11 +24,12 @@
 			transform: translateY(-50%);
 			z-index: 50;
 			height: 80px;
+			width: 40px;
 		}
-		.slick-left{
+		.slick-prev{
 			left: 0;
 		}
-		.slick-right{
+		.slick-next{
 			right: 0;
 		}
 	}
@@ -40,19 +41,21 @@
 	}
 	.thumb{
 		float: left;
-		margin-right: 10px;
-		width: 80px !important;
+		width: 80px;
 		display: inline-block;
 		height: 80px;
-		border: 1px solid #e6e6e6;
-		background: #fff;
-		border-radius: $border-radius;
+
 		overflow: hidden;
 		&:last-child{  margin-right: 0;  }
 		&:hover{  cursor: pointer;  }
 		img{
 			width: 100%;
+			max-width: 80px;
 			height: 100%;
+			margin: 0 auto;
+			border: 1px solid #e6e6e6;
+			background: #fff;
+			border-radius: $border-radius;
 		}
 		&.slick-current img{
 			opacity: 1;

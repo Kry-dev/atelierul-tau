@@ -17,13 +17,13 @@ $(document).ready(function() {
       asNavFor: '.productThumbCarousel-list'
   });
   $('.productThumbCarousel-list').slick({
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
-      nextArrow: '<button class="btn btn-secondary slick-left"><i class="fa fa fa-angle-left"></i></button>',
-      prevArrow: '<button class="btn btn-secondary slick-right"><i class="fa fa fa-angle-right"></i></button>',
+      nextArrow: '<button class="btn btn-secondary slick-next"><i class="fa fa fa-angle-right"></i></button>',
+      prevArrow: '<button class="btn btn-secondary slick-prev"><i class="fa fa fa-angle-prev"></i></button>',
       asNavFor: '.carousel-inner',
       dots: false,
-      centerMode: true,
+      //centerMode: true,
       focusOnSelect: true
   });
 
