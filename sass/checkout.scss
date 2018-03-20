@@ -1,0 +1,190 @@
+.checkout-wrapper{
+	padding-top: 40px;
+	padding-bottom:40px;
+	background-color: #fafbfa;}
+.checkout{
+	background-color: #fff;
+	font-size: 1rem;
+	position: relative;
+	&:before{
+		position: absolute;
+		left: 21px;
+		top: 0;
+		display: block;
+		content: "";
+		height: 100%;
+		width: 2px;
+		background: $border-color;
+		z-index: 1;
+	}
+	.collapse.show{
+		padding-left: 21px;
+	}
+	.collapsing{
+		padding-left: 21px;
+		//transition: height 0s ease;
+	}
+	p{
+		color: $checkout-text-color;
+		font-size: 1.15rem;
+	}
+}
+.panel{
+	margin-bottom:5px;
+	z-index: 2;
+}
+.checkout-step {
+	border-top: 1px solid #f2f2f2;
+	color: #666;
+	font-size: 1rem;
+	padding: 0;
+	position: relative;
+	&-body{
+		padding: 2rem 2.5rem;
+		position: relative;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			content: "";
+			height: 100%;
+			width: 2px;
+			background: $orange;
+			z-index: 50;
+			transition: height .8s ease;
+		}
+	}
+	.btn{
+		border: 1px solid $border-color;
+	}
+}
+
+.checkout-step-number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: $border-radius;
+	background: $border-color;
+	color: $checkout-text-color;
+	border: 0;
+	font-size: 1rem;
+	height: 44px;
+	width: 44px;
+	margin-right: 26px;
+	padding: 6px;
+	text-align: center;
+}
+.checkout-step-title{
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: bold;
+	vertical-align: middle;
+	display: inline-block;
+	margin:0;
+	a{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		color: $checkout-text-color;
+		text-decoration: none;
+		background: $secondary-background-color;
+		border-radius: $border-radius;
+		&:hover{
+			color: $white;
+			text-decoration: none;
+		}
+		&[aria-expanded="true"]{
+			color: $white;
+			background: $checkout-dark;
+			.checkout-step-number{
+				background: $orange;
+			}
+		}
+	}
+
+}
+
+.checout-address-step{}
+.checout-address-step .form-group{
+	margin-bottom: 18px;
+	display: inline-block;
+	width: 100%;
+}
+
+.checkout-step-active{display: block;}
+.checkout-step-disabled{display: none;}
+
+.checkout-login{
+	form{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.login-phone{
+		width: 80%;
+		margin-right: 10px;
+		font-size: 1rem;
+	}
+
+}
+
+
+.otp-verifaction{margin-top: 30px;}
+.checkout-sidebar{background-color: #fff;
+	border:1px solid #eaefe9; padding: 30px; margin-bottom: 30px;}
+.checkout-sidebar-merchant-box{background-color: #fff;
+	border:1px solid #eaefe9; margin-bottom: 30px;}
+.checkout-total{border-bottom: 1px solid #eaefe9; padding-bottom: 10px;margin-bottom: 10px; }
+.checkout-invoice{display: inline-block;
+	width: 100%;}
+.checout-invoice-title{    float: left; color: #30322f;}
+.checout-invoice-price{    float: right; color: #30322f;}
+.checkout-charges{display: inline-block;
+	width: 100%;}
+.checout-charges-title{float: left; }
+.checout-charges-price{float: right;}
+.charges-free{color: #43b02a; font-weight: 600;}
+.checkout-payable{display: inline-block;
+	width: 100%; color: #333;}
+.checkout-payable-title{float: left; }
+.checkout-payable-price{float: right;}
+
+.checkout-cart-merchant-box{ padding: 20px;display: inline-block;width: 100%; border-bottom: 1px solid #eaefe9;
+	padding-bottom: 20px; }
+.checkout-cart-merchant-name{color: #30322f; float: left;}
+.checkout-cart-merchant-item{ float: right; color: #30322f; }
+.checkout-cart-products{}
+
+.checkout-cart-products .checkout-charges{ padding: 10px 20px;
+	color: #333;}
+.checkout-cart-item{ border-bottom: 1px solid #eaefe9;
+	box-sizing: border-box;
+	display: table;
+	font-size: 12px;
+	padding: 22px 20px;
+	width: 100%;}
+.checkout-item-list{}
+.checkout-item-count{ float: left; }
+.checkout-item-img{width: 60px; float: left;}
+.checkout-item-name-box{ float: left; }
+.checkout-item-title{ color: #30322f; font-size: 1rem;  }
+.checkout-item-unit{  }
+.checkout-item-price{float: right;color: #30322f; font-size: 1rem; font-weight: 600;}
+
+
+.checkout-viewmore-btn{padding: 10px; text-align: center;}
+
+.header-checkout-item{text-align: right; padding-top: 20px;}
+.checkout-promise-item {
+	background-repeat: no-repeat;
+	background-size: 14px;
+	display: inline-block;
+	margin-left: 20px;
+	padding-left: 24px;
+	color: #30322f;
+}
+.checkout-promise-item i{padding-right: 10px;color: #43b02a;}

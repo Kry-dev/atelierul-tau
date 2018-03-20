@@ -1,0 +1,63 @@
+.container
+    .row
+        .col-md-12
+            #accordion.checkout
+                .panel.checkout-step
+                    .checkout-step-header
+                        h4.checkout-step-title
+                            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepOne', aria-expanded="true")
+                                span.checkout-step-number 1
+                                | DATE DE IDENTIFICARE
+                    #stepOne.collapse.in.show
+                        .checkout-step-body
+                            .row.mb-5.border-bottom
+                                .col-md-6.border-right
+                                    p Ai mai comandat de la noi? Completează cu adresa de email sau telefonul folosite pentru comenzile mai vechi.
+                                    .checkout-login
+                                        form
+                                            .login-phone
+                                                input.form-control(type='text', placeholder='Completează cu email-ul sau telefonul… ')
+                                            a.btn.btn-default(role='button', data-toggle='collapse', href='#otp-verifaction') Autentifică-mă în site
+                                .col-md-6
+                                    p Nu ai cont pe AtelierulTău.ro? Deschide-ți un cont acum și poți trimite comenzile mult mai rapid!
+                                    a.btn.btn-default(role='button', href='#') Deschid cont pe AtelierulTău.ro
+                            .row
+                                .col-md-12
+                                    p Folosește datele de identificare
+                                        b  (nume, prenume, email)
+                                        |  din conturile tale sociale:
+                                    .btn.btn-facebook(href="#")
+                                        i.fa.fa-facebook-f
+                                        | Conectează-te prin Facebook
+                                    .btn.btn-twitter(href="#")
+                                        i.fa.fa-twitter
+                                        | Conectează-te prin Twitter
+                                    .btn.btn-google-plus(href="#")
+                                        i.fa.fa-google-plus
+                                        | Conectează-te prin Google+
+
+                .panel.checkout-step
+                    .checkout-step-header#headingTwo(role='tab')
+                        h4.checkout-step-title
+                            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepTwo')
+                                span.checkout-step-number 2
+                                | LIVRARE ȘI FACTURĂ
+                    #stepTwo.panel-collapse.collapse
+                        .checkout-step-body
+                            .checout-address-step
+                                .row
+                                    form
+                                        .form-group
+                                            .col-md-12
+                                                button#singlebutton.btn.btn-primary(name='singlebutton') Save
+                            a.collapsed.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree')  Next
+                .panel.checkout-step
+                    .checkout-step-header#headingThree(role='tab')
+                        h4.checkout-step-title
+                            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree')
+                                span.checkout-step-number 3
+                                | MODALITATEA DE PLATĂ
+                    #stepThree.panel-collapse.collapse
+                        .checkout-step-body
+                            a.collapsed.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepFour')  Next
+

@@ -19,8 +19,8 @@ $(document).ready(function() {
   $('.productThumbCarousel-list').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-      nextArrow: '<button class="btn btn-secondary slick-next"><i class="fa fa fa-angle-right"></i></button>',
-      prevArrow: '<button class="btn btn-secondary slick-prev"><i class="fa fa fa-angle-left"></i></button>',
+      nextArrow: '<button class="btn btn-secondary slick-next"><i class="fa fa-angle-right"></i></button>',
+      prevArrow: '<button class="btn btn-secondary slick-prev"><i class="fa fa-angle-left"></i></button>',
       asNavFor: '.carousel-inner',
       dots: false,
       //centerMode: true,

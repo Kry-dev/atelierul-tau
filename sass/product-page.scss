@@ -217,6 +217,10 @@
 			height: 80px;
 			width: 40px;
 			background: $white;
+			.fa{
+				font-size: 2rem;
+				color: $darkred;
+			}
 		}
 		.slick-prev{
 			left: 0;

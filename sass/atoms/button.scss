@@ -37,7 +37,8 @@
 .btn-facebook,
 .btn-twitter,
 .btn-google-plus {
-  padding: $input-btn-padding-y $default-spacing-1;
+  //padding: $input-btn-padding-y $default-spacing-1;
+  border: 0;
 }
 
 .btn-at {
