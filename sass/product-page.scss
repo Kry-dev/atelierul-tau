@@ -121,9 +121,7 @@
 		z-index: 100;
 		top: 0;
 		background: $white;
-		transition: 0.4s;
-		-webkit-transition: 0.4s;
-		@include box-shadow;
+		transition: all .4s ease-in-out;
 		.productCarousel {
 			display: none;
 		}
@@ -171,6 +169,11 @@
 		}
 		.product_row {
 			width: auto;
+			margin-bottom: 0;
+		}
+		.add-to-cart{
+			margin-bottom: 0;
+			margin-right: 1rem;
 		}
 		.product_id,
 		.product_ship,
@@ -178,6 +181,14 @@
 		.product_text,
 		.product_tel {
 			display: none;
+		}
+		.product_price__sale{
+			border-right: 0;
+			border-left: 8px solid transparent;
+			span{
+				left: inherit;
+				right: 10px;
+			}
 		}
 	}
 }
