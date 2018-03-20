@@ -25,6 +25,9 @@
 @import './footer.scss';
 
 // Bootstrap overrides
+body{
+  position: relative;
+}
 body,
 html {
   font-family: 'Open Sans', sans-serif;

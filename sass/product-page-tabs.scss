@@ -1,10 +1,11 @@
 .product-detail-tabs{
 	width: 100%;
 	border-radius: $border-radius;
-	.nav-tabs{
+	.navbar{
 		background: $secondary-background-color;
 		justify-content: center;
 		border: 0;
+		padding: 0;
 		.nav-item{
 			margin-bottom: 0;
 		}
@@ -13,14 +14,26 @@
 			&:hover{
 				border: 1px solid transparent;
 			}
+			&.active{
+				color: $product-text-color;
+				border: 1px solid transparent;
+				border-radius: 0;
+				background: $white;
+			}
 		}
-		.active{
-			border: 1px solid transparent;
-			border-radius: 0;
+		&.fixed{
+			position: fixed;
+			top: 80px;
+			left: 0;
+			background: $white;
+			width: 100%;
+			z-index: 50;
 		}
 	}
-	.tab-content{
+	.product-detail-content{
 		padding: 2rem 0;
+		//overflow: scroll;
+		min-height: 80vh;
 		h2,
 		h3{
 			font-weight: bold;
@@ -31,5 +44,7 @@
 			margin-bottom: 1rem;
 		}
 	}
+	.productPadding{
 
+	}
 }

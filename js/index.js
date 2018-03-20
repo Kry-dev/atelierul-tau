@@ -38,6 +38,8 @@ $(document).ready(function() {
       infinite: false,
       slidesToShow: 6,
       slidesToScroll: 6,
+      prevArrow: $container.find('.related-products-prev'),
+      nextArrow: $container.find('.related-products-next'),
       responsive: [
         {
           breakpoint: 768,
@@ -49,11 +51,33 @@ $(document).ready(function() {
       ]
     });
   });
+  //
+  // Set up sticky product on product page
 
+    var $productHeader = $('.product_header');
+    var $productHeaderHeight = $productHeader.height();
+    var $headerHeight = $('.header').height();
+    var $productTabs = $('.product-detail-tabs > .navbar');
+    var $productScrollPoint = $productHeaderHeight+$headerHeight+$productTabs.height() +20;
+
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= $productScrollPoint){
+            $productHeader.addClass('fixed');
+            $productTabs.addClass('fixed');
+            $('.product-detail-tabs').css('padding-top', ($productScrollPoint -20));
+        }else {
+            $productHeader.removeClass('fixed');
+            $productTabs.removeClass('fixed');
+            $('.product-detail-tabs').css('padding-top', '0');
+        }
+    });
+    $('body').scrollspy({target: '#product-detail-info'});
   // Set up sticky footer on cart page
 
   var $cartFooter = $('.cart-footer');
   var $cartServices = $('.cart-services');
+
 
   function checkOffset() {
     var y = $(window).scrollTop();
@@ -61,16 +85,18 @@ $(document).ready(function() {
 
     if (y + viewportHeight < $cartServices.offset().top) {
       $cartFooter.css('position', 'fixed');
+
     } else {
       $cartFooter.css('position', 'static');
     }
   }
 
+
   // Only enable sticky footer on cart page
-  if ($cartFooter.length > 0 && $cartServices.length > 0) {
-    $(document).scroll(checkOffset);
-    checkOffset();
-  }
+    if ($cartFooter.length > 0 && $cartServices.length > 0) {
+        $(document).scroll(checkOffset);
+        checkOffset();
+    }
 
   // Set up category selector dropdowns
   $('.category-selector-items').on('click', function(e) {
@@ -86,11 +112,8 @@ $(document).ready(function() {
       $(this).children().each(function(index, item) {
         $(item).removeClass('show');
       });
-
       $target.parent().addClass('show');
     }
   });
-
-
 
 });
