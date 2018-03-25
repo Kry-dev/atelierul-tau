@@ -55,24 +55,32 @@ $(document).ready(function() {
   // Set up sticky product on product page
 
     var $productHeader = $('.product_header');
-    var $productHeaderHeight = $productHeader.height();
-    var $headerHeight = $('.header').height();
     var $productTabs = $('.product-detail-tabs > .navbar');
-    var $productScrollPoint = $productHeaderHeight+$headerHeight+$productTabs.height() +20;
+    var $productScrollPoint = 210;
 
 
     $(window).scroll(function(){
         if ($(window).scrollTop() >= $productScrollPoint){
             $productHeader.addClass('fixed');
             $productTabs.addClass('fixed');
-            $('.product-detail-tabs').css('padding-top', ($productScrollPoint -20));
+            $('.product-detail-content').css('padding-top', $productScrollPoint);
         }else {
             $productHeader.removeClass('fixed');
             $productTabs.removeClass('fixed');
-            $('.product-detail-tabs').css('padding-top', '0');
+            $('.product-detail-content').css('padding-top', '0');
         }
     });
-    $('body').scrollspy({target: '#product-detail-info'});
+
+    // Add scrollspy to <body>
+    var offsetVal = 130;
+    $('body').scrollspy({target: "#product-detail-info", offset: offsetVal});
+
+    $("#product-detail-info li a").click(function(e){
+        e.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({scrollTop: $(hash).offset().top - offsetVal}, 800);
+    });
+
   // Set up sticky footer on cart page
 
   var $cartFooter = $('.cart-footer');

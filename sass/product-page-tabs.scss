@@ -12,7 +12,8 @@
 		.nav-link{
 			padding: .8rem 1rem;
 			&:hover{
-				border: 1px solid transparent;
+				//border: 1px solid transparent;
+				border: 0;
 			}
 			&.active{
 				color: $product-text-color;
@@ -43,5 +44,8 @@
 		p{
 			margin-bottom: 1rem;
 		}
+	}
+	.product-detail-content-item{
+		margin-top: 2rem;
 	}
 }

@@ -1,5 +1,6 @@
 .product{
 	margin-bottom: 0 !important;
+	background: $white;
 	&_title{
 		font-weight: bold;
 		margin-bottom: 1rem;
@@ -115,13 +116,19 @@
 	&.fixed {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
 		position: fixed;
 		padding-top: 0;
 		z-index: 100;
+		width: 100%;
 		top: 0;
+		left: 0;
 		background: $white;
 		transition: all .4s ease-in-out;
+		.row{
+			max-width: 1440px;
+			display: flex;
+		}
 		.productCarousel {
 			display: none;
 		}
