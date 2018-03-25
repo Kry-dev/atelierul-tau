@@ -69,59 +69,53 @@ $(document).ready(function () {
         }
     });
 
-// Add scrollspy to <body>
-var offsetVal = 130;
-$('body').scrollspy({target: "#product-detail-info", offset: offsetVal});
+    // Add scrollspy to <body>
+    var offsetVal = 130;
+    $('body').scrollspy({target: "#product-detail-info", offset: offsetVal});
 
-$("#product-detail-info li a").click(function (e) {
-    e.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({scrollTop: $(hash).offset().top - offsetVal}, 800);
+    $("#product-detail-info li a").click(function (e) {
+        e.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({scrollTop: $(hash).offset().top - offsetVal}, 800);
+    });
+
+    // Set up sticky footer on cart page
+
+    var $cartFooter = $('.cart-footer');
+    var $cartServices = $('.cart-services');
+
+    function checkOffset() {
+        var y = $(window).scrollTop();
+        var viewportHeight = window.innerHeight;
+
+        if (y + viewportHeight < $cartServices.offset().top) {
+            $cartFooter.css('position', 'fixed');
+
+        } else {
+            $cartFooter.css('position', 'static');
+        }
+    }
+
+    // Only enable sticky footer on cart page
+    if ($cartFooter.length > 0 && $cartServices.length > 0) {
+        $(document).scroll(checkOffset);
+        checkOffset();
+    }
+
+    // Set up category selector dropdowns
+    $('.category-selector-items').on('click', function (e) {
+        var $target = $(e.target);
+
+        if (!$target.hasClass('category-selector-button')) {
+            return;
+        }
+        if ($target.parent().hasClass('show')) {
+            $target.parent().removeClass('show');
+        } else {
+            $(this).children().each(function (index, item) {
+                $(item).removeClass('show');
+            });
+            $target.parent().addClass('show');
+        }
+    });
 });
-
-
-// Set up sticky footer on cart page
-
-var $cartFooter = $('.cart-footer');
-var $cartServices = $('.cart-services');
-
-
-function checkOffset() {
-    var y = $(window).scrollTop();
-    var viewportHeight = window.innerHeight;
-
-    if (y + viewportHeight < $cartServices.offset().top) {
-        $cartFooter.css('position', 'fixed');
-
-    } else {
-        $cartFooter.css('position', 'static');
-    }
-}
-
-
-// Only enable sticky footer on cart page
-if ($cartFooter.length > 0 && $cartServices.length > 0) {
-    $(document).scroll(checkOffset);
-    checkOffset();
-}
-
-// Set up category selector dropdowns
-$('.category-selector-items').on('click', function (e) {
-    var $target = $(e.target);
-
-    if (!$target.hasClass('category-selector-button')) {
-        return;
-    }
-
-    if ($target.parent().hasClass('show')) {
-        $target.parent().removeClass('show');
-    } else {
-        $(this).children().each(function (index, item) {
-            $(item).removeClass('show');
-        });
-        $target.parent().addClass('show');
-    }
-});
-
-})
-;
