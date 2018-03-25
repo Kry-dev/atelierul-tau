@@ -58,7 +58,12 @@ ul {
   padding: 0;
   list-style: none;
 }
-
+h1,
+h2{
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+  }
+}
 .container {
   margin: 0 auto;
 }

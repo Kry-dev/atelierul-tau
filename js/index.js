@@ -59,17 +59,17 @@ $(document).ready(function() {
     var $productScrollPoint = 210;
 
 
-    $(window).scroll(function(){
-        if ($(window).scrollTop() >= $productScrollPoint){
-            $productHeader.addClass('fixed');
-            $productTabs.addClass('fixed');
-            $('.product-detail-content').css('padding-top', $productScrollPoint);
-        }else {
-            $productHeader.removeClass('fixed');
-            $productTabs.removeClass('fixed');
-            $('.product-detail-content').css('padding-top', '0');
-        }
-    });
+    // $(window).scroll(function(){
+    //     if ($(window).scrollTop() >= $productScrollPoint){
+    //         $productHeader.addClass('fixed');
+    //         $productTabs.addClass('fixed');
+    //         $('.product-detail-content').css('padding-top', $productScrollPoint);
+    //     }else {
+    //         $productHeader.removeClass('fixed');
+    //         $productTabs.removeClass('fixed');
+    //         $('.product-detail-content').css('padding-top', '0');
+    //     }
+    // });
 
     // Add scrollspy to <body>
     var offsetVal = 130;
