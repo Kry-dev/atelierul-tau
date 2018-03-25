@@ -143,6 +143,7 @@ $(document).ready(function () {
             $('.product-detail-content').css('padding-top', $productScrollPoint);
         }else{
             $productHeader.removeClass('fixed');
+            $productTabs.removeClass('fixed');
             $('.product-detail-content').css('padding-top', '0');
         }
     });
