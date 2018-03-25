@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
-    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
@@ -266,9 +266,10 @@
     <div class="main product">
       <!-- images are subject to copyright-->
       <div class="container">
-        <div class="row product_header">
-          <div class="col-md-4 col-sm-6 mb-3 product-left">
-            <div class="product-left_mobile"><img src="/assets/product/product-01.png" alt=""></div>
+        <div class="product_header">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3 product-left">
+              <div class="product-left_mobile"><img src="/assets/product/product-01.png" alt=""></div>
 <div class="productCarousel" id="productCarousel">
   <div class="carousel-inner">
     <div class="item active"><img src="/assets/product/product-01.png" alt=""></div>
@@ -287,43 +288,44 @@
     <div class="thumb" data-target="#productCarousel" data-slide-to="4"><img src="/assets/product/product-01.png" alt="product-prev-05"></div>
   </div>
 </div>
-          </div>
-          <div class="col-md-8 col-sm-6 product-right">
-            <h2 class="product_title">Motosapa Ruris 751KS, 8.5CP, Motor Kama, 4 timpi, 90cm + Roti de cauciuc, Rarita, Plug reversibil</h2>
-            <div class="product_id">
-              <Cod>produs: 70882016</Cod>
             </div>
-            <div class="product_row">
-              <div class="product_price">
-                <div class="product_price__old">
-                  <div class="product_price__count">2279 Lei</div>
-                  <div class="product_price__sale"><span>Reducere 12%</span></div>
+            <div class="col-lg-8 col-md-6 col-sm-12 product-right">
+              <h2 class="product_title">Motosapa Ruris 751KS, 8.5CP, Motor Kama, 4 timpi, 90cm + Roti de cauciuc, Rarita, Plug reversibil</h2>
+              <div class="product_id">
+                <Cod>produs: 70882016</Cod>
+              </div>
+              <div class="product_row">
+                <div class="product_price">
+                  <div class="product_price__old">
+                    <div class="product_price__count">2279 Lei</div>
+                    <div class="product_price__sale"><span>Reducere 12%</span></div>
+                  </div>
+                  <div class="price">1998<sup>99</sup><span>Lei</span></div>
                 </div>
-                <div class="price">1998<sup>99</sup><span>Lei</span></div>
+                <div class="product_ship">
+                  <div class="product_ship__label"><i class="fa fa-truck"></i>Livrare</div>
+                  <div class="product_ship__label_info"><b>Gratuită</b></div>
+                  <div class="product_ship__label"><i class="fa fa-certificate"></i>Garanție</div>
+                  <div class="product_ship__label_info"><span>24 Luni - Persoane fizice</span><span>12 Luni - Persoane juridice</span></div>
+                </div>
               </div>
-              <div class="product_ship">
-                <div class="product_ship__label"><i class="fa fa-truck"></i>Livrare</div>
-                <div class="product_ship__label_info"><b>Gratuită</b></div>
-                <div class="product_ship__label"><i class="fa fa-certificate"></i>Garanție</div>
-                <div class="product_ship__label_info"><span>24 Luni - Persoane fizice</span><span>12 Luni - Persoane juridice</span></div>
-              </div>
+              <div class="badge badge-secondary">ÎN STOC FURNIZOR</div>
+              <p class="product_text"><span class="text-danger">Contactează-ne</span> pentru termenul de livrare.</p><a class="btn add-to-cart" href="#"><span>ADAUGĂ ÎN COȘ</span><i class="fa fa-shopping-cart"></i></a>
+              <p class="product_text mb-0">Comandă prin telefon la numărul</p><a class="text-danger product_tel" href="tel:0374770344"><i class="fa fa-phone"></i>0374.770.344</a>
+              <p class="product_text">disponibil de<b>Luni până Vineri între 8 - 18</b> și<b> Sâmbăta între 8 - 14.</b></p>
             </div>
-            <div class="badge badge-secondary">ÎN STOC FURNIZOR</div>
-            <p class="product_text"><span class="text-danger">Contactează-ne</span> pentru termenul de livrare.</p><a class="btn add-to-cart" href="#"><span>ADAUGĂ ÎN COȘ</span><i class="fa fa-shopping-cart"></i></a>
-            <p class="product_text mb-0">Comandă prin telefon la numărul</p><a class="text-danger product_tel" href="tel:0374770344"><i class="fa fa-phone"></i>0374.770.344</a>
-            <p class="product_text">disponibil de<b>Luni până Vineri între 8 - 18</b> și<b> Sâmbăta între 8 - 14.</b></p>
           </div>
         </div>
 <div class="product-detail-tabs">
   <nav class="navbar" id="product-detail-info">
-    <ul class="nav">
+    <ul class="nav" data-spy="affix" data-offset-top="197">
       <li class="nav-item active"><a class="nav-link active" href="#one">Descriere</a></li>
       <li class="nav-item"><a class="nav-link" href="#two">Specificații tehnice</a></li>
       <li class="nav-item"><a class="nav-link" href="#three">Accesorii compatibil</a></li>
     </ul>
   </nav>
   <div class="product-detail-content">
-    <div id="one">
+    <div class="product-detail-content-item" id="one">
       <h2>Descriere</h2>
       <p>Motocoasa Ruris 7088 este ideala pentru afanarea si fertilizarea pamantului, pregatirea razoarelor si distrugerea buruienilor.</p>
       <p>
@@ -333,7 +335,7 @@
       </p>
       <p>Coarne ajustabile stanga/dreapta.</p>
     </div>
-<div id="two">
+<div class="product-detail-content-item" id="two">
   <h2>Specificații tehnice</h2>
   <table class="table table-striped">
     <thead>
@@ -395,7 +397,7 @@
     </tbody>
   </table>
 </div>
-    <div class="related-products" id="three">
+    <div class="product-detail-content-item related-products" id="three">
       <p class="related-products-title">Compară cu produse similare</p>
       <div class="related-products-nav">
         <button class="btn btn-secondary related-products-prev"><i class="fa fa-angle-left"></i></button>
