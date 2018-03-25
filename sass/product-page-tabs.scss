@@ -12,12 +12,11 @@
 		.nav-link{
 			padding: .8rem 1rem;
 			&:hover{
-				//border: 1px solid transparent;
 				border: 0;
 			}
 			&.active{
 				color: $product-text-color;
-				border: 1px solid transparent;
+				border: 0;
 				border-radius: 0;
 				background: $white;
 			}
