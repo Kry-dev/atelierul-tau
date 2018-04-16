@@ -106,8 +106,13 @@ module.exports = {
         template: 'pug/checkout-social-login.pug'
     }),
     new HtmlWebpackPlugin({
-        filename: 'checkout-2.html',
-        template: 'pug/checkout-2.pug'
+          filename: 'checkout-2.html',
+          template: 'pug/checkout-2.pug'
+    }),
+    new HtmlWebpackPlugin({
+        filename: 'checkout-3.html',
+        template: 'pug/checkout-3.pug'
     })
+
   ]
 };

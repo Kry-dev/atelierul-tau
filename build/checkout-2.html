@@ -6,6 +6,7 @@
     <title>Magazin online de Scule electrice Makita Bosch Hitachi DeWalt Metabo</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -271,53 +272,122 @@
       <div class="checkout" id="accordion">
         <div class="panel checkout-step">
           <div class="checkout-step-header">
-            <h4 class="checkout-step-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#stepOne" aria-expanded="true"><span class="checkout-step-number">1</span>DATE DE IDENTIFICARE</a></h4>
+            <h4 class="checkout-step-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#stepOne"><span class="checkout-step-number">1</span>DATE DE IDENTIFICARE</a></h4>
           </div>
           <div class="collapse in show" id="stepOne">
-            <div class="checkout-step-body">
-              <div class="row mb-5">
-                <div class="col-md-6 bodrer-right-2">
-                  <p>Ai mai comandat de la noi? Completează cu adresa de email sau telefonul folosite pentru comenzile mai vechi.</p>
-                  <div class="checkout-login">
-                    <form>
-                      <div class="login-phone">
-                        <input class="form-control" type="text" placeholder="Completează cu email-ul sau telefonul… ">
-                      </div><a class="btn btn-default" role="button" data-toggle="collapse" href="#otp-verifaction">Autentifică-mă în site</a>
-                    </form>
+            <div class="checkout-step-body py-3">
+              <div class="row">
+                <div class="d-flex col flex-row justify-content-start">
+                  <div class="checkout-user-small mr-3"><img src="assets/checkout/checkout-user.png"></div>
+                  <div class="checkout-user-info">
+                    <div class="checkout-user-info-name">Adrian Popescu</div>
+                    <div class="checkout-user-info-email">adrianpopescu09@gmail.com</div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <p>Nu ai cont pe AtelierulTău.ro? Deschide-ți un cont acum și poți trimite comenzile mult mai rapid!</p><a class="btn btn-default" role="button" href="#">Deschid cont pe AtelierulTău.ro</a>
-                </div>
-              </div>
-              <div class="border-row">
-                <div class="border-line"></div><span>SAU</span>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <p>Folosește datele de identificare<b> (nume, prenume, email)</b> din conturile tale sociale:</p><a class="btn btn-facebook" href="/checkout-social-login.html"><i class="fa fa-facebook-f"></i>Conectează-te prin Facebook</a><a class="btn btn-twitter" href="/checkout-social-login.html"><i class="fa fa-twitter"></i>Conectează-te prin Twitter</a><a class="btn btn-google-plus" href="/checkout-social-login.html"><i class="fa fa-google-plus"></i>Conectează-te prin Google+</a>
-                </div>
+                <div class="d-flex col justify-content-end"><a class="btn btn-default" role="button" href="#">Modifică</a></div>
               </div>
             </div>
           </div>
         </div>
         <div class="panel checkout-step">
           <div class="checkout-step-header" id="headingTwo" role="tab">
-            <h4 class="checkout-step-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepTwo"><span class="checkout-step-number">2</span>LIVRARE ȘI FACTURĂ</a></h4>
+            <h4 class="checkout-step-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepTwo" aria-expanded="true"><span class="checkout-step-number">2</span>LIVRARE ȘI FACTURĂ</a></h4>
           </div>
-          <div class="panel-collapse collapse" id="stepTwo">
+          <div class="collapse in show" id="stepTwo">
             <div class="checkout-step-body">
               <div class="checout-address-step">
                 <div class="row">
-                  <form>
-                    <div class="form-group">
-                      <div class="col-md-12">
-                        <button class="btn btn-primary" id="singlebutton" name="singlebutton">Save</button>
+                  <div class="col-lg-6 col-md-12 mb-3">
+                    <h4>Detalii livrare</h4>
+                    <div class="row no-gutters mb-3">
+                      <div class="col-6 px-2 border p-2 rounded-left">
+                        <div class="pretty p-default p-round">
+                          <input type="radio" name="curier" checked>
+                          <div class="state">
+                            <label>Livrare prin curier</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 px-2 p-2 border rounded-right">
+                        <div class="pretty p-default p-round">
+                          <input type="radio" name="curier">
+                          <div class="state">
+                            <label>Ridicare personală</label>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </form>
+                    <div class="row no-gutters border rounded-top">
+                      <div class="col-9 px-2 py-3">
+                        <div class="pretty p-default p-round mb-5">
+                          <input type="radio" name="contact" checked>
+                          <div class="state">
+                            <label class="multi-label p-danger"><b>Persoana de contact</b><span>Adrian Popescu - 0723738053</span></label>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column pl-4"><b>Adresa</b><span>Str. Mr. Alexandru Campeanu, nr. 24 - Bucureşti (Sectorul 1), Bucureşti</span></div>
+                      </div>
+                      <div class="col-3 px-2 py-3">
+                        <div class="d-flex flex-row justify-content-end"><a class="btn btn-default" role="button" href="#">Modifică</a></div>
+                      </div>
+                    </div>
+                    <div class="row no-gutters mb-3 border rounded-bottom">
+                      <div class="col-12 p-2 pt-3 pb-2">
+                        <div class="pretty p-default p-round mb-3">
+                          <input type="radio" name="contact">
+                          <div class="state">
+                            <label class="multi-label p-danger"><span>Popescu Adrian - 0723738053</span><span>
+                                Str. Matei Basarab, Nr. 40, Bl. 30, Scara B, et. 3, ap. 15 - Slobozia,Ialomiţaspan</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div><a class="collapsed btn btn-default" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepThree"> Adaugă o adresă nouă</a>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <h4>Detalii facturare</h4>
+                    <div class="row no-gutters mb-3">
+                      <div class="col-6 px-2 border p-2 rounded-left">
+                        <div class="pretty p-default p-round">
+                          <input type="radio" name="fizic" checked>
+                          <div class="state">
+                            <label>Persoană fizică</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 px-2 p-2 border rounded-right">
+                        <div class="pretty p-default p-round">
+                          <input type="radio" name="fizic">
+                          <div class="state">
+                            <label>Persoană juridică</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row no-gutters border rounded mb-3">
+                      <div class="col-9 px-2 py-3">
+                        <div class="pretty p-default p-round mb-3">
+                          <input type="radio" name="contact-1" checked>
+                          <div class="state">
+                            <label class="multi-label"><b>Nume și număr de telefon</b><span>Adrian Popescu - 0723738053</span></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 px-2 py-3">
+                        <div class="d-flex flex-row justify-content-end"><a class="btn btn-default" role="button" href="#">Modifică</a></div>
+                      </div>
+                      <div class="col-12 p-2 pt-3 pb-2">
+                        <div class="pretty p-default p-round mb-3">
+                          <input type="radio" name="contact-1">
+                          <div class="state">
+                            <label class="multi-label"><span>Popescu Adrian - 0723738053</span><span>
+                                Str. Matei Basarab, Nr. 40, Bl. 30, Scara B, et. 3, ap. 15 - Slobozia,Ialomiţaspan</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div><a class="btn btn-default" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepThree">Adaugă alte informații pentru factură</a>
+                  </div>
                 </div>
-              </div><a class="collapsed btn btn-default" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepThree"> Next</a>
+              </div>
             </div>
           </div>
         </div>
@@ -326,7 +396,32 @@
             <h4 class="checkout-step-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepThree"><span class="checkout-step-number">3</span>MODALITATEA DE PLATĂ</a></h4>
           </div>
           <div class="panel-collapse collapse" id="stepThree">
-            <div class="checkout-step-body"><a class="collapsed btn btn-default" role="button" data-toggle="collapse" data-parent="#accordion" href="#stepFour"> Next</a></div>
+            <div class="checkout-step-body">
+              <div class="d-flex border p-3 rounded-top">
+                <div class="pretty p-default p-round">
+                  <input type="radio" name="plata" checked>
+                  <div class="state">
+                    <label>Online prin card de credit sau debit</label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex border p-3">
+                <div class="pretty p-default p-round">
+                  <input type="radio" name="plata">
+                  <div class="state">
+                    <label>Ramburs la curier</label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex border p-3 rounded-bottom">
+                <div class="pretty p-default p-round">
+                  <input type="radio" name="plata">
+                  <div class="state">
+                    <label>Ordin de plată</label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
