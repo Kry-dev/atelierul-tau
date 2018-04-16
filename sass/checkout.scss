@@ -28,6 +28,13 @@
 		color: $checkout-text-color;
 		font-size: 1.15rem;
 	}
+	&-user{
+		width: 144px;
+		height: 144px;
+		img{
+			width: 100%;
+		}
+	}
 }
 .panel{
 	margin-bottom:5px;
@@ -188,3 +195,32 @@
 	color: #30322f;
 }
 .checkout-promise-item i{padding-right: 10px;color: #43b02a;}
+
+.border-row{
+	display: block;
+	width: 100%;
+	height: 3rem;
+	position: relative;
+	.border-line{
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: $border-color;
+	}
+	span{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 6rem;
+		height: 6rem;
+		text-align: center;
+		background: $white;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+.bodrer-right-2{
+	border-right: 2px solid $border-color !important;
+}

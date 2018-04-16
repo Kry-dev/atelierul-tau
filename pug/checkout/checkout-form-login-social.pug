@@ -12,15 +12,39 @@
                         .checkout-step-body
                             .row.mb-5
                                 .col-md-6.bodrer-right-2
-                                    p Ai mai comandat de la noi? Completează cu adresa de email sau telefonul folosite pentru comenzile mai vechi.
-                                    .checkout-login
-                                        form
-                                            .login-phone
-                                                input.form-control(type='text', placeholder='Completează cu email-ul sau telefonul… ')
-                                            a.btn.btn-default(role='button', data-toggle='collapse', href='#otp-verifaction') Autentifică-mă în site
+                                    p Excelentă alegere! Iată ce date de identificare am găsit în profilul tău de
+                                        b  Facebook:
+
+                                    .row
+                                        .col-3.mb-3
+                                            .checkout-user
+                                                img(src='assets/checkout/checkout-user.png')
+                                        .col-9
+                                            .form-row
+                                                .form-group.col-md-6
+                                                    label(for='prenume').mb-0 Prenume
+                                                    input#prenume.form-control(type='text', placeholder='Adrian')
+                                                .form-group.col-md-6
+                                                    label(for='nume').mb-0 Nume
+                                                    input#nume.form-control(type='text', placeholder='Popescu')
+                                            .form-group
+                                                label(for='Email').mb-0 Email
+                                                input#Email.form-control(type='email', placeholder='adrianpopescu09@gmail.com')
+                                        .col-7
+                                            .cart-order
+                                                button.btn.btn-at.btn-block(role='button', data-toggle='collapse', href='#otp-verifaction')
+                                                    | CONTINUĂ CU ACESTE DATE
+                                                    i.fa.fa-chevron-right
+                                        .col-5
+                                            a.btn.btn-default.btn-block(role='button', href='#') Schimbă datele de identificare
+
                                 .col-md-6
-                                    p Nu ai cont pe AtelierulTău.ro? Deschide-ți un cont acum și poți trimite comenzile mult mai rapid!
-                                    a.btn.btn-default(role='button', href='#') Deschid cont pe AtelierulTău.ro
+                                    p Email-ul
+                                        b adrianpopescu09@gmail.com
+                                        |  a mai fost folosit în trecut pentru a comanda de pe AtelierulTau.ro.
+
+                                    p Vrei să-ți creăm un cont cu aceste informații ca să poți comanda mai ușor pe viitor? Îți vom trimite
+                                        | pe adresa de email toate detaliile necesare.
                             .border-row
                                 .border-line
                                 span SAU
@@ -29,15 +53,6 @@
                                     p Folosește datele de identificare
                                         b  (nume, prenume, email)
                                         |  din conturile tale sociale:
-                                    a.btn.btn-facebook(href="/checkout-social-login.html")
-                                        i.fa.fa-facebook-f
-                                        | Conectează-te prin Facebook
-                                    a.btn.btn-twitter(href="/checkout-social-login.html")
-                                        i.fa.fa-twitter
-                                        | Conectează-te prin Twitter
-                                    a.btn.btn-google-plus(href="/checkout-social-login.html")
-                                        i.fa.fa-google-plus
-                                        | Conectează-te prin Google+
 
                 .panel.checkout-step
                     .checkout-step-header#headingTwo(role='tab')
