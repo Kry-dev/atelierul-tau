@@ -10,6 +10,8 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:  #000;
 
+
+
 $ash: #2d3537;
 $yellow: #ffd43d;
 $orange: #ffc600;
@@ -19,6 +21,43 @@ $blue: #187AAD;
 $cyan: #17a2b8;
 $red: #dc3545;
 
+
+$blue:    #007bff ;
+$indigo:  #6610f2 ;
+$purple:  #6f42c1 ;
+$pink:    #e83e8c ;
+$teal:    #20c997 ;
+$cyan:    #17a2b8 ;
+$success: $green;
+$warning: $orange;
+$colors: (
+				blue: $blue,
+				indigo: $indigo,
+				purple: $purple,
+				pink: $pink,
+				red: $red,
+				orange: $orange,
+				yellow: $yellow,
+				green: $green,
+				teal: $teal,
+				cyan: $cyan,
+				white: $white,
+				gray: $gray-600,
+				gray-dark: $gray-800
+);
+
+$theme-colors: (
+				primary: $blue,
+				secondary: $gray-600,
+				success: $green,
+				info: $cyan,
+				warning: $yellow,
+				danger: $red,
+				light: $gray-100,
+				dark: $gray-800
+);
+
+$danger: $darkred;
 $light-text-color: $gray-700;
 $light-icon-color: $gray-600;
 
@@ -27,6 +66,14 @@ $product-text-color: #5C6365;
 
 $checkout-dark: #2F3638;
 $checkout-text-color: #5C6365;
+
+$pretty--color-default:#bdc3c7;
+$pretty--color-primary:#428bca;
+$pretty--color-info: $cyan;
+$pretty--color-success: $success;
+$pretty--color-warning: $warning;
+$pretty--color-danger: $danger;
+$pretty--color-dark:#5a656b;
 
 $secondary-background-color: #F2F2F2;
 $secondary-border-color: #E3E7EA;

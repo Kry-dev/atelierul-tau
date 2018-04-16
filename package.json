@@ -28,5 +28,7 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pretty-checkbox": "^3.0.3"
+  }
 }

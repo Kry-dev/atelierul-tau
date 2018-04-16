@@ -1,0 +1,132 @@
+.container
+    .row
+        .col-md-12
+            #accordion.checkout
+                .panel.checkout-step
+                    .checkout-step-header
+                        h4.checkout-step-title
+                            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepOne')
+                                span.checkout-step-number 1
+                                | DATE DE IDENTIFICARE
+                    #stepOne.collapse.in.show
+                        .checkout-step-body.py-3
+                            .row
+                                .d-flex.col.flex-row.justify-content-start
+                                    .checkout-user-small.mr-3
+                                        img(src='assets/checkout/checkout-user.png')
+                                    .checkout-user-info
+                                        .checkout-user-info-name Adrian Popescu
+                                        .checkout-user-info-email adrianpopescu09@gmail.com
+                                .d-flex.col.justify-content-end
+                                    a.btn.btn-default(role='button', href='#') Modifică
+
+                .panel.checkout-step
+                    .checkout-step-header#headingTwo(role='tab')
+                        h4.checkout-step-title
+                            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepTwo',aria-expanded="true")
+                                span.checkout-step-number 2
+                                | LIVRARE ȘI FACTURĂ
+                    #stepTwo.collapse.in.show
+                        .checkout-step-body
+                            .checout-address-step
+                                .row
+                                    .col-lg-6.col-md-12.mb-3
+                                        h4 Detalii livrare
+                                        .row.no-gutters.mb-3
+                                            .col-6.px-2.border.p-2.rounded-left
+                                                .pretty.p-default.p-round
+                                                    input(type='radio', name='curier', checked)
+                                                    .state
+                                                        label Livrare prin curier
+                                            .col-6.px-2.p-2.border.rounded-right
+                                                .pretty.p-default.p-round
+                                                    input(type='radio', name='curier')
+                                                    .state
+                                                        label Ridicare personală
+                                        .row.no-gutters.border.rounded-top
+                                            .col-9.px-2.py-3
+                                                .pretty.p-default.p-round.mb-5
+                                                    input(type='radio', name='contact', checked)
+                                                    .state
+                                                        label.multi-label.p-danger
+                                                            b Persoana de contact
+                                                            span Adrian Popescu - 0723738053
+                                                .d-flex.flex-column.pl-4
+                                                    b Adresa
+                                                    span Str. Mr. Alexandru Campeanu, nr. 24 - Bucureşti (Sectorul 1), Bucureşti
+                                            .col-3.px-2.py-3
+                                                .d-flex.flex-row.justify-content-end
+                                                    a.btn.btn-default(role='button', href='#') Modifică
+                                        .row.no-gutters.mb-3.border.rounded-bottom
+                                            .col-12.p-2.pt-3.pb-2
+                                                .pretty.p-default.p-round.mb-3
+                                                    input(type='radio', name='contact')
+                                                    .state
+                                                        label.multi-label.p-danger
+                                                            span Popescu Adrian - 0723738053
+                                                            span Str. Matei Basarab, Nr. 40, Bl. 30, Scara B, et. 3, ap. 15 - Slobozia,
+                                                                | Ialomiţaspan
+                                        a.collapsed.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree')  Adaugă o adresă nouă
+
+                                    .col-lg-6.col-md-12
+                                        h4 Detalii facturare
+                                        .row.no-gutters.mb-3
+                                            .col-6.px-2.border.p-2.rounded-left
+                                                .pretty.p-default.p-round
+                                                    input(type='radio', name='fizic', checked)
+                                                    .state
+                                                        label Persoană fizică
+                                            .col-6.px-2.p-2.border.rounded-right
+                                                .pretty.p-default.p-round
+                                                    input(type='radio', name='fizic')
+                                                    .state
+                                                        label Persoană juridică
+                                        .row.no-gutters.border.rounded.mb-3
+                                            .col-9.px-2.py-3
+                                                .pretty.p-default.p-round.mb-3
+                                                    input(type='radio', name='contact-1', checked)
+                                                    .state
+                                                        label.multi-label
+                                                            b Nume și număr de telefon
+                                                            span Adrian Popescu - 0723738053
+
+                                            .col-3.px-2.py-3
+                                                .d-flex.flex-row.justify-content-end
+                                                    a.btn.btn-default(role='button', href='#') Modifică
+
+                                            .col-12.p-2.pt-3.pb-2
+                                                .pretty.p-default.p-round.mb-3
+                                                    input(type='radio', name='contact-1')
+                                                    .state
+                                                        label.multi-label
+                                                            span Popescu Adrian - 0723738053
+                                                            span Str. Matei Basarab, Nr. 40, Bl. 30, Scara B, et. 3, ap. 15 - Slobozia,
+                                                                | Ialomiţaspan
+
+                                        a.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree') Adaugă alte informații pentru factură
+
+
+                .panel.checkout-step
+                    .checkout-step-header#headingThree(role='tab')
+                        h4.checkout-step-title
+                            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree')
+                                span.checkout-step-number 3
+                                | MODALITATEA DE PLATĂ
+                    #stepThree.panel-collapse.collapse
+                        .checkout-step-body
+                            .d-flex.border.p-3.rounded-top
+                                .pretty.p-default.p-round
+                                    input(type='radio', name='plata', checked)
+                                    .state
+                                        label Online prin card de credit sau debit
+                            .d-flex.border.p-3
+                                .pretty.p-default.p-round
+                                    input(type='radio', name='plata')
+                                    .state
+                                        label Ramburs la curier
+                            .d-flex.border.p-3.rounded-bottom
+                                .pretty.p-default.p-round
+                                    input(type='radio', name='plata')
+                                    .state
+                                        label Ordin de plată
+

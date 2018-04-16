@@ -1,0 +1,26 @@
+.pretty{
+	white-space: unset;
+	.state{
+		label{
+			display: block;
+			span{
+				display: block;
+				font-weight: 100;
+				margin-top: 5px;
+			}
+			&.multi-label{
+				&:before,
+				&:after{
+					top: 25%;
+				}
+			}
+		}
+	}
+}
+.pretty.p-default input:checked ~ .state label:before,
+.pretty.p-default input:checked ~ .state label:after{
+	border:5px solid $danger ;
+}
+.pretty.p-default input:checked~.state label:after{
+	background: $white !important;
+}

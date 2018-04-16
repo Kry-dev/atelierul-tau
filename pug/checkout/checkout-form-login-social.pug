@@ -10,8 +10,8 @@
                                 | DATE DE IDENTIFICARE
                     #stepOne.collapse.in.show
                         .checkout-step-body
-                            .row.mb-5
-                                .col-md-6.bodrer-right-2
+                            .row.mb-5.position-relative
+                                .col-md-6.pr-5
                                     p Excelentă alegere! Iată ce date de identificare am găsit în profilul tău de
                                         b  Facebook:
 
@@ -37,22 +37,25 @@
                                                     i.fa.fa-chevron-right
                                         .col-5
                                             a.btn.btn-default.btn-block(role='button', href='#') Schimbă datele de identificare
-
-                                .col-md-6
+                                .border-vertical
+                                    .border-line
+                                    span SAU
+                                .col-md-6.pl-5
                                     p Email-ul
                                         b adrianpopescu09@gmail.com
                                         |  a mai fost folosit în trecut pentru a comanda de pe AtelierulTau.ro.
 
                                     p Vrei să-ți creăm un cont cu aceste informații ca să poți comanda mai ușor pe viitor? Îți vom trimite
                                         | pe adresa de email toate detaliile necesare.
-                            .border-row
-                                .border-line
-                                span SAU
-                            .row
-                                .col-md-12
-                                    p Folosește datele de identificare
-                                        b  (nume, prenume, email)
-                                        |  din conturile tale sociale:
+
+                                    .pretty.p-default.p-round
+                                        input#yes(type='radio', name='yes', value='option1', checked)
+                                        .state
+                                            label.p-danger(for='yes') Da, vreau cont cont pe AtelierulTău.ro
+                                    .pretty.p-default.p-round
+                                        input#no(type='radio', name='yes', value='option1', checked)
+                                        .state
+                                            label.p-danger(for='no') Nu, trimit și această comanda fără cont
 
                 .panel.checkout-step
                     .checkout-step-header#headingTwo(role='tab')
