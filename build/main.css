@@ -6515,6 +6515,32 @@ h3 {
       float: left; }
     .checkout-charges-price {
       float: right; }
+  .checkout-footer-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .checkout-footer-wrapper .cart-total {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+      .checkout-footer-wrapper .cart-total h5 {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 1rem; }
+      .checkout-footer-wrapper .cart-total p {
+        font-size: 2rem;
+        margin-bottom: 0;
+        font-weight: bold; }
 
 .panel {
   margin-bottom: 5px;
@@ -6660,6 +6686,18 @@ h3 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
+
+.card .list-group-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .card .list-group-item .card-text {
+    color: inherit; }
+  .card .list-group-item .card-price {
+    font-weight: bold; }
 
 .pagination-container {
   display: block;
