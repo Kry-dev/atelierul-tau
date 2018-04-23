@@ -11,15 +11,15 @@
                     #stepOne.collapse.in.show
                         .checkout-step-body
                             .row.mb-5.position-relative
-                                .col-md-6.pr-5
+                                .col-md-6.pr-md-5
                                     p Excelentă alegere! Iată ce date de identificare am găsit în profilul tău de
                                         b  Facebook:
 
                                     .row
-                                        .col-3.mb-3
+                                        .col-lg-3.mb-3
                                             .checkout-user
                                                 img(src='../assets/checkout/checkout-user.png')
-                                        .col-9
+                                        .col-lg-9
                                             .form-row
                                                 .form-group.col-md-6
                                                     label(for='prenume').mb-0 Prenume
@@ -30,12 +30,12 @@
                                             .form-group
                                                 label(for='Email').mb-0 Email
                                                 input#Email.form-control(type='email', placeholder='adrianpopescu09@gmail.com')
-                                        .col-7
+                                        .col-lg-6.col-xs-12.mb-sm-3
                                             .cart-order
                                                 button.btn.btn-at.btn-block(role='button', data-toggle='collapse', href='checkout-2.html')
                                                     | CONTINUĂ CU ACESTE DATE
                                                     i.fa.fa-chevron-right
-                                        .col-5
+                                        .col-lg-6.col-xs-12.mb-sm-3
                                             a.btn.btn-default.btn-block(role='button', href='checkout-2.html') Schimbă datele de
                                                 | identificare
                                 .border-vertical
@@ -54,7 +54,7 @@
                                         .state
                                             label.p-danger(for='yes') Da, vreau cont cont pe AtelierulTău.ro
                                     .pretty.p-default.p-round
-                                        input#no(type='radio', name='yes', value='option1', checked)
+                                        input#no(type='radio', name='yes', value='option2')
                                         .state
                                             label.p-danger(for='no') Nu, trimit și această comanda fără cont
 

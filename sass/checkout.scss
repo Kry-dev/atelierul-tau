@@ -30,10 +30,14 @@
 		font-size: 1.15rem;
 	}
 	&-user {
-		width: 144px;
-		height: 144px;
+		display: block;
+		max-width: 144px;
+		margin: 0 auto;
+		max-height: 144px;
 		img {
 			width: 100%;
+
+			display: block;
 		}
 	}
 	&-user-small {
@@ -53,6 +57,9 @@
 		&-body {
 			padding: 2rem 2.5rem;
 			position: relative;
+			@include media-breakpoint-down(sm) {
+				padding: 1rem;
+			}
 			&:before {
 				position: absolute;
 				left: 0;
@@ -68,6 +75,10 @@
 		}
 		.btn {
 			border: 1px solid $border-color;
+			overflow: hidden;
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
 		}
 		&:last-of-type{
 			.checkout-step-body:before{
@@ -304,6 +315,13 @@
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-50%);
+	}
+	@include media-breakpoint-down(sm) {
+		left: auto;
+		right: 0;
+	}
+	@include media-breakpoint-down(xs) {
+		display: none;
 	}
 }
 .card{
