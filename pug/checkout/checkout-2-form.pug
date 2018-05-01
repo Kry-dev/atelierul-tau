@@ -43,29 +43,32 @@
                                                     input(type='radio', name='curier')
                                                     .state
                                                         label Ridicare personală
-                                        .row.no-gutters.border.rounded-top
-                                            .col-9.px-2.py-3
-                                                .pretty.p-default.p-round.mb-md-5
+                                        .row.no-gutters.border.rounded-top.py-3.px-2
+                                            .col-12.mb-3
+                                                .pretty.p-default.p-round.w-100
                                                     input(type='radio', name='contact', checked)
                                                     .state
                                                         label.multi-label.p-danger
                                                             b Persoana de contact
                                                             span Adrian Popescu - 0723738053
+                                                    a.btn.btn-default(role='button', href='#') Modifică
+
+                                            .col-12
                                                 .d-flex.flex-column.pl-4
                                                     b Adresa
                                                     span Str. Mr. Alexandru Campeanu, nr. 24 - Bucureşti (Sectorul 1), Bucureşti
-                                            .col-3.px-2.py-3
-                                                .d-flex.flex-row.justify-content-end
-                                                    a.btn.btn-default(role='button', href='#') Modifică
-                                        .row.no-gutters.mb-3.border.rounded-bottom
-                                            .col-12.p-2.pt-3.pb-2
-                                                .pretty.p-default.p-round.mb-md-3
+
+
+                                        .row.no-gutters.mb-3.border.rounded-bottom.py-3.px-2
+                                            .col-12
+                                                .pretty.p-default.p-round.w-100
                                                     input(type='radio', name='contact')
                                                     .state
-                                                        label.multi-label.p-danger
-                                                            span Popescu Adrian - 0723738053
+                                                        label.multi-label.p-danger.w-75
+                                                            b Popescu Adrian - 0723738053
                                                             span Str. Matei Basarab, Nr. 40, Bl. 30, Scara B, et. 3, ap. 15 - Slobozia,
                                                                 | Ialomiţaspan
+                                                    a.btn.btn-default(role='button', href='#') Modifică
                                         a.collapsed.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree')  Adaugă o adresă nouă
 
                                     .col-lg-6.col-md-12
@@ -81,27 +84,26 @@
                                                     input(type='radio', name='fizic')
                                                     .state
                                                         label Persoană juridică
-                                        .row.no-gutters.border.rounded.mb-3
-                                            .col-9.px-2.pt-3.pb-md-3git add .
-                                                .pretty.p-default.p-round.mb-md-3
+                                        .row.no-gutters.border.rounded.mb-3.pt-4.pb-3.px-2
+                                            .col-12.mb-3
+                                                .pretty.p-default.p-round.w-100
                                                     input(type='radio', name='contact-1', checked)
                                                     .state
-                                                        label.multi-label
+                                                        label.multi-label.w-75
                                                             b Nume și număr de telefon
                                                             span Adrian Popescu - 0723738053
-
-                                            .col-3.px-2.py-md-3
-                                                .d-flex.flex-row.justify-content-end
                                                     a.btn.btn-default(role='button', href='#') Modifică
 
-                                            .col-12.p-2.pt-md-3
-                                                .pretty.p-default.p-round.mb-md-3
+
+                                            .col-12
+                                                .pretty.p-default.p-round.w-100
                                                     input(type='radio', name='contact-1')
                                                     .state
-                                                        label.multi-label
-                                                            span Popescu Adrian - 0723738053
+                                                        label.multi-label.w-75
+                                                            b Popescu Adrian - 0723738053
                                                             span Str. Matei Basarab, Nr. 40, Bl. 30, Scara B, et. 3, ap. 15 - Slobozia,
                                                                 | Ialomiţaspan
+                                                    a.btn.btn-default(role='button', href='#') Modifică
 
                                         a.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree') Adaugă alte informații pentru factură
 

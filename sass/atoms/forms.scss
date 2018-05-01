@@ -1,6 +1,9 @@
 .pretty{
 	white-space: unset;
 	.state{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 		label{
 			display: block;
 			span{
@@ -14,9 +17,25 @@
 					top: 25%;
 				}
 			}
+			//&.w-75{
+			//	@include media-breakpoint-down(sm) {
+			//		width: 100%;
+			//	}
+			//}
 		}
 	}
 }
+.pretty.p-default .btn{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	@include media-breakpoint-down(sm) {
+		width: auto;
+	}
+}
+.pretty.p-default input:checked ~ .btn{
+	display: inline-block;}
 .pretty.p-default input:checked ~ .state label:before,
 .pretty.p-default input:checked ~ .state label:after{
 	border:5px solid $danger ;
