@@ -17,13 +17,14 @@ $(document).ready(function () {
         asNavFor: '.productThumbCarousel-list'
     });
     $('.productThumbCarousel-list').slick({
-        slidesToShow: 4,
+        // slidesToShow: auto,
+        variableWidth: true,
         slidesToScroll: 1,
         nextArrow: '<button class="btn btn-secondary slick-next"><i class="fa fa-angle-right"></i></button>',
         prevArrow: '<button class="btn btn-secondary slick-prev"><i class="fa fa-angle-left"></i></button>',
         asNavFor: '.carousel-inner',
         dots: false,
-        //centerMode: true,
+        // centerMode: true,
         focusOnSelect: true
     });
 

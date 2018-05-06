@@ -364,6 +364,8 @@
 	margin: 0 auto;
 	overflow: hidden;
 	display: flex;
+	min-height: 0;
+	min-width: 0;
 	@include media-breakpoint-down(sm) {
 		max-width: 100%;
 	}
@@ -398,6 +400,7 @@
 		}
 	}
 	.slick-list{
+
 		overflow: hidden;
 		height: 80px;
 		padding: 0 40px;
@@ -413,8 +416,8 @@
 		width: 80px;
 		display: inline-block;
 		height: 80px;
-
 		overflow: hidden;
+		margin: 0 1px;
 		&:last-child{  margin-right: 0;  }
 		&:hover{  cursor: pointer;  }
 		img{
