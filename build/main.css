@@ -5245,7 +5245,13 @@ button.close {
     text-decoration: none; }
   .product-preview-large:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); }
-  .product-preview-large:hover .add-to-cart {
+  .product-preview-large .btn-at {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    display: none;
+    z-index: 1; }
+  .product-preview-large:hover .btn-at {
     display: block;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); }
   .product-preview-large .badge {
@@ -5293,9 +5299,6 @@ button.close {
       margin-right: 1rem; }
   .product-preview-large .add-to-cart {
     display: none;
-    position: absolute;
-    left: -1px;
-    right: -1px;
     padding: 0 1rem 1rem 1rem;
     background-color: #fff;
     border: 1px solid #d6d6d6;
@@ -6762,16 +6765,20 @@ h3 {
     border-bottom: 1px solid #d6d6d6;
     border-bottom-left-radius: 0.2143rem;
     border-bottom-right-radius: 0.2143rem; }
-  .category-selector .category-selector-item.show {
+  .category-selector .category-selector-item.show, .category-selector .category-selector-item:hover {
     box-shadow: 0 0 3px 0 #BCC1C2; }
-    .category-selector .category-selector-item.show .category-selector-menu {
+    .category-selector .category-selector-item.show .category-selector-menu, .category-selector .category-selector-item:hover .category-selector-menu {
       display: -ms-flexbox;
       display: flex;
-      min-height: 277px; }
-    .category-selector .category-selector-item.show .category-selector-button {
+      min-height: 277px;
+      transform: translateX(0);
+      opacity: 1;
+      transition: all .9s;
+      -o-transition: all .9s; }
+    .category-selector .category-selector-item.show .category-selector-button, .category-selector .category-selector-item:hover .category-selector-button {
       position: relative;
       color: #2d3537; }
-      .category-selector .category-selector-item.show .category-selector-button:before, .category-selector .category-selector-item.show .category-selector-button:after {
+      .category-selector .category-selector-item.show .category-selector-button:before, .category-selector .category-selector-item.show .category-selector-button:after, .category-selector .category-selector-item:hover .category-selector-button:before, .category-selector .category-selector-item:hover .category-selector-button:after {
         position: absolute;
         top: 0;
         left: 100%;
@@ -6780,17 +6787,19 @@ h3 {
         content: '';
         display: block;
         z-index: 3; }
-      .category-selector .category-selector-item.show .category-selector-button:before {
+      .category-selector .category-selector-item.show .category-selector-button:before, .category-selector .category-selector-item:hover .category-selector-button:before {
         box-sizing: content-box;
         width: 1rem;
         outline: 1px solid #d6d6d6;
         box-shadow: 0 0 3px 0 #BCC1C2; }
-      .category-selector .category-selector-item.show .category-selector-button:after {
+      .category-selector .category-selector-item.show .category-selector-button:after, .category-selector .category-selector-item:hover .category-selector-button:after {
         width: 2rem;
         background-color: #fff;
         transform: translateX(-25%); }
-      .category-selector .category-selector-item.show .category-selector-button .fa-chevron-right {
+      .category-selector .category-selector-item.show .category-selector-button .fa-chevron-right, .category-selector .category-selector-item:hover .category-selector-button .fa-chevron-right {
         opacity: 0; }
+  .category-selector .category-selector-item:hover .category-selector-menu {
+    display: block; }
   .category-selector .category-selector-item .svg-icon {
     width: 20px;
     height: 20px; }
@@ -6827,7 +6836,11 @@ h3 {
   border-radius: 0.2143rem;
   border: 1px solid #d6d6d6;
   box-shadow: 0 0 3px 0 #BCC1C2;
-  z-index: 2; }
+  z-index: 2;
+  opacity: .9;
+  transform: translateX(-30px);
+  transition: all .9s;
+  -o-transition: all .9s; }
   .category-selector .category-selector-menu h4 {
     color: #c21920;
     font-size: 1.143rem;

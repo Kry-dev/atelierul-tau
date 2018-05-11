@@ -13,8 +13,14 @@ $line-height: 1.4;
   &:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
   }
-
-  &:hover .add-to-cart{
+  .btn-at{
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    display: none;
+    z-index: 1;
+  }
+  &:hover .btn-at{
     display: block;
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
   }
@@ -88,9 +94,7 @@ $line-height: 1.4;
 
   .add-to-cart {
     display: none;
-    position: absolute;
-    left: -1px;
-    right: -1px;
+
     padding: 0 $default-spacing $default-spacing $default-spacing;
     background-color: $white;
     border: 1px solid $border-color;
