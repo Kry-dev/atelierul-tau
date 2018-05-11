@@ -68,12 +68,15 @@ $line-height: 1.4;
     }
     
     &:hover {
-      transform: translateY(-$copy-font-size * $line-height * $lines-to-show) translateY(-$default-spacing);
       overflow: visible;
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 0.2s;
-      transition: all 0.2s;
       //height: $copy-font-size * $line-height * $lines-to-show;
+      .product-preview-title-inner{
+        transform: translateY(-$copy-font-size * $line-height * $lines-to-show) translateY(-$default-spacing);
+        overflow: visible;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+      }
     }
   }
 

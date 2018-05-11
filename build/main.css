@@ -5280,9 +5280,11 @@ button.close {
       line-height: 1.4;
       margin: 0; }
     .product-preview-large .product-preview-title:hover {
-      transform: translateY(-4.2rem) translateY(-1rem);
-      overflow: visible;
-      transition: all 0.2s; }
+      overflow: visible; }
+      .product-preview-large .product-preview-title:hover .product-preview-title-inner {
+        transform: translateY(-4.2rem) translateY(-1rem);
+        overflow: visible;
+        transition: all 0.2s; }
   .product-preview-large .product-preview-price {
     position: relative;
     margin: 0 1rem;

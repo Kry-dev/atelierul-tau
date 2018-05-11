@@ -198,12 +198,10 @@ $(document).ready(function () {
     //         $target.children().addClass('show');
     //     }
     // });
-    $('.category-selector-items').parent().on("mouseover" , function (e) {
-        console.log('hover');
+    $('.category-selector-items').parent().on("mouseover" , function () {
         $(this).children('.collapse').collapse('show');
     });
-    $('.category-selector-items').parent().on("mouseleave" , function (e) {
-        console.log('lieve');
+    $('.category-selector-items').parent().on("mouseleave" , function () {
         $(this).children('.collapse').collapse('hide');
     });
 });
