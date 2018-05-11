@@ -1,5 +1,27 @@
 .category-selector {
   &.collapsible {
+    //.collapse{
+    //  //display: block;
+    //  -webkit-transform: translateY(-30px);
+    //  -ms-transform: translateY(-30px);
+    //  -o-transform: translateY(-30px);
+    //  transform: translateY(-30px);
+    //  -webkit-transition: opacity .3s,visibility .3s,-webkit-transform .3s;
+    //  transition: opacity .3s,visibility .3s,-webkit-transform .3s;
+    //  -o-transition: opacity .3s,visibility .3s,-o-transform .3s;
+    //  transition: opacity .3s,transform .3s,visibility .3s;
+    //  transition: opacity .3s,transform .3s,visibility .3s,-webkit-transform .3s,-o-transform .3s;
+    //}
+    //&:hover{
+    //  .collapse{
+    //    visibility: visible;
+    //    -webkit-transform: none;
+    //    -ms-transform: none;
+    //    -o-transform: none;
+    //    transform: none;
+    //    opacity: 1;
+    //  }
+    //}
     .category-selector-header {
       border-radius: $border-radius;
       cursor: pointer;
@@ -36,12 +58,21 @@
       border-bottom-right-radius: $border-radius;
     }
 
-    &.show {
+    &.show,
+    &:hover{
       box-shadow: 0 0 3px 0 $border-shadow-color;
 
       .category-selector-menu {
         display: flex;
         min-height: 277px;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+        -webkit-transition: all .9s;
+        transition: all .9s;
+        -o-transition: all .9s;
       }
 
       .category-selector-button {
@@ -75,11 +106,16 @@
         }
       }
     }
-
+    &:hover{
+      .category-selector-menu{
+        display: block;
+      }
+    }
     .svg-icon {
       width: 20px;
       height: 20px;
     }
+
   }
 
   // Hide Bootstrap dropdown overlay
@@ -120,6 +156,14 @@
     border: 1px solid $border-color;
     box-shadow: 0 0 3px 0 $border-shadow-color;
     z-index: 2;
+    opacity: .9;
+    -webkit-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    -o-transform: translateX(-30px);
+    transform: translateX(-30px);
+    -webkit-transition: all .9s;
+    transition: all .9s;
+    -o-transition: all .9s;
 
     h4 {
       color: theme-color("primary");

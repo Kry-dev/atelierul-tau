@@ -105,19 +105,27 @@ $(document).ready(function () {
     }
 
     // Set up category selector dropdowns
-    $('.category-selector-items').on('click', function (e) {
-        var $target = $(e.target);
-
-        if (!$target.hasClass('category-selector-button')) {
-            return;
-        }
-        if ($target.parent().hasClass('show')) {
-            $target.parent().removeClass('show');
-        } else {
-            $(this).children().each(function (index, item) {
-                $(item).removeClass('show');
-            });
-            $target.parent().addClass('show');
-        }
+    // $('.category-selector-items').parent().hover(function (e) {
+    //     var $target = $(e.type === "mouseenter");
+    //
+    //     if (!$target.children().hasClass('category-selector-button')) {
+    //         return;
+    //     }
+    //     if ($target.children().hasClass('show')) {
+    //         $target.children().removeClass('show');
+    //     } else {
+    //         $(this).children().each(function (index, item) {
+    //             $(item).removeClass('show');
+    //         });
+    //         $target.children().addClass('show');
+    //     }
+    // });
+    $('.category-selector-items').parent().on("mouseover" , function (e) {
+        console.log('hover');
+        $(this).children('.collapse').collapse('show');
+    });
+    $('.category-selector-items').parent().on("mouseleave" , function (e) {
+        console.log('lieve');
+        $(this).children('.collapse').collapse('hide');
     });
 });
