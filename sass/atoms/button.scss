@@ -40,7 +40,15 @@
   //padding: $input-btn-padding-y $default-spacing-1;
   border: 0;
 }
-
+.btn-submit{
+  color: $hyperlink-color;
+  &:hover,
+  &:focus{
+    cursor: pointer;
+    outline: none;
+    color: $hyperlink-hover-color;
+  }
+}
 .btn-at {
   @include button-variant($darkred, $white);
 

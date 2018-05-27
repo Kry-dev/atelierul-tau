@@ -43,3 +43,23 @@
 .pretty.p-default input:checked~.state label:after{
 	background: $white !important;
 }
+.login-form{
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	&-group{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		margin-bottom: 1rem;
+	}
+	&-label{
+		display: flex;
+		width: 100%;
+	}
+	.login-phone{
+		width: 100%;
+	}
+}

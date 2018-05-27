@@ -14,7 +14,19 @@
                                 .col-md-6.bodrer-right-2
                                     p Ai mai comandat de la noi? Completează cu adresa de email sau telefonul folosite pentru comenzile mai vechi.
                                     .checkout-login.pr-md-5
-                                        form.w100
+                                        form.login-form(name='login', action='http://www.wunderhaff.hu/login.php?action=process',
+                                        method='post')
+                                            input(type='hidden', name='formid', value='724b4d2cca3fcc111c81cc75e355cc58')
+                                            .login-form-group
+                                                .login-form-label Adresa de email:
+                                                input.form-control(type='text', name='email_address', placeholder='Completează email-ul')
+                                            .login-form-group
+                                                .login-form-label Parola:
+                                                input.form-control(type='password', name='password', maxlength='40', placeholder='Parola')
+                                            .d-flex.mb-3
+                                                input.btn.btn-submit(type='submit', value='Autentificare')
+                                    a(href="http://www.wunderhaff.hu/password_forgotten.php") Ai uitat parola? Click aici pentru a o recupera
+                                        //form.w100
                                             .login-phone
                                                 input.form-control(type='text', placeholder='Completează cu email-ul sau telefonul… ')
                                             a.btn.btn-default(role='button', data-toggle='collapse', href='#otp-verifaction') Autentifică-mă în site
