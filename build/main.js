@@ -209,10 +209,18 @@ $(document).ready(function () {
     });
     $('.header-search-icon').click(function (e) {
         e.preventDefault();
-        $('.header-search').css('display','flex');
+        $('.header-search').addClass('d-flex')
     });
-    $('#closeMobileSearch').click(function () {
-        $('.header-search').css('display','none');
+    $('#closeMobileSearch').click(function (e) {
+        e.preventDefault();
+        $('.header-search').removeClass('d-flex')
+    });
+    $('#showFilterListing').click(function () {
+        $('.filter-box').slideDown( "300");
+    });
+    $('#closeFilterListing').click(function (e) {
+        e.preventDefault();
+        $('.filter-box').slideUp( "300");
     });
 });
 

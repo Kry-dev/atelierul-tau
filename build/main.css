@@ -6468,6 +6468,55 @@ h3 {
 
 .accessories-listing-mobile-header {
   border-bottom: 1px solid #E3E7EA; }
+  .accessories-listing-mobile-header .navbar {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+  @media (max-width: 767px) {
+    .accessories-listing-mobile-header .navbar {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .accessories-listing-mobile-header .navbar .navbar-brand {
+        margin: 0;
+        width: 100%;
+        -ms-flex-order: -1;
+            order: -1;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+      .accessories-listing-mobile-header .navbar .btn {
+        width: 100%; }
+        .accessories-listing-mobile-header .navbar .btn:first-child {
+          margin-bottom: 10px; } }
+
+.filter-box #closeFilterListing {
+  display: none; }
+
+@media (max-width: 767px) {
+  .filter-box {
+    width: 100%;
+    display: none;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 1030;
+    background: #fff;
+    padding: 1rem 0; }
+    .filter-box h3 {
+      text-align: center;
+      line-height: 1.2; }
+    .filter-box #closeFilterListing {
+      display: block;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background: #dc3545;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      z-index: 10; } }
 
 .cart {
   padding-top: 1rem;

@@ -269,10 +269,12 @@
       </div>
     </div>
     <!-- Accessories listing page for tablet and larger resolutions-->
-    <div class="accessories-listing container hidden-sm-down">
-      <div class="accessories-listing-header"><img src="assets/burghie_sds_plus.jpg"></div>
+    <div class="accessories-listing container">
+      <!--.accessories-listing-header.hidden-sm-down-->
+      <!--  img(src=require('../assets/burghie_sds_plus.jpg'))-->
       <div class="row">
-        <div class="col-3">
+        <div class="col-md-3 col-sm-12 filter-box">
+          <button class="btn btn-primary" id="closeFilterListing"><i class="fa fa-close"></i></button>
           <h3>Filtrează după</h3>
           <div class="accessories-listing-fiters">
             <h4>Producător</h4>
@@ -345,7 +347,7 @@
             </div>
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-md-9 hidden-sm-down">
           <div class="accessories-listing-items">
             <table class="table table-striped">
               <thead>
@@ -546,7 +548,7 @@
     <div class="accessories-listing-mobile-header hidden-md-up">
       <nav class="navbar navbar-light sticky-top">
         <button class="btn btn-secondary"><i class="fa fa-chevron-left"></i>&nbsp;Burghie și accesorii</button><span class="navbar-brand">Burghie SDS Plus</span>
-        <button class="btn btn-secondary">3 Filtre aplicate&nbsp;<i class="fa fa-filter"></i></button>
+        <button class="btn btn-secondary" id="showFilterListing">3 Filtre aplicate&nbsp;<i class="fa fa-filter"></i></button>
       </nav>
     </div>
     <div class="accessories-listing-mobile-items container hidden-md-up">
