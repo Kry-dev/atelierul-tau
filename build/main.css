@@ -6801,7 +6801,8 @@ h3 {
       .category-selector .category-selector-item.show .category-selector-button .fa-chevron-right, .category-selector .category-selector-item:hover .category-selector-button .fa-chevron-right {
         opacity: 0; }
   .category-selector .category-selector-item:hover .category-selector-menu {
-    display: block; }
+    display: -ms-flexbox;
+    display: flex; }
   .category-selector .category-selector-item .svg-icon {
     width: 20px;
     height: 20px; }

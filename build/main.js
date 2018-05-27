@@ -87,22 +87,23 @@ $(document).ready(function () {
         autoplay: false,
         autoplaySpeed: 2000
     });
-    $('.carousel-inner').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.productThumbCarousel-list'
-    });
+    var initProductSlider = function(){
+        $('.carousel-inner').not('.slick-initialized').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.productThumbCarousel-list'
+        });
+    };
+    initProductSlider();
     $('.productThumbCarousel-list').slick({
-        // slidesToShow: auto,
         variableWidth: true,
         slidesToScroll: 1,
         nextArrow: '<button class="btn btn-secondary slick-next"><i class="fa fa-angle-right"></i></button>',
         prevArrow: '<button class="btn btn-secondary slick-prev"><i class="fa fa-angle-left"></i></button>',
         asNavFor: '.carousel-inner',
         dots: false,
-        // centerMode: true,
         focusOnSelect: true
     });
 
@@ -111,7 +112,6 @@ $(document).ready(function () {
 
     $relatedProductsContainers.each(function (i, container) {
         var $container = $(container);
-
         $container.find('.related-products-list').slick({
             dots: false,
             infinite: false,
@@ -146,6 +146,9 @@ $(document).ready(function () {
             $productHeader.removeClass('fixed');
             $productTabs.removeClass('fixed');
             $('.product-detail-content').css('padding-top', '0');
+        }
+        if ($(window).scrollTop() <= $productScrollPoint){
+            $('.carousel-inner').slick('reinit');
         }
     });
 

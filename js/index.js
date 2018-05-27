@@ -10,7 +10,7 @@ $(document).ready(function () {
         autoplaySpeed: 2000
     });
     var initProductSlider = function(){
-        $('.carousel-inner').slick({
+        $('.carousel-inner').not('.slick-initialized').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -20,14 +20,12 @@ $(document).ready(function () {
     };
     initProductSlider();
     $('.productThumbCarousel-list').slick({
-        // slidesToShow: auto,
         variableWidth: true,
         slidesToScroll: 1,
         nextArrow: '<button class="btn btn-secondary slick-next"><i class="fa fa-angle-right"></i></button>',
         prevArrow: '<button class="btn btn-secondary slick-prev"><i class="fa fa-angle-left"></i></button>',
         asNavFor: '.carousel-inner',
         dots: false,
-        // centerMode: true,
         focusOnSelect: true
     });
 
@@ -66,11 +64,13 @@ $(document).ready(function () {
             $productHeader.addClass('fixed');
             $productTabs.addClass('fixed');
             $('.product-detail-content').css('padding-top', $productScrollPoint);
-            //initProductSlider();
         }else{
             $productHeader.removeClass('fixed');
             $productTabs.removeClass('fixed');
             $('.product-detail-content').css('padding-top', '0');
+        }
+        if ($(window).scrollTop() <= $productScrollPoint){
+            $('.carousel-inner').slick('reinit');
         }
     });
 
