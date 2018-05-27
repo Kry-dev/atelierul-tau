@@ -101,6 +101,25 @@ h3 {
   .navbar{
     flex-wrap: nowrap;
   }
+  @include media-breakpoint-down(sm){
+    .navbar{
+      flex-direction: column;
+      .navbar-brand{
+        margin: 0;
+        width: 100%;
+        order: -1;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+      }
+      .btn{
+        width: 100%;
+        &:first-child{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 .filter-box{
   #closeFilterListing{
@@ -117,6 +136,7 @@ h3 {
     padding: 1rem 0;
     h3{
       text-align: center;
+      line-height: 1.2;
     }
     #closeFilterListing{
       display: block;
@@ -125,8 +145,8 @@ h3 {
       color: $white;
       background: $red;
       position: absolute;
-      right: 1px;
-      top: 1px;
+      right: 2px;
+      top: 2px;
       z-index: 10;
     }
   }
