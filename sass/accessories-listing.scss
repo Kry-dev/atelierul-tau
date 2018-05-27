@@ -98,4 +98,36 @@ h3 {
 
 .accessories-listing-mobile-header {
   border-bottom: 1px solid $secondary-border-color;
+  .navbar{
+    flex-wrap: nowrap;
+  }
+}
+.filter-box{
+  #closeFilterListing{
+    display: none;
+  }
+  @include media-breakpoint-down(sm){
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 1030;
+    background: $white;
+    padding: 1rem 0;
+    h3{
+      text-align: center;
+    }
+    #closeFilterListing{
+      display: block;
+      width: 40px;
+      height: 40px;
+      color: $white;
+      background: $red;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      z-index: 10;
+    }
+  }
 }
