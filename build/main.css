@@ -5071,6 +5071,13 @@ button.close {
 .btn-google-plus {
   border: 0; }
 
+.btn-submit {
+  color: #c21920; }
+  .btn-submit:hover, .btn-submit:focus {
+    cursor: pointer;
+    outline: none;
+    color: #951319; }
+
 .btn-at {
   color: #fff;
   background-color: #c21920;
@@ -5343,6 +5350,30 @@ button.close {
 
 .pretty.p-default input:checked ~ .state label:after {
   background: #fff !important; }
+
+.login-form {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .login-form-group {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-bottom: 1rem; }
+  .login-form-label {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .login-form .login-phone {
+    width: 100%; }
 
 .m-0 {
   margin: 0 !important; }

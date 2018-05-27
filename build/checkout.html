@@ -280,12 +280,26 @@
                 <div class="col-md-6 bodrer-right-2">
                   <p>Ai mai comandat de la noi? Completează cu adresa de email sau telefonul folosite pentru comenzile mai vechi.</p>
                   <div class="checkout-login pr-md-5">
-                    <form class="w100">
-                      <div class="login-phone">
-                        <input class="form-control" type="text" placeholder="Completează cu email-ul sau telefonul… ">
-                      </div><a class="btn btn-default" role="button" data-toggle="collapse" href="#otp-verifaction">Autentifică-mă în site</a>
+                    <form class="login-form" name="login" action="http://www.wunderhaff.hu/login.php?action=process" method="post">
+                      <input type="hidden" name="formid" value="724b4d2cca3fcc111c81cc75e355cc58">
+                      <div class="login-form-group">
+                        <div class="login-form-label">Adresa de email:</div>
+                        <input class="form-control" type="text" name="email_address" placeholder="Completează email-ul">
+                      </div>
+                      <div class="login-form-group">
+                        <div class="login-form-label">Parola:</div>
+                        <input class="form-control" type="password" name="password" maxlength="40" placeholder="Parola">
+                      </div>
+                      <div class="d-flex mb-3">
+                        <input class="btn btn-submit" type="submit" value="Autentificare">
+                      </div>
                     </form>
-                  </div>
+                  </div><a href="http://www.wunderhaff.hu/password_forgotten.php">Ai uitat parola? Click aici pentru a o recupera
+                    <!--form.w100
+                    .login-phone
+                        input.form-control(type='text', placeholder='Completează cu email-ul sau telefonul… ')
+                    a.btn.btn-default(role='button', data-toggle='collapse', href='#otp-verifaction') Autentifică-mă în site
+                    --></a>
                 </div>
                 <div class="col-md-6 pl-md-5">
                   <p>Nu ai cont pe AtelierulTău.ro? Deschide-ți un cont acum și poți trimite comenzile mult mai rapid!</p><a class="btn btn-default" role="button" href="#">Deschid cont pe AtelierulTău.ro</a>
