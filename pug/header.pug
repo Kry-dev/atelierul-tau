@@ -23,9 +23,9 @@
             |  Ai deja cont? Autentifica-te aici
   
   // Main header for tablet and larger resolutions
-  .main-header.hidden-sm-down
+  .main-header
     .container
-      a.header-logo(href="/")
+      a.header-logo(href="/").hidden-sm-down
         img(src=require('../assets/logo.png'), width='282', height='52')
       form.header-search.input-group
         input.form-control.header-search-input(type="text", placeholder="Cauta un produs...")
@@ -38,7 +38,11 @@
         .input-group-btn
           button.btn.btn-primary(type="button")
             i.fa.fa-search
-      .header-cart
+        .input-group-btn.hidden-md-up
+          button#closeMobileSearch.btn.btn-primary
+            i.fa.fa-close
+          //button#closeMobileSearch.btn.btn-primary.hidden-sm-up
+      .header-cart.hidden-sm-down
         .header-cart-icon
           i.fa.fa-shopping-cart
           .header-cart-counter.badge.badge-primary.badge-pill 24
@@ -58,7 +62,7 @@
       a.navbar-brand(href="/")
         img(src=require('../assets/logo.png'), width='150')
       .mobile-header-right-controls
-        .header-search-icon
+        a.header-search-icon
           i.fa.fa-search
         .header-cart-icon
           i.fa.fa-shopping-cart

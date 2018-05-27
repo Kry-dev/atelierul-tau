@@ -207,6 +207,13 @@ $(document).ready(function () {
     $('.category-selector-items').parent().on("mouseleave" , function () {
         $(this).children('.collapse').collapse('hide');
     });
+    $('.header-search-icon').click(function (e) {
+        e.preventDefault();
+        $('.header-search').css('display','flex');
+    });
+    $('#closeMobileSearch').click(function () {
+        $('.header-search').css('display','none');
+    });
 });
 
 

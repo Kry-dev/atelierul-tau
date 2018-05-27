@@ -7827,7 +7827,9 @@ h3 {
       border-width: 2px 1px 2px 1px; }
     .header .main-header .header-search .btn-primary {
       border-color: transparent;
-      margin-left: 0px; }
+      margin-left: 0; }
+      .header .main-header .header-search .btn-primary:hover, .header .main-header .header-search .btn-primary:focus {
+        cursor: pointer; }
     .header .main-header .header-cart {
       display: -ms-flexbox;
       display: flex;
@@ -7886,6 +7888,8 @@ h3 {
     .header .mobile-header .header-search-icon i {
       color: #E3E7EA;
       font-size: 2rem; }
+    .header .mobile-header .header-search-icon:hover, .header .mobile-header .header-search-icon:focus {
+      cursor: pointer; }
 
 @media (max-width: 991px) {
   .header-logo {
@@ -7898,6 +7902,22 @@ h3 {
     width: 300px; }
   .header-search {
     width: calc(100% - 0.5rem - 300px - 190px); } }
+
+@media (max-width: 767px) {
+  .header .main-header {
+    height: 0; }
+  .header-search {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: none; }
+    .header-search input,
+    .header-search button {
+      padding: 15px; }
+      .header-search input:hover, .header-search input:focus,
+      .header-search button:hover,
+      .header-search button:focus {
+        cursor: pointer; } }
 
 .footer {
   position: relative;

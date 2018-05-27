@@ -113,8 +113,8 @@
     </div>
   </div>
   <!-- Main header for tablet and larger resolutions-->
-  <div class="main-header hidden-sm-down">
-    <div class="container"><a class="header-logo" href="/"><img src="assets/logo.png" width="282" height="52"></a>
+  <div class="main-header">
+    <div class="container"><a class="header-logo hidden-sm-down" href="/"><img src="assets/logo.png" width="282" height="52"></a>
       <form class="header-search input-group">
         <input class="form-control header-search-input" type="text" placeholder="Cauta un produs...">
         <div class="input-group-btn">
@@ -124,8 +124,12 @@
         <div class="input-group-btn">
           <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
         </div>
+        <div class="input-group-btn hidden-md-up">
+          <button class="btn btn-primary" id="closeMobileSearch"><i class="fa fa-close"></i></button>
+          <!--button#closeMobileSearch.btn.btn-primary.hidden-sm-up-->
+        </div>
       </form>
-      <div class="header-cart">
+      <div class="header-cart hidden-sm-down">
         <div class="header-cart-icon"><i class="fa fa-shopping-cart"></i>
           <div class="header-cart-counter badge badge-primary badge-pill">24</div>
         </div>
@@ -140,8 +144,7 @@
   <div class="mobile-header hidden-md-up">
     <nav class="navbar navbar-light navbar-expand-lg">
       <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="/"><img src="assets/logo.png" width="150"></a>
-      <div class="mobile-header-right-controls">
-        <div class="header-search-icon"><i class="fa fa-search"></i></div>
+      <div class="mobile-header-right-controls"><a class="header-search-icon"><i class="fa fa-search"></i></a>
         <div class="header-cart-icon"><i class="fa fa-shopping-cart"></i>
           <div class="header-cart-counter">24</div>
         </div>

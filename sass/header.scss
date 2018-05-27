@@ -60,7 +60,11 @@ $header-cart-width: 190px;
 
       .btn-primary {
         border-color: transparent;
-        margin-left: 0px;
+        margin-left: 0;
+        &:hover,
+        &:focus{
+          cursor: pointer;
+        }
       }
     }
 
@@ -152,6 +156,10 @@ $header-cart-width: 190px;
         color: $secondary-border-color;
         font-size: 2rem;
       }
+      &:hover,
+      &:focus{
+        cursor: pointer;
+      }
     }
   }
 }
@@ -173,5 +181,28 @@ $header-cart-width: 190px;
 
   .header-search {
     width: calc(100% - #{$default-spacing-2} - #{$header-logo-width} - #{$header-cart-width});
+  }
+}
+@include media-breakpoint-down(sm){
+  .header{
+    .main-header{
+      height: 0;
+    }
+  }
+  .header-search{
+
+    position: absolute;
+    width: 100%;
+    top:0;
+    display: none;
+    input,
+    button{
+      padding: 15px;
+      &:hover,
+      &:focus{
+        cursor: pointer;
+      }
+    }
+
   }
 }
