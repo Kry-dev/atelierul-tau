@@ -6503,10 +6503,11 @@ h3 {
     top: 0;
     z-index: 1030;
     background: #fff;
-    padding: 1rem 0; }
+    padding: 0; }
     .filter-box h3 {
       text-align: center;
-      line-height: 1.2; }
+      line-height: 1.2;
+      padding: .5rem; }
     .filter-box #closeFilterListing {
       display: block;
       width: 40px;
