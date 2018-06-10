@@ -1227,6 +1227,9 @@ pre {
     background-color: #fff;
     border-color: #ec6e73;
     outline: none; }
+  .form-control::-webkit-input-placeholder {
+    color: #868e96;
+    opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #868e96;
     opacity: 1; }
@@ -4996,6 +4999,18 @@ button.close {
     font-weight: bold;
     color: inherit;
     vertical-align: top; }
+  .table.table-nowrap-2cols th:first-child,
+  .table.table-nowrap-2cols th:nth-child(2) {
+    width: 0;
+    white-space: nowrap; }
+  .table.table-nowrap-2cols tr > td:first-child {
+    color: #5C6365;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1rem; }
+  .table.table-nowrap-2cols .price-cell {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
 
 .btn:focus, .btn:active {
   box-shadow: none; }
@@ -6415,21 +6430,22 @@ h3 {
     .accessories-listing-fiters h4:first-child {
       margin-top: 0; }
 
-.accessories-listing-items .price-header {
-  text-align: center; }
-
-.accessories-listing-items .price-cell {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-  .accessories-listing-items .price-cell .price-over {
-    font-weight: 700;
-    font-size: 1.714rem; }
+.accessories-listing-items {
+  width: 100%; }
+  .accessories-listing-items .price-header {
+    text-align: center; }
+  .accessories-listing-items .price-cell {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .accessories-listing-items .price-cell .price-over {
+      font-weight: 700;
+      font-size: 1.714rem; }
 
 @media (max-width: 1199px) {
   .accessories-listing-items .price-cell {
@@ -8085,6 +8101,9 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 14px; }
+
+input::-webkit-input-placeholder {
+  color: #94999c !important; }
 
 input:-ms-input-placeholder {
   color: #94999c !important; }

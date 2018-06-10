@@ -96,4 +96,20 @@ $rotated-label-height: 150px;
     color: inherit;
     vertical-align: top;
   }
+  &.table-nowrap-2cols{
+    th:first-child,
+    th:nth-child(2){
+      width: 0;
+      white-space: nowrap;
+    }
+    tr > td:first-child{
+      color: #5C6365;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 1rem;
+    }
+    .price-cell{
+      flex-wrap: nowrap;
+    }
+  }
 }
