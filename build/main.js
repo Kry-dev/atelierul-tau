@@ -222,6 +222,18 @@ $(document).ready(function () {
         e.preventDefault();
         $('.filter-box').slideUp( "300");
     });
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > $(".main-products").height() - 100) {
+            $('.scrollTop-container').show();
+        } else {
+            $('.scrollTop-container').hide();
+        }
+    });
+    $('#scrollTop').click(function(){
+        $('html, body').animate({scrollTop : 0});
+        return false;
+    });
+
 });
 
 

@@ -133,3 +133,25 @@
     }
   }
 }
+.scrollTop-container{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  bottom: 20%;
+  z-index: 10;
+  .scrollTop{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100%;
+    background-color: $darkred;
+    box-shadow: 0 2px 2px #eee;
+    z-index: 100;
+    color: #fff;
+    margin: 0 auto;
+    outline: 0;
+  }
+}

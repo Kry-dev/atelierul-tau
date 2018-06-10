@@ -5198,6 +5198,30 @@ button.close {
       .add-to-cart .fa {
         font-size: 1rem; } }
 
+.scrollTop-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  left: 0;
+  position: fixed;
+  bottom: 20%;
+  z-index: 10; }
+  .scrollTop-container .scrollTop {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100%;
+    background-color: #c21920;
+    box-shadow: 0 2px 2px #eee;
+    z-index: 100;
+    color: #fff;
+    margin: 0 auto;
+    outline: 0; }
+
 .divider {
   display: -ms-flexbox;
   display: flex;
@@ -8277,24 +8301,25 @@ ul {
     .main-carousel .slick-dots li.slick-active button {
       background-color: #ffd43d; }
 
-.main-products .nav-tabs {
-  -ms-flex-align: end;
-      align-items: flex-end; }
-
-.main-products .nav-item {
-  margin-bottom: 0;
-  margin-right: 0.25rem; }
-
-.main-products .nav-link {
-  background-color: #F2F2F2;
-  color: #2d3537;
-  font-size: 20px; }
-  .main-products .nav-link:hover {
-    border-color: transparent; }
-  .main-products .nav-link.active {
-    border-color: transparent;
-    background-color: #ffd43d;
-    font-size: 24px; }
+.main-products {
+  position: relative;
+  z-index: 15; }
+  .main-products .nav-tabs {
+    -ms-flex-align: end;
+        align-items: flex-end; }
+  .main-products .nav-item {
+    margin-bottom: 0;
+    margin-right: 0.25rem; }
+  .main-products .nav-link {
+    background-color: #F2F2F2;
+    color: #2d3537;
+    font-size: 20px; }
+    .main-products .nav-link:hover {
+      border-color: transparent; }
+    .main-products .nav-link.active {
+      border-color: transparent;
+      background-color: #ffd43d;
+      font-size: 24px; }
 
 .main-product-list {
   border: 1px solid #d6d6d6;
@@ -8316,8 +8341,16 @@ ul {
       border-bottom: none; }
 
 .main-related {
+  position: relative;
+  z-index: 15;
   background-color: #F2F2F2;
   border-top: 1px solid #E3E7EA;
   border-bottom: 1px solid #E3E7EA; }
+
+.main-content,
+.main-recently-viewed {
+  position: relative;
+  overflow: hidden;
+  z-index: 15; }
 
 /*# sourceMappingURL=main.css.map*/
