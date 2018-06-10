@@ -6943,14 +6943,16 @@ h3 {
   -o-transition: all .9s; }
   .category-selector .category-selector-menu h4 {
     color: #c21920;
-    font-size: 1.143rem;
+    font-size: 1.0287rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem; }
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem; }
   .category-selector .category-selector-menu li {
-    margin-bottom: 0.25rem; }
+    margin-bottom: 0; }
   .category-selector .category-selector-menu a {
-    color: #2d3537; }
+    color: #2d3537;
+    font-size: 90%;
+    line-height: 1; }
 
 .category-selector .category-selector-menu-items {
   columns: 3;
