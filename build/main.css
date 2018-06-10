@@ -6840,6 +6840,9 @@ h3 {
   border-radius: 0.2143rem;
   cursor: pointer; }
 
+.category-selector.collapsible-items {
+  position: relative; }
+
 .category-selector .category-selector-header {
   display: -ms-flexbox;
   display: flex;
@@ -6934,6 +6937,9 @@ h3 {
   left: 25%;
   right: calc(1rem - 1px);
   width: auto;
+  height: 100%;
+  min-height: 90vh;
+  max-height: 120vh;
   font-size: 1rem;
   background-color: #fff;
   border-radius: 0.2143rem;
