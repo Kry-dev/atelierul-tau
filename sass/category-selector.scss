@@ -70,9 +70,10 @@
         -o-transform: translateX(0);
         transform: translateX(0);
         opacity: 1;
-        -webkit-transition: all .9s;
-        transition: all .9s;
-        -o-transition: all .9s;
+        visibility: visible;
+        -webkit-transition: all .9s ease .5s;
+        transition: all .9s ease .5s;
+        -o-transition: all .9s ease .5s;
       }
 
       .category-selector-button {
@@ -144,9 +145,10 @@
   }
 
   .category-selector-menu {
-    display: none;
+    display: flex;
     position: absolute;
     top: 0;
+    visibility: hidden;
     left: 25%;
     right: calc(#{$default-spacing} - 1px);
     width: auto;
@@ -156,14 +158,14 @@
     border: 1px solid $border-color;
     box-shadow: 0 0 3px 0 $border-shadow-color;
     z-index: 2;
-    opacity: .9;
+    opacity: 0;
     -webkit-transform: translateX(-30px);
     -ms-transform: translateX(-30px);
     -o-transform: translateX(-30px);
     transform: translateX(-30px);
-    -webkit-transition: all .9s;
-    transition: all .9s;
-    -o-transition: all .9s;
+    -webkit-transition: all .9s ease .5s;
+    transition: all .9s ease .5s;
+    -o-transition: all .9s ease .5s;
 
     h4 {
       color: theme-color("primary");

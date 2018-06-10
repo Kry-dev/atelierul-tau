@@ -1,6 +1,6 @@
 include mixins.pug
 
-mixin category-selector(collapsed = true)
+mixin category-selector(collapsed = false)
   .category-selector(class = collapsed ? 'collapsible' : '')
     if collapsed
       .category-selector-header(data-toggle="collapse", data-target=".category-selector-items")
