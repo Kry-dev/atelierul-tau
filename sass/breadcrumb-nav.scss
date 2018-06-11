@@ -1,6 +1,11 @@
 .breadcrumb-nav-wrapper {
   position: relative;
   z-index: 100;
+  > .breadcrumb-nav{
+    height: auto;
+    min-width: 42px;
+    max-height: 100px;
+  }
 }
 
 .breadcrumb-nav {

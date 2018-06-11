@@ -6843,6 +6843,10 @@ h3 {
 .breadcrumb-nav-wrapper {
   position: relative;
   z-index: 100; }
+  .breadcrumb-nav-wrapper > .breadcrumb-nav {
+    height: auto;
+    min-width: 42px;
+    max-height: 100px; }
 
 .breadcrumb-nav {
   margin-top: 1rem;
