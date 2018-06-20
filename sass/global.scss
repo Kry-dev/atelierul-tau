@@ -41,3 +41,8 @@
 
 // Make sure our mixins override BS mixins
 @import './mixins.scss';
+
+html,
+body{
+	height: 100%;
+}

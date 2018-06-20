@@ -46,7 +46,7 @@ module.exports = {
             postcssLoader,
             {
               loader: 'sass-loader',
-              query: {sourceMap: true}
+              query: {sourceMap: false}
             }
           ]
         })
