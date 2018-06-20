@@ -8,6 +8,7 @@ $social-link-size: 44px;
   background-color: $secondary-background-color;
   border-top: 1px solid $secondary-border-color;
   font-size: $copy-font-size;
+  z-index: 100;
 
   ul {
     list-style: none;
@@ -121,6 +122,8 @@ $social-link-size: 44px;
   color: $white;
   font-size: $copy-font-size;
   background-color: #333;
+  position: relative;
+  z-index: 100;
 }
 
 @include media-breakpoint-down(sm) {

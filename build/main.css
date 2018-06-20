@@ -8358,6 +8358,7 @@ ul {
 .main-recently-viewed {
   position: relative;
   overflow: hidden;
-  z-index: 15; }
+  z-index: 15;
+  background: white; }
 
 /*# sourceMappingURL=main.css.map*/

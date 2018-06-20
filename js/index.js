@@ -144,12 +144,17 @@ $(document).ready(function () {
         e.preventDefault();
         $('.filter-box').slideUp( "300");
     });
-    $('.scrollTop-container').hide();
+    // $('.scrollTop-container').hide();
     $(window).scroll(function(){
-        if ($(this).scrollTop() > $(".main-products").height() - 100) {
-            $('.scrollTop-container').show();
+        if ($(this).scrollTop() > $(".main-products").height() - 200) {
+            $('.main-products > .scrollTop').addClass("show");
         } else {
-            $('.scrollTop-container').hide();
+            $('.main-products > .scrollTop').removeClass("show");
+        }
+        if ($(this).scrollTop() > $(".accessories-listing-fiters").height() - 200) {
+            $('.accessories-listing-fiters > .scrollTop').addClass("show");
+        } else {
+            $('.accessories-listing-fiters > .scrollTop').removeClass("show");
         }
     });
     $('#scrollTop').click(function(){
