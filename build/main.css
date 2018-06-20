@@ -6967,7 +6967,7 @@ h3 {
   right: calc(1rem - 1px);
   width: auto;
   height: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   max-height: 120vh;
   font-size: 1rem;
   background-color: #fff;

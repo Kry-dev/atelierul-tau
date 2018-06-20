@@ -144,6 +144,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('.filter-box').slideUp( "300");
     });
+    $('.scrollTop-container').hide();
     $(window).scroll(function(){
         if ($(this).scrollTop() > $(".main-products").height() - 100) {
             $('.scrollTop-container').show();
