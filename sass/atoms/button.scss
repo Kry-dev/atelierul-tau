@@ -148,7 +148,7 @@
   margin: 0 auto;
   outline: 0;
   &.left{
-    left: 14%;
+    left: 10%;
   }
   &.right{
     right: 15%;
@@ -163,5 +163,9 @@
   }
   &.show{
     opacity: 1;
+  }
+  &:hover,
+  &:focus{
+    outline: none;
   }
 }
