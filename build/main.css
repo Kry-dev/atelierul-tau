@@ -4774,6 +4774,16 @@ body {
   padding: 0 1rem;
   color: #868e96; }
 
+.breadcrumb-inner {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+  .breadcrumb-inner .breadcrumb {
+    margin: 0;
+    background-color: white;
+    border-radius: 0;
+    border: 1px solid #d6d6d6; }
+
 .badge {
   text-transform: uppercase;
   padding: 0.5rem; }
@@ -5288,6 +5298,7 @@ body {
     max-width: 100%;
     height: auto; }
   .product-preview .product-preview-title {
+    min-height: 85px;
     display: block;
     font-weight: 700;
     font-size: 1rem; }

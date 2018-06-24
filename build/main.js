@@ -238,6 +238,15 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop : 0});
         return false;
     });
+    var max_col_height = 0; // максимальная высота, первоначально 0
+    $('.related-products-list > .product-preview').each(function(){ // цикл "для каждой из колонок"
+        if ($(this).height() > max_col_height) { // если высота колонки больше значения максимальной высоты,
+            max_col_height = $(this).height(); // то она сама становится новой максимальной высотой
+        }
+    });
+    $('.related-products-list > .product-preview').height(max_col_height); // устанавливаем высоту каждой колонки равной значению
+    // максимальной высоты
+
 
 });
 
