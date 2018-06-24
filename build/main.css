@@ -6591,9 +6591,15 @@ h3 {
       top: 0;
       right: 0; }
     .cart .cart-item .cart-item-image {
+      display: inline-block;
       float: left;
-      width: 240px;
-      padding-right: 1rem; }
+      width: 150px;
+      margin-right: 1rem; }
+      .cart .cart-item .cart-item-image a {
+        margin: 0 auto;
+        display: block;
+        width: 150px;
+        height: 150px; }
       .cart .cart-item .cart-item-image img {
         vertical-align: middle;
         width: 100%;
@@ -6601,7 +6607,7 @@ h3 {
         object-fit: contain; }
     .cart .cart-item .cart-item-details,
     .cart .cart-item .cart-item-footer {
-      margin-left: 240px; }
+      margin-left: 150px; }
     .cart .cart-item .cart-item-details {
       display: -ms-flexbox;
       display: flex;

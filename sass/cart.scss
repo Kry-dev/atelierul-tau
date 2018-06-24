@@ -1,4 +1,4 @@
-$cart-item-image-width: 240px;
+$cart-item-image-width: 150px;
 $services-icon-size: 36px;
 
 .cart {
@@ -32,9 +32,16 @@ $services-icon-size: 36px;
     }
 
     .cart-item-image {
+      display: inline-block;
       float: left;
       width: $cart-item-image-width;
-      padding-right: $default-spacing;
+      margin-right: $default-spacing;
+      a{
+        margin: 0 auto;
+        display: block;
+        width: 150px;
+        height: 150px;
+      }
 
       img {
         vertical-align: middle;
