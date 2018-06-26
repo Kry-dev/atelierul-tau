@@ -5363,12 +5363,13 @@ body {
     display: none;
     width: 100%;
     position: absolute;
-    left: -1px;
-    right: -1px;
+    left: 0;
+    right: -2px;
     padding: 0 1rem 1rem 1rem;
     background: #fff;
-    border: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
     border-top: none;
+    border-radius: 0;
     z-index: 1; }
 
 .pretty {
