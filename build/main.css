@@ -5361,13 +5361,14 @@ body {
       margin-right: 1rem; }
   .product-preview-large .add-to-cart {
     display: none;
-    width: 100%;
+    width: 99.5%;
     position: absolute;
+    top: 99%;
     left: 0;
-    right: -2px;
+    right: 0;
     padding: 0 1rem 1rem 1rem;
     background: #fff;
-    border-bottom: 1px solid #d6d6d6;
+    border: 0 1px 1px solid #d6d6d6;
     border-top: none;
     border-radius: 0;
     z-index: 1; }
