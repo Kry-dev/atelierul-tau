@@ -5012,7 +5012,7 @@ body {
   .table td {
     font-weight: bold;
     color: inherit;
-    vertical-align: top; }
+    vertical-align: middle; }
   .table.table-nowrap-2cols th:first-child,
   .table.table-nowrap-2cols th:nth-child(2) {
     width: 0;
