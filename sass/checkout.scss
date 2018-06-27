@@ -210,6 +210,17 @@
 			}
 		}
 	}
+	.pretty{
+		width: 100%;
+		label{
+			width: 100%;
+			img{
+				max-width: 100px;
+				margin: 0 20px;
+			}
+		}
+	}
+
 }
 .panel{
 	margin-bottom:5px;

@@ -11,6 +11,11 @@
 				font-weight: 100;
 				margin-top: 5px;
 			}
+			&:before,
+			&:after{
+				top: 50%;
+				margin-top: -8px;
+			}
 			&.multi-label{
 				&:before,
 				&:after{

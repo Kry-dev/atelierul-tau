@@ -30,19 +30,23 @@
                         .checkout-step-body
                             .checout-address-step
                                 .row
-                                    .col-lg-6.col-md-12.mb-3
+                                    .col-lg-12.col-md-12.mb-3
                                         h4 Detalii livrare
                                         .row.no-gutters.mb-3
-                                            .col-6.px-2.border.p-2.rounded-left
+                                            .col-12.px-2.border.p-2.rounded-left
                                                 .pretty.p-default.p-round
                                                     input(type='radio', name='curier', checked)
                                                     .state
-                                                        label Livrare prin curier
-                                            .col-6.px-2.p-2.border.rounded-right
+                                                        label
+                                                            img(src="../assets/urgentcargus.png")
+                                                            |Livrare prin curier
+                                            .col-12.px-2.p-2.border.rounded-right
                                                 .pretty.p-default.p-round
                                                     input(type='radio', name='curier')
                                                     .state
-                                                        label Ridicare personală
+                                                        label
+                                                            img(src="../assets/urgentcargus.png")
+                                                            |Ridicare personală
                                         .row.no-gutters.border.rounded-top.py-3.px-2
                                             .col-12.mb-3
                                                 .pretty.p-default.p-round.w-100
@@ -71,7 +75,7 @@
                                                     a.btn.btn-default(role='button', href='#') Modifică
                                         a.collapsed.btn.btn-default(role='button', data-toggle='collapse', data-parent='#accordion', href='#stepThree')  Adaugă o adresă nouă
 
-                                    .col-lg-6.col-md-12
+                                    .col-lg-12.col-md-12
                                         h4 Detalii facturare
                                         .row.no-gutters.mb-3
                                             .col-6.px-2.border.p-2.rounded-left
