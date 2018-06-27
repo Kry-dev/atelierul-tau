@@ -4973,7 +4973,8 @@ body {
   }
   */ }
   .table thead th.rotate-label {
-    min-width: 60px; }
+    min-width: 60px;
+    max-width: 120px; }
     .table thead th.rotate-label div {
       height: 150px;
       white-space: nowrap;
@@ -4998,28 +4999,23 @@ body {
   font-size: 0.875rem;
   margin-bottom: 2rem; }
   .table thead {
-    color: #5C6365;
-    text-transform: uppercase;
     text-align: left;
     font-size: 1rem; }
     .table thead th {
       padding: 0.75rem; }
   .table th {
-    width: 40%;
-    color: #5C6365;
     vertical-align: top;
     padding: 0.75rem; }
   .table td {
-    font-weight: bold;
+    font-weight: normal;
     color: inherit;
     vertical-align: middle; }
   .table.table-nowrap-2cols th:first-child,
-  .table.table-nowrap-2cols th:nth-child(2) {
+  .table.table-nowrap-2cols th:nth-child(2),
+  .table.table-nowrap-2cols th:nth-child(3) {
     width: 0;
     white-space: nowrap; }
   .table.table-nowrap-2cols tr > td:first-child {
-    color: #5C6365;
-    text-transform: uppercase;
     text-align: left;
     font-size: 1rem; }
   .table.table-nowrap-2cols .price-cell {
