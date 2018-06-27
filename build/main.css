@@ -5388,6 +5388,9 @@ body {
         display: block;
         font-weight: 100;
         margin-top: 5px; }
+      .pretty .state label:before, .pretty .state label:after {
+        top: 50%;
+        margin-top: -8px; }
       .pretty .state label.multi-label:before, .pretty .state label.multi-label:after {
         top: 25%; }
 
@@ -7733,6 +7736,13 @@ h3 {
         font-size: 2rem;
         margin-bottom: 0;
         font-weight: bold; }
+  .checkout .pretty {
+    width: 100%; }
+    .checkout .pretty label {
+      width: 100%; }
+      .checkout .pretty label img {
+        max-width: 100px;
+        margin: 0 20px; }
 
 .panel {
   margin-bottom: 5px;
@@ -8386,5 +8396,3 @@ ul {
   overflow: hidden;
   z-index: 15;
   background: white; }
-
-/*# sourceMappingURL=main.css.map*/
