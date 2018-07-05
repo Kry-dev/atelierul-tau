@@ -113,3 +113,13 @@ $rotated-label-height: 150px;
     }
   }
 }
+.table{
+  &-unstriped{
+    tbody tr:nth-of-type(odd) {
+      background-color: white;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: $table-accent-bg;
+    }
+  }
+}

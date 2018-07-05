@@ -238,13 +238,16 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop : 0});
         return false;
     });
-    var max_col_height = 0; // максимальная высота, первоначально 0
-    $('.related-products-list > .product-preview').each(function(){ // цикл "для каждой из колонок"
-        if ($(this).height() > max_col_height) { // если высота колонки больше значения максимальной высоты,
-            max_col_height = $(this).height(); // то она сама становится новой максимальной высотой
+    var maxColHeight = 0; // максимальная высота, первоначально 0
+    //var colCurrent =   $('.related-products-list > .related-product');
+    $(".related-products-list .related-product .product-preview-title").each(function(){ // цикл "для каждой из колонок"
+
+        console.log($(".related-products-list .related-product .product-preview-title").height());
+        if ($(this).height() > maxColHeight) { // если высота колонки больше значения максимальной высоты,
+            maxColHeight = $(this).height(); // то она сама становится новой максимальной высотой
         }
     });
-    $('.related-products-list > .product-preview').height(max_col_height); // устанавливаем высоту каждой колонки равной значению
+    $(".related-products-list .related-product .product-preview-title").height(maxColHeight); // устанавливаем высоту каждой колонки равной значению
     // максимальной высоты
 
 

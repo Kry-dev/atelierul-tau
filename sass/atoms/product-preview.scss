@@ -4,7 +4,7 @@
   text-align: center;
   background-color: $white;
   padding: $default-spacing-2;
-
+  height: 100%;
   &:hover, &:active, &:visited {
     text-decoration: none;
   }
@@ -22,7 +22,7 @@
   }
 
   .product-preview-title {
-    min-height: 85px;
+    //min-height: 85px;
     display: block;
     font-weight: $bold-font-weight;
     font-size: $copy-font-size;

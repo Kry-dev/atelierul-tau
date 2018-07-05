@@ -5282,7 +5282,8 @@ body {
   display: inline-block;
   text-align: center;
   background-color: #fff;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  height: 100%; }
   .product-preview:hover, .product-preview:active, .product-preview:visited {
     text-decoration: none; }
   .product-preview .badge {
@@ -5294,7 +5295,6 @@ body {
     max-width: 100%;
     height: auto; }
   .product-preview .product-preview-title {
-    min-height: 85px;
     display: block;
     font-weight: 700;
     font-size: 1rem; }
@@ -7059,7 +7059,8 @@ h3 {
   .related-products .related-product {
     float: left;
     width: calc(100% / 6);
-    border-right: 2px solid #d6d6d6; }
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6; }
     .related-products .related-product:last-child {
       border-right: none; }
 
