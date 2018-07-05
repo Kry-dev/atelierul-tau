@@ -122,4 +122,9 @@ $rotated-label-height: 150px;
       background-color: $table-accent-bg;
     }
   }
+  &-th-30{
+    th {
+      width: 30%;
+    }
+  }
 }

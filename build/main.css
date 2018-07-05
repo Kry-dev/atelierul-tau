@@ -5022,6 +5022,15 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
 
+.table-unstriped tbody tr:nth-of-type(odd) {
+  background-color: white; }
+
+.table-unstriped tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.table-th-30 th {
+  width: 30%; }
+
 .btn:focus, .btn:active {
   box-shadow: none; }
 
@@ -8393,3 +8402,5 @@ ul {
   overflow: hidden;
   z-index: 15;
   background: white; }
+
+/*# sourceMappingURL=main.css.map*/
