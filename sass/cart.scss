@@ -62,6 +62,12 @@ $services-icon-size: 36px;
       display: flex;
       align-items: center;
       height: $cart-item-image-height;
+      @include media-breakpoint-down(md) {
+        height: auto;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        min-height: $cart-item-image-height;
+      }
     }
 
     .cart-item-desc {

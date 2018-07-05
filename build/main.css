@@ -6636,6 +6636,12 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
       height: 150px; }
+      @media (max-width: 991px) {
+        .cart .cart-item .cart-item-details {
+          height: auto;
+          padding-top: 1rem;
+          padding-right: 1rem;
+          min-height: 150px; } }
     .cart .cart-item .cart-item-desc {
       -ms-flex-preferred-size: 55%;
           flex-basis: 55%;
