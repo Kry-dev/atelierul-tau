@@ -1,4 +1,5 @@
 $cart-item-image-width: 150px;
+$cart-item-image-height: $cart-item-image-width;
 $services-icon-size: 36px;
 
 .cart {
@@ -13,7 +14,8 @@ $services-icon-size: 36px;
     @include clearfix();
 
     position: relative;
-    padding: $default-spacing;
+    //padding: $default-spacing;
+    padding: 1px;
     margin-bottom: $default-spacing;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -39,8 +41,8 @@ $services-icon-size: 36px;
       a{
         margin: 0 auto;
         display: block;
-        width: 150px;
-        height: 150px;
+        width: $cart-item-image-width;
+        height: $cart-item-image-height;
       }
 
       img {
@@ -58,7 +60,8 @@ $services-icon-size: 36px;
 
     .cart-item-details {
       display: flex;
-      margin-bottom: $default-spacing;
+      align-items: center;
+      height: $cart-item-image-height;
     }
 
     .cart-item-desc {
