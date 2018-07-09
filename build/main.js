@@ -238,19 +238,39 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop : 0});
         return false;
     });
-    var maxColHeight = 0; // максимальная высота, первоначально 0
-    //var colCurrent =   $('.related-products-list > .related-product');
-    $(".related-products-list .related-product .product-preview-title").each(function(){ // цикл "для каждой из колонок"
+    var maxColHeight = 0;
+    $(".related-products-list .related-product .product-preview-title").each(function(){
 
         console.log($(".related-products-list .related-product .product-preview-title").height());
-        if ($(this).height() > maxColHeight) { // если высота колонки больше значения максимальной высоты,
-            maxColHeight = $(this).height(); // то она сама становится новой максимальной высотой
+        if ($(this).height() > maxColHeight) {
+            maxColHeight = $(this).height();
         }
     });
-    $(".related-products-list .related-product .product-preview-title").height(maxColHeight); // устанавливаем высоту каждой колонки равной значению
-    // максимальной высоты
+    $(".related-products-list .related-product .product-preview-title").height(maxColHeight);
 
-
+    function moveScroll(){
+        var scroll = $(window).scrollTop();
+        var anchor_top = $("#accessories-listing").offset().top;
+        var anchor_bottom = $("#bottom_anchor").offset().top;
+        if (scroll>anchor_top && scroll<anchor_bottom) {
+            clone_table = $("#clone");
+            if(clone_table.length == 0){
+                clone_table = $("#accessories-listing").clone();
+                clone_table.attr('id', 'clone');
+                clone_table.css({position:'fixed',
+                    'pointer-events': 'none',
+                    top: 100});
+                clone_table.width($("#accessories-listing").width());
+                $(".accessories-listing-items").append(clone_table);
+                $("#clone").css({visibility:'hidden'});
+                //$("#clone thead").css({visibility:'visible', 'pointer-events':'auto', 'background': 'white', 'height':'150px'});
+                $("#clone thead").addClass('thead-fixed');
+            }
+        } else {
+            $("#clone").remove();
+        }
+    }
+    $(window).scroll(moveScroll);
 });
 
 

@@ -127,4 +127,24 @@ $rotated-label-height: 150px;
       width: 30%;
     }
   }
+  thead.thead-fixed{
+    padding-top: 3rem;
+    visibility: visible;
+    pointer-events: auto;
+    background: white;
+    z-index: 1001;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      background: white;
+      width: 100%;
+      height: 100px;
+      left: 0;
+      top: -100px;
+    }
+  }
+}
+#clone{
+  z-index: 1000;
 }
