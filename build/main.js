@@ -250,17 +250,17 @@ $(document).ready(function () {
 
     function moveScroll(){
         var scroll = $(window).scrollTop();
-        var anchor_top = $("#accessories-listing").offset().top;
+        var anchor_top = $("#tablesorter-demo").offset().top;
         var anchor_bottom = $("#bottom_anchor").offset().top;
         if (scroll>anchor_top && scroll<anchor_bottom) {
             clone_table = $("#clone");
             if(clone_table.length == 0){
-                clone_table = $("#accessories-listing").clone();
+                clone_table = $("#tablesorter-demo").clone();
                 clone_table.attr('id', 'clone');
                 clone_table.css({position:'fixed',
                     'pointer-events': 'none',
                     top: 100});
-                clone_table.width($("#accessories-listing").width());
+                clone_table.width($("#tablesorter-demo").width());
                 $(".accessories-listing-items").append(clone_table);
                 $("#clone").css({visibility:'hidden'});
                 //$("#clone thead").css({visibility:'visible', 'pointer-events':'auto', 'background': 'white', 'height':'150px'});
