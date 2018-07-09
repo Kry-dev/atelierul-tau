@@ -7633,6 +7633,8 @@ h3 {
         background: #ffc600;
         z-index: 50;
         transition: height .8s ease; }
+      .checkout-step-body.checkout-step-body-single:before {
+        background: #ffc600; }
     .checkout-step .btn {
       border: 1px solid #d6d6d6;
       overflow: hidden; }
@@ -7648,6 +7650,16 @@ h3 {
       height: 100%;
       width: 2px;
       background: #fff;
+      z-index: 1; }
+    .checkout-step:first-of-type .checkout-step-body:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      content: "";
+      height: 100%;
+      width: 2px;
+      background: #ffc600;
       z-index: 1; }
   .checkout-step-number {
     display: -ms-flexbox;
@@ -7776,6 +7788,9 @@ h3 {
       .checkout .pretty label img {
         max-width: 100px;
         margin: 0 20px; }
+  .checkout img.img-responsive {
+    max-width: 100px;
+    margin-right: 15px; }
 
 .panel {
   margin-bottom: 5px;
@@ -7929,17 +7944,19 @@ h3 {
     .border-vertical {
       display: none; } }
 
-.card .list-group-item {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-  .card .list-group-item .card-text {
-    color: inherit; }
-  .card .list-group-item .card-price {
-    font-weight: bold; }
+.card {
+  height: 100%; }
+  .card .list-group-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .card .list-group-item .card-text {
+      color: inherit; }
+    .card .list-group-item .card-price {
+      font-weight: bold; }
 
 .pagination-container {
   display: block;
@@ -8430,3 +8447,4 @@ ul {
   z-index: 15;
   background: white; }
 
+/*# sourceMappingURL=main.css.map*/
