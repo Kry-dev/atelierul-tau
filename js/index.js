@@ -60,12 +60,14 @@ $(document).ready(function () {
     var $productScrollPoint = 210;
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() >= $productScrollPoint) {
-            $productHeader.addClass('fixed');
+        if ($(window).scrollTop() >= $productHeader.height() - 100) {
+            $('#navbar_product').addClass('navbar-product-visible');
+            //$productHeader.addClass('fixed');
             $productTabs.addClass('fixed');
             $('.product-detail-content').css('padding-top', $productScrollPoint);
         }else{
-            $productHeader.removeClass('fixed');
+            $('#navbar_product').removeClass('navbar-product-visible');
+            //$productHeader.removeClass('fixed');
             $productTabs.removeClass('fixed');
             $('.product-detail-content').css('padding-top', '0');
         }

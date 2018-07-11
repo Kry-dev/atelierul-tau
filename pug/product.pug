@@ -1,20 +1,39 @@
 extends layout
 
 block content
+  #navbar_product.navbar.navbar-product.navbar-product-alt
+    .container
+      .row.navbar-product-row
+        .navbar-product-img
+          img(src='assets/product/product-01.png', alt='')
+        h2.navbar-product-title Motosapa Ruris 751KS, 8.5CP, Motor Kama, 4 timpi, 90cm + Roti de cauciuc, Rarita, Plug reversibil
+        .product_price
+          .product_price__old
+            .product_price__count 2279 Lei
+            .product_price__sale
+              span Reducere 12%
+          .price 1998
+            sup 99
+            span Lei
+
+        a(href="#").btn.add-to-cart
+          span ADAUGĂ ÎN COȘ
+          i.fa.fa-shopping-cart
   include header.pug
 
   include breadcrumb-nav.pug
+
 
   .main.product
     // images are subject to copyright
     .container
       .product_header
         .row
-          .col-lg-4.col-md-6.col-sm-12.mb-3.product-left
+          .col-sm-12.col-md-6.col-lg-5.mb-3.product-left
             .product-left_mobile
               img(src='assets/product/product-01.png', alt='')
             include product/product-slider
-          .col-lg-8.col-md-6.col-sm-12.product-right
+          .col-sm-12.col-md-6.col-lg-7.product-right
             h2.product_title Motosapa Ruris 751KS, 8.5CP, Motor Kama, 4 timpi, 90cm + Roti de cauciuc, Rarita, Plug reversibil
             .product_id
               Cod produs: 70882016
