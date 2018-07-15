@@ -142,12 +142,12 @@ $(document).ready(function () {
             $('#navbar_product').addClass('navbar-product-visible');
             //$productHeader.addClass('fixed');
             $productTabs.addClass('fixed');
-            $('.product-detail-content').css('padding-top', $productScrollPoint);
+            //$('.product-detail-content').css('padding-top', $productScrollPoint);
         }else{
             $('#navbar_product').removeClass('navbar-product-visible');
             //$productHeader.removeClass('fixed');
             $productTabs.removeClass('fixed');
-            $('.product-detail-content').css('padding-top', '0');
+            //$('.product-detail-content').css('padding-top', '0');
         }
         if ($(window).scrollTop() <= $productScrollPoint){
             $('.carousel-inner').slick('reinit');
@@ -242,8 +242,6 @@ $(document).ready(function () {
     });
     var maxColHeight = 0;
     $(".related-products-list .related-product .product-preview-title").each(function(){
-
-        console.log($(".related-products-list .related-product .product-preview-title").height());
         if ($(this).height() > maxColHeight) {
             maxColHeight = $(this).height();
         }

@@ -7530,11 +7530,15 @@ h3 {
 
 .navbar-product {
   display: block;
-  height: 80px;
+  min-height: 60px;
   background: #fff;
   transform: translate(0, -100%);
   transform: translate3d(0, -100%, 0);
-  opacity: 0; }
+  opacity: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); }
+  @media (max-width: 767px) {
+    .navbar-product .container {
+      padding: 0 .5rem; } }
   .navbar-product.navbar-product-alt {
     position: fixed;
     top: 0;
@@ -7563,7 +7567,18 @@ h3 {
     -ms-flex-pack: justify;
         justify-content: space-between;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    padding: 0 1rem;
+    margin: 0 auto; }
+    @media (max-width: 767px) {
+      .navbar-product-row {
+        padding: 0; } }
+  .navbar-product .navbar-tel {
+    display: none; }
+    @media (max-width: 767px) {
+      .navbar-product .navbar-tel {
+        display: -ms-flexbox;
+        display: flex; } }
   .navbar-product-img {
     width: 80px;
     height: 80px;
@@ -7574,15 +7589,34 @@ h3 {
       width: 100%;
       height: 100%;
       margin: 0 auto; }
+    @media (max-width: 767px) {
+      .navbar-product-img {
+        display: none; } }
   .navbar-product-title {
     margin-bottom: 0;
     max-height: 40px;
     line-height: 20px;
     overflow: hidden;
     font-size: 16px; }
+    @media (max-width: 767px) {
+      .navbar-product-title {
+        width: 40%;
+        font-size: 12px; } }
   .navbar-product .add-to-cart {
     margin-bottom: 0;
     justify-self: flex-end; }
+    @media (max-width: 767px) {
+      .navbar-product .add-to-cart {
+        height: 40px;
+        padding: .75rem;
+        justify-self: flex-end;
+        width: 40px;
+        background: linear-gradient(100deg, #c21920 68%, #ffc600 59%); }
+        .navbar-product .add-to-cart span {
+          display: none; }
+        .navbar-product .add-to-cart .fa {
+          font-size: 1.4rem;
+          color: #fff; } }
   .navbar-product .product_price {
     width: 170px; }
     .navbar-product .product_price .product_price__count {
@@ -7593,6 +7627,17 @@ h3 {
         font-size: .7rem; }
     .navbar-product .product_price .price {
       font-size: 1.5rem; }
+    .navbar-product .product_price .price-percent {
+      text-align: center;
+      width: 100%; }
+    @media (max-width: 767px) {
+      .navbar-product .product_price {
+        margin-bottom: 0;
+        width: 100px; }
+        .navbar-product .product_price .product_price__count {
+          font-size: 10px; }
+        .navbar-product .product_price .price {
+          margin-bottom: 0; } }
 
 .product-detail-tabs {
   width: 100%;
@@ -7622,7 +7667,7 @@ h3 {
       top: 80px;
       left: 0;
       width: 100%;
-      z-index: 50;
+      z-index: 1040;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
       @media (max-width: 767px) {
         .product-detail-tabs .navbar.fixed {
