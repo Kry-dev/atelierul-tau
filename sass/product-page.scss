@@ -567,6 +567,10 @@
 		.price{
 			font-size: 1.5rem;
 		}
+		.price-percent{
+			text-align: center;
+			width: 100%;
+		}
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 0;
 			width: 100px;
