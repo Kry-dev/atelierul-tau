@@ -64,12 +64,12 @@ $(document).ready(function () {
             $('#navbar_product').addClass('navbar-product-visible');
             //$productHeader.addClass('fixed');
             $productTabs.addClass('fixed');
-            $('.product-detail-content').css('padding-top', $productScrollPoint);
+            //$('.product-detail-content').css('padding-top', $productScrollPoint);
         }else{
             $('#navbar_product').removeClass('navbar-product-visible');
             //$productHeader.removeClass('fixed');
             $productTabs.removeClass('fixed');
-            $('.product-detail-content').css('padding-top', '0');
+            //$('.product-detail-content').css('padding-top', '0');
         }
         if ($(window).scrollTop() <= $productScrollPoint){
             $('.carousel-inner').slick('reinit');
