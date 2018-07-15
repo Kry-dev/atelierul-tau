@@ -164,8 +164,6 @@ $(document).ready(function () {
     });
     var maxColHeight = 0;
     $(".related-products-list .related-product .product-preview-title").each(function(){
-
-        console.log($(".related-products-list .related-product .product-preview-title").height());
         if ($(this).height() > maxColHeight) {
             maxColHeight = $(this).height();
         }
