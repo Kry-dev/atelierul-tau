@@ -7035,8 +7035,8 @@ h3 {
   z-index: 2;
   opacity: 0;
   transform: translateX(-30px);
-  transition: all .9s ease .5s;
-  -o-transition: all .9s ease .5s; }
+  transition: all .1s ease .5s;
+  -o-transition: all .1s ease .5s; }
   .category-selector .category-selector-menu h4 {
     color: #c21920;
     font-size: 1.0287rem;
