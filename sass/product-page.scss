@@ -498,11 +498,8 @@
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 1rem;
+		padding: 0;
 		margin: 0 auto;
-		@include media-breakpoint-down(sm) {
-			padding:0;
-		}
 	}
 	.navbar-tel{
 		display: none;
@@ -537,20 +534,15 @@
 	}
 	.add-to-cart{
 		margin-bottom: 0;
+		width: auto;
+		height: 40px;
+		padding: .75rem;
 		justify-self: flex-end;
-		@include media-breakpoint-down(sm) {
-			height: 40px;
-			padding: .75rem;
-			justify-self: flex-end;
-			width: 40px;
-			background: linear-gradient(100deg, #c21920 68%, #ffc600 59%);
-			span{
-				display: none;
-			}
-			.fa{
-				font-size: 1.4rem;
-				color: $white;
-			}
+		background: linear-gradient(100deg, #c21920 74%, #ffc600 59%);
+		.fa{
+			font-size: 1.4rem;
+			//color: $white;
+			margin: 0 10px;
 		}
 	}
 	.product_price{
