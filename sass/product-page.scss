@@ -481,6 +481,10 @@
 		backface-visibility: none;
 		background-color: #fff;
 		transition: transform .15s ease-in,-webkit-transform .15s ease-in;
+		min-height:80px;
+		@include media-breakpoint-down(sm) {
+			min-height: 60px;
+		}
 	}
 	&.navbar-product-visible{
 		-webkit-transform: translate(0,0);
@@ -559,11 +563,13 @@
 		}
 	}
 	.add-to-cart{
+		display: flex;
 		margin-bottom: 0;
 		width: auto;
 		height: 40px;
 		padding: .75rem;
 		justify-self: flex-end;
+		justify-content: space-between;
 		background: linear-gradient(100deg, #c21920 74%, #ffc600 59%);
 		.fa{
 			font-size: 1.4rem;
@@ -576,11 +582,15 @@
 		@include media-breakpoint-down(xs) {
 			width: auto;
 			background: linear-gradient(110deg, #c21920 74%, #ffc600 59%);
+			padding: .5rem;
+			justify-content: flex-end;
 			span{
-				display: none;
+				font-size: 8px;
+				padding-right: 10px;
 			}
 			.fa{
-				color: $white;
+				font-size: 10px;
+				margin: 0;
 			}
 		}
 	}
