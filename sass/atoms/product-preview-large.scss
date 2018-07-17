@@ -19,13 +19,13 @@ $line-height: 1.4;
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
   }
 
-  .badge {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    font-size: $normal-font-size;
+  .badge-block{
+    .badge-stoc{
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+    }
   }
-
   .product-preview-image {
     img {
       display: inline-block;
