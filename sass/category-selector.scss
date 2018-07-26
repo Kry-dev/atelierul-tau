@@ -1,17 +1,9 @@
 .category-selector {
   &.collapsible {
-    //.collapse{
-    //  //display: block;
-    //  -webkit-transform: translateY(-30px);
-    //  -ms-transform: translateY(-30px);
-    //  -o-transform: translateY(-30px);
-    //  transform: translateY(-30px);
-    //  -webkit-transition: opacity .3s,visibility .3s,-webkit-transform .3s;
-    //  transition: opacity .3s,visibility .3s,-webkit-transform .3s;
-    //  -o-transition: opacity .3s,visibility .3s,-o-transform .3s;
-    //  transition: opacity .3s,transform .3s,visibility .3s;
-    //  transition: opacity .3s,transform .3s,visibility .3s,-webkit-transform .3s,-o-transform .3s;
-    //}
+    //position: absolute;
+    //width: 24%;
+    .collapse{
+    }
     //&:hover{
     //  .collapse{
     //    visibility: visible;

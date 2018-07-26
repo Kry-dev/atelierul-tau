@@ -2,27 +2,47 @@
   position: relative;
   z-index: 101;
   > .breadcrumb-nav{
-    height: auto;
-    min-height: 42px;
-    max-height: 100px;
+    padding: 0 1rem;
+    position: relative;
+    &:before,
+    &:after{
+      content: "";
+      height: 42px;
+      width: 50%;
+      display: block;
+      position: absolute;
+      background-color: $secondary-background-color;
+      z-index: -1;
+      top: 0;
+    }
+    &:before{  left: 2rem;  }
+    &:after{  right: 2rem;  }
   }
+
 }
 
 .breadcrumb-nav {
   margin-top: $default-spacing;
   height: 42px;
   margin-bottom: $default-spacing;
-  background-color: $secondary-background-color;
   border-radius: 0 $border-radius $border-radius 0;
-
   .row [class^="col-"] {
     position: static;
   }
-
   .breadcrumb {
     margin: 0;
-    padding-left: 0;
+    padding-left: 1rem;
     padding-right: 0;
-    background-color: transparent;
+    height: auto;
+    min-height: 42px;
+    max-height: 100px;
+    background-color: $secondary-background-color;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    &-item{
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
