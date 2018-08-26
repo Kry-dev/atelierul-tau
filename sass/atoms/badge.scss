@@ -38,15 +38,16 @@
   &.badge-discount{
     @include badge-variant($orange);
   }
+  &.badge-secondary {
+    @include badge-variant($gray-600);
+  }
 }
 
 .badge-popular {
   @include badge-variant($blue);
 }
 
-.badge-secondary {
-  @include badge-variant($gray-600);
-}
+
 .badge-block{
   display: flex;
   position: absolute;
