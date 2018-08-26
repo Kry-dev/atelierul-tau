@@ -4840,6 +4840,17 @@ body {
     background-color: #72a230; }
   .badge-stoc[href]:after {
     background-color: #72a230; }
+  .badge-stoc.badge-discount {
+    color: #111;
+    background-color: #ffc600!important; }
+    .badge-stoc.badge-discount:after {
+      background-color: #ffc600!important; }
+    .badge-stoc.badge-discount[href]:focus, .badge-stoc.badge-discount[href]:hover {
+      color: #111;
+      text-decoration: none;
+      background-color: #cc9e00!important; }
+    .badge-stoc.badge-discount[href]:after {
+      background-color: #cc9e00!important; }
 
 .badge-popular {
   color: #fff;
@@ -8246,66 +8257,103 @@ h3 {
       margin-left: 0; }
       .header .main-header .header-search .btn-primary:hover, .header .main-header .header-search .btn-primary:focus {
         cursor: pointer; }
-    .header .main-header .header-cart {
+  .header .header-cart {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    height: 45px;
+    width: 190px;
+    margin-left: 1rem; }
+    .header .header-cart .header-cart-icon {
+      width: 60px;
+      height: 45px;
+      position: relative; }
+      .header .header-cart .header-cart-icon i {
+        font-size: 2.5rem;
+        color: #E3E7EA; }
+      .header .header-cart .header-cart-icon .header-cart-counter {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding: 0.25em 0.4em; }
+    .header .header-cart .header-cart-info {
+      height: 45px; }
+      .header .header-cart .header-cart-info .header-cart-dropdown {
+        font-size: 0.8571rem; }
+      .header .header-cart .header-cart-info .header-cart-price {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #c21920; }
+      .header .header-cart .header-cart-info .currency {
+        font-size: 1rem; }
+  .header .mobile-header {
+    position: fixed;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    top: -100%;
+    z-index: 1000; }
+    .header .mobile-header.fixed {
+      top: 0; }
+    .header .mobile-header-toggler:hover + .navbar-collapse {
+      display: block; }
+    .header .mobile-header-toggler[aria-expanded="true"]-icon {
+      background: transparent;
+      content: "X"; }
+    .header .mobile-header .navbar {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2); }
+      .header .mobile-header .navbar-collapse {
+        position: absolute;
+        width: 25%;
+        top: 100%;
+        left: 0;
+        padding: 0 1rem;
+        z-index: -1; }
+      .header .mobile-header .navbar-nav {
+        padding: 0 1rem;
+        background: #fff;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
+    .header .mobile-header .nav-link {
+      cursor: pointer; }
+    .header .mobile-header .navbar-brand {
+      margin: 0; }
+    .header .mobile-header .mobile-header-right-controls {
       display: -ms-flexbox;
       display: flex;
-      height: 45px;
-      width: 190px;
-      margin-left: 1rem; }
-      .header .main-header .header-cart .header-cart-icon {
-        width: 60px;
-        height: 45px;
-        position: relative; }
-        .header .main-header .header-cart .header-cart-icon i {
-          font-size: 2.5rem;
-          color: #E3E7EA; }
-        .header .main-header .header-cart .header-cart-icon .header-cart-counter {
-          position: absolute;
-          top: 5px;
-          right: 5px;
-          padding: 0.25em 0.4em; }
-      .header .main-header .header-cart .header-cart-info {
-        height: 45px; }
-        .header .main-header .header-cart .header-cart-info .header-cart-dropdown {
-          font-size: 0.8571rem; }
-        .header .main-header .header-cart .header-cart-info .header-cart-price {
-          font-size: 1.25rem;
-          font-weight: 600;
-          color: #c21920; }
-        .header .main-header .header-cart .header-cart-info .currency {
-          font-size: 1rem; }
-  .header .mobile-header .nav-link {
-    cursor: pointer; }
-  .header .mobile-header .navbar-brand {
-    margin: 0; }
-  .header .mobile-header .mobile-header-right-controls {
-    display: -ms-flexbox;
-    display: flex; }
-  .header .mobile-header .header-cart-icon {
-    position: relative;
-    width: 40px; }
-    .header .mobile-header .header-cart-icon i {
-      color: #E3E7EA;
-      font-size: 2rem; }
-    .header .mobile-header .header-cart-icon .header-cart-counter {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: #c21920;
-      color: #fff;
-      border-radius: 100%;
-      width: 1.25rem;
-      height: 1.25rem;
-      padding: .1rem;
-      font-size: 0.8571rem;
-      text-align: center; }
-  .header .mobile-header .header-search-icon {
-    width: 40px; }
-    .header .mobile-header .header-search-icon i {
-      color: #E3E7EA;
-      font-size: 2rem; }
-    .header .mobile-header .header-search-icon:hover, .header .mobile-header .header-search-icon:focus {
-      cursor: pointer; }
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-align: center;
+          align-items: center; }
+    .header .mobile-header .header-cart-icon {
+      position: relative;
+      width: 40px; }
+      .header .mobile-header .header-cart-icon i {
+        color: #E3E7EA;
+        font-size: 2rem; }
+      .header .mobile-header .header-cart-icon .header-cart-counter {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #c21920;
+        color: #fff;
+        border-radius: 100%;
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: .1rem;
+        font-size: 0.8571rem;
+        text-align: center; }
+    .header .mobile-header .header-search {
+      max-width: 40%; }
+    .header .mobile-header .header-search-icon {
+      width: 40px; }
+      .header .mobile-header .header-search-icon i {
+        color: #E3E7EA;
+        font-size: 2rem; }
+      .header .mobile-header .header-search-icon:hover, .header .mobile-header .header-search-icon:focus {
+        cursor: pointer; }
 
 @media (max-width: 991px) {
   .header-logo {

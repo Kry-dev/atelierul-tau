@@ -1,3 +1,5 @@
+include mixins.pug
+include category-selector.pug
 .header
   // Top header for tablet and larger resolutions
   .top-header.hidden-sm-down
@@ -55,50 +57,152 @@
             span.currency Lei
   
   // Mobile header
-  .mobile-header.hidden-md-up
-    nav.navbar.navbar-light.navbar-expand-lg
+  //.mobile-header.hidden-md-up
+  .mobile-header
+    nav.navbar.navbar-light
       button.navbar-toggler.navbar-toggler-left(type='button', data-toggle='collapse', data-target='#navbarNav')
         span.navbar-toggler-icon
       a.navbar-brand(href="/")
         img(src=require('../assets/logo.png'), width='150')
+      form.header-search.input-group
+        input.form-control.header-search-input(type="text", placeholder="Cauta un produs...")
+        .input-group-btn
+          button.btn.btn-primary(type="button")
+            i.fa.fa-search
       .mobile-header-right-controls
-        a.header-search-icon
-          i.fa.fa-search
-        .header-cart-icon
-          i.fa.fa-shopping-cart
-          .header-cart-counter 24
-      #navbarNav.collapse.navbar-collapse
-        .navbar-nav
-          a.nav-item.nav-link(href='#') Start
-          a.nav-item.nav-link(href='#') Contact
-          a.nav-item.nav-link(href='#') Login
-          
-          <div class="dropdown-divider"></div>
-          .nav-item.dropdown
-            a.nav-link.dropdown-toggle(id="scule-electrice-header-button", data-toggle="dropdown")
+        a(href="#").nav-link Contact
+        a(href="#").nav-link Ajutor
+
+        .header-cart
+          .header-cart-icon
+            i.fa.fa-shopping-cart
+            .header-cart-counter.badge.badge-primary.badge-pill 24
+          .header-cart-info
+            .header-cart-dropdown
+              | Cos cumparaturi&nbsp;
+              i.fa.fa-angle-down
+            .header-cart-price
+              | 83219,00&nbsp;
+              span.currency Lei
+      //#navbarNav.navbar-collapse.collapse
+      #navbarNav.hidden-md-up
+        .category-selector-items.collapsed
+          .category-selector-item
+            .category-selector-button(id="scule-electrice-button")
+              +icon('hand-drill')
               | Scule electrice
-            .dropdown-menu(aria-labelledby="scule-electrice-header-button")
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-          .nav-item.dropdown
-            a.nav-link.dropdown-toggle(id="scule-de-mana-header-button", data-toggle="dropdown")
+              i.fa.fa-chevron-right
+            .category-selector-menu(aria-labelledby="scule-electrice-button")
+              .category-selector-menu-items
+                h4 Aparate de măsură
+                ul
+                  li
+                    a(href="#") Nivele laser cu linii
+                  li
+                    a(href="#") Nivele laser cu puncte
+                  li
+                    a(href="#") Nivele laser rotative
+                  li
+                    a(href="#") Nivele optice
+                  li
+                    a(href="#") Receptoare
+                  li
+                    a(href="#") Telemetre
+                  li
+                    a(href="#") Teodolite electronice
+                  li
+                    a(href="#") Goniometre si clinometre
+                  li
+                    a(href="#") Suporturi, stative și accesorii
+                h4 Aparate de măsură
+                ul
+                  li
+                    a(href="#") Nivele laser cu linii
+                  li
+                    a(href="#") Nivele laser cu puncte
+                  li
+                    a(href="#") Nivele laser rotative
+                  li
+                    a(href="#") Nivele optice
+                h4 Aparate de măsură
+                ul
+                  li
+                    a(href="#") Nivele laser cu linii
+                  li
+                    a(href="#") Nivele laser cu puncte
+                  li
+                    a(href="#") Nivele laser rotative
+                  li
+                    a(href="#") Nivele optice
+                  li
+                    a(href="#") Receptoare
+                  li
+                    a(href="#") Telemetre
+                  li
+                    a(href="#") Teodolite electronice
+                  li
+                    a(href="#") Goniometre si clinometre
+                  li
+                    a(href="#") Suporturi, stative și accesorii
+              .category-selector-menu-extra
+                h4 Aparate de măsură
+                ul
+                  li
+                    a(href="#") Nivele laser linii
+                  li
+                    a(href="#") Nivele laser puncte
+                  li
+                    a(href="#") Nivele laser
+                  li
+                    a(href="#") Nivele optice
+                  li
+                    a(href="#") Receptoare
+                  li
+                    a(href="#") Telemetre
+                  li
+                    a(href="#") Teodolite electro
+                  li
+                    a(href="#") Goniometre
+                  li
+                    a(href="#") Suporturi
+                  li
+                    a(href="#") Receptoare
+                  li
+                    a(href="#") Telemetre
+                  li
+                    a(href="#") Teodolite electro
+                  li
+                    a(href="#") Goniometre
+                  li
+                    a(href="#") Suporturi
+                  li
+                    a(href="#") Receptoare
+                  li
+                    a(href="#") Telemetre
+                  li
+                    a(href="#") Teodolite electro
+                  li
+                    a(href="#") Goniometre
+                  li
+                    a(href="#") Suporturi
+          .category-selector-item
+            .category-selector-button(id="scule-de-mana-button")
+              +icon('wrench-screwdriver')
               | Scule de mână
-            .dropdown-menu(aria-labelledby="scule-de-mana-header-button")
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-          .nav-item.dropdown
-            a.nav-link.dropdown-toggle(id="aparate-utilaje-header-button", data-toggle="dropdown")
+              i.fa.fa-chevron-right
+            .category-selector-menu(aria-labelledby="scule-de-mana-button")
+              | You know the drill...
+          .category-selector-item
+            .category-selector-button(id="aparate-utilaje-button")
+              +icon('multimeter')
               | Aparate și utilaje
-            .dropdown-menu(aria-labelledby="aparate-utilaje-header-button")
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-          .nav-item.dropdown
-            a.nav-link.dropdown-toggle(id="piese-accesorii-header-button", data-toggle="dropdown")
+              i.fa.fa-chevron-right
+            .category-selector-menu(aria-labelledby="aparate-utilaje-button")
+              | You know the drill...
+          .category-selector-item
+            .category-selector-button(id="piese-accesorii-button")
+              +icon('drill-sencondary')
               | Piese și accesorii
-            .dropdown-menu(aria-labelledby="piese-accesorii-header-button")
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
-              a.dropdown-item(href="#") Lorem Ipsum
+              i.fa.fa-chevron-right
+            .category-selector-menu(aria-labelledby="piese-accesorii-button")
+              | You know the drill...

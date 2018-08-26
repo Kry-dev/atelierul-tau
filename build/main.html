@@ -96,230 +96,322 @@
 
 </symbol></svg>
     </div>
-<div class="header">
-  <!-- Top header for tablet and larger resolutions-->
-  <div class="top-header hidden-sm-down">
-    <div class="container">
-      <div class="row">
-        <ul class="nav col-md-5 col-sm-3">
-          <li class="nav-item"><a class="nav-link" href="#">Start</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Ajutor</a>
-            <div class="dropdown-menu"><a class="dropdown-item" href="">Help 1</a><a class="dropdown-item" href="">Help 2</a><a class="dropdown-item" href="">Help 3</a></div>
-          </li>
-        </ul>
-        <ul class="nav col-md-7 col-sm-9 justify-content-end"><a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Nu ai cont? Creeza unul nou.</a><a class="nav-link new-account-link" href="#"><i class="fa fa-lock" aria-hidden="true"></i> Ai deja cont? Autentifica-te aici</a></ul>
+    <div class="header">
+      <!-- Top header for tablet and larger resolutions-->
+      <div class="top-header hidden-sm-down">
+        <div class="container">
+          <div class="row">
+            <ul class="nav col-md-5 col-sm-3">
+              <li class="nav-item"><a class="nav-link" href="#">Start</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Ajutor</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="">Help 1</a><a class="dropdown-item" href="">Help 2</a><a class="dropdown-item" href="">Help 3</a></div>
+              </li>
+            </ul>
+            <ul class="nav col-md-7 col-sm-9 justify-content-end"><a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Nu ai cont? Creeza unul nou.</a><a class="nav-link new-account-link" href="#"><i class="fa fa-lock" aria-hidden="true"></i> Ai deja cont? Autentifica-te aici</a></ul>
+          </div>
+        </div>
+      </div>
+      <!-- Main header for tablet and larger resolutions-->
+      <div class="main-header">
+        <div class="container"><a class="header-logo hidden-sm-down" href="/"><img src="assets/logo.png" width="282" height="52"></a>
+          <form class="header-search input-group">
+            <input class="form-control header-search-input" type="text" placeholder="Cauta un produs...">
+            <div class="input-group-btn">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Toate categoriile</button>
+              <div class="dropdown-menu"><a class="dropdown-item" href="#">Categorie 1</a><a class="dropdown-item" href="#">Categorie 2</a><a class="dropdown-item" href="#">Categorie 3</a></div>
+            </div>
+            <div class="input-group-btn">
+              <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="input-group-btn hidden-md-up">
+              <button class="btn btn-primary" id="closeMobileSearch"><i class="fa fa-close"></i></button>
+              <!--button#closeMobileSearch.btn.btn-primary.hidden-sm-up-->
+            </div>
+          </form>
+          <div class="header-cart hidden-sm-down">
+            <div class="header-cart-icon"><i class="fa fa-shopping-cart"></i>
+              <div class="header-cart-counter badge badge-primary badge-pill">24</div>
+            </div>
+            <div class="header-cart-info">
+              <div class="header-cart-dropdown">Cos cumparaturi&nbsp;<i class="fa fa-angle-down"></i></div>
+              <div class="header-cart-price">83219,00&nbsp;<span class="currency">Lei</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile header-->
+      <!--.mobile-header.hidden-md-up-->
+      <div class="mobile-header">
+        <nav class="navbar navbar-light">
+          <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="/"><img src="assets/logo.png" width="150"></a>
+          <form class="header-search input-group">
+            <input class="form-control header-search-input" type="text" placeholder="Cauta un produs...">
+            <div class="input-group-btn">
+              <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+          <div class="mobile-header-right-controls"><a class="nav-link" href="#">Contact</a><a class="nav-link" href="#">Ajutor</a>
+            <div class="header-cart">
+              <div class="header-cart-icon"><i class="fa fa-shopping-cart"></i>
+                <div class="header-cart-counter badge badge-primary badge-pill">24</div>
+              </div>
+              <div class="header-cart-info">
+                <div class="header-cart-dropdown">Cos cumparaturi&nbsp;<i class="fa fa-angle-down"></i></div>
+                <div class="header-cart-price">83219,00&nbsp;<span class="currency">Lei</span></div>
+              </div>
+            </div>
+          </div>
+          <!--#navbarNav.navbar-collapse.collapse-->
+          <div class="hidden-md-up" id="navbarNav">
+            <div class="category-selector-items collapsed">
+              <div class="category-selector-item">
+                <div class="category-selector-button" id="scule-electrice-button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#hand-drill-icon"></use>
+                      </svg>Scule electrice<i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="category-selector-menu" aria-labelledby="scule-electrice-button">
+                  <div class="category-selector-menu-items">
+                    <h4>Aparate de măsură</h4>
+                    <ul>
+                      <li><a href="#">Nivele laser cu linii</a></li>
+                      <li><a href="#">Nivele laser cu puncte</a></li>
+                      <li><a href="#">Nivele laser rotative</a></li>
+                      <li><a href="#">Nivele optice</a></li>
+                      <li><a href="#">Receptoare</a></li>
+                      <li><a href="#">Telemetre</a></li>
+                      <li><a href="#">Teodolite electronice</a></li>
+                      <li><a href="#">Goniometre si clinometre</a></li>
+                      <li><a href="#">Suporturi, stative și accesorii</a></li>
+                    </ul>
+                    <h4>Aparate de măsură</h4>
+                    <ul>
+                      <li><a href="#">Nivele laser cu linii</a></li>
+                      <li><a href="#">Nivele laser cu puncte</a></li>
+                      <li><a href="#">Nivele laser rotative</a></li>
+                      <li><a href="#">Nivele optice</a></li>
+                    </ul>
+                    <h4>Aparate de măsură</h4>
+                    <ul>
+                      <li><a href="#">Nivele laser cu linii</a></li>
+                      <li><a href="#">Nivele laser cu puncte</a></li>
+                      <li><a href="#">Nivele laser rotative</a></li>
+                      <li><a href="#">Nivele optice</a></li>
+                      <li><a href="#">Receptoare</a></li>
+                      <li><a href="#">Telemetre</a></li>
+                      <li><a href="#">Teodolite electronice</a></li>
+                      <li><a href="#">Goniometre si clinometre</a></li>
+                      <li><a href="#">Suporturi, stative și accesorii</a></li>
+                    </ul>
+                  </div>
+                  <div class="category-selector-menu-extra">
+                    <h4>Aparate de măsură</h4>
+                    <ul>
+                      <li><a href="#">Nivele laser linii</a></li>
+                      <li><a href="#">Nivele laser puncte</a></li>
+                      <li><a href="#">Nivele laser</a></li>
+                      <li><a href="#">Nivele optice</a></li>
+                      <li><a href="#">Receptoare</a></li>
+                      <li><a href="#">Telemetre</a></li>
+                      <li><a href="#">Teodolite electro</a></li>
+                      <li><a href="#">Goniometre</a></li>
+                      <li><a href="#">Suporturi</a></li>
+                      <li><a href="#">Receptoare</a></li>
+                      <li><a href="#">Telemetre</a></li>
+                      <li><a href="#">Teodolite electro</a></li>
+                      <li><a href="#">Goniometre</a></li>
+                      <li><a href="#">Suporturi</a></li>
+                      <li><a href="#">Receptoare</a></li>
+                      <li><a href="#">Telemetre</a></li>
+                      <li><a href="#">Teodolite electro</a></li>
+                      <li><a href="#">Goniometre</a></li>
+                      <li><a href="#">Suporturi</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="category-selector-item">
+                <div class="category-selector-button" id="scule-de-mana-button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#wrench-screwdriver-icon"></use>
+                      </svg>Scule de mână<i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="category-selector-menu" aria-labelledby="scule-de-mana-button">You know the drill...</div>
+              </div>
+              <div class="category-selector-item">
+                <div class="category-selector-button" id="aparate-utilaje-button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#multimeter-icon"></use>
+                      </svg>Aparate și utilaje<i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="category-selector-menu" aria-labelledby="aparate-utilaje-button">You know the drill...</div>
+              </div>
+              <div class="category-selector-item">
+                <div class="category-selector-button" id="piese-accesorii-button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#drill-sencondary-icon"></use>
+                      </svg>Piese și accesorii<i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="category-selector-menu" aria-labelledby="piese-accesorii-button">You know the drill...</div>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
-  </div>
-  <!-- Main header for tablet and larger resolutions-->
-  <div class="main-header">
-    <div class="container"><a class="header-logo hidden-sm-down" href="/"><img src="assets/logo.png" width="282" height="52"></a>
-      <form class="header-search input-group">
-        <input class="form-control header-search-input" type="text" placeholder="Cauta un produs...">
-        <div class="input-group-btn">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Toate categoriile</button>
-          <div class="dropdown-menu"><a class="dropdown-item" href="#">Categorie 1</a><a class="dropdown-item" href="#">Categorie 2</a><a class="dropdown-item" href="#">Categorie 3</a></div>
-        </div>
-        <div class="input-group-btn">
-          <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-        </div>
-        <div class="input-group-btn hidden-md-up">
-          <button class="btn btn-primary" id="closeMobileSearch"><i class="fa fa-close"></i></button>
-          <!--button#closeMobileSearch.btn.btn-primary.hidden-sm-up-->
-        </div>
-      </form>
-      <div class="header-cart hidden-sm-down">
-        <div class="header-cart-icon"><i class="fa fa-shopping-cart"></i>
-          <div class="header-cart-counter badge badge-primary badge-pill">24</div>
-        </div>
-        <div class="header-cart-info">
-          <div class="header-cart-dropdown">Cos cumparaturi&nbsp;<i class="fa fa-angle-down"></i></div>
-          <div class="header-cart-price">83219,00&nbsp;<span class="currency">Lei</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile header-->
-  <div class="mobile-header hidden-md-up">
-    <nav class="navbar navbar-light navbar-expand-lg">
-      <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="/"><img src="assets/logo.png" width="150"></a>
-      <div class="mobile-header-right-controls"><a class="header-search-icon"><i class="fa fa-search"></i></a>
-        <div class="header-cart-icon"><i class="fa fa-shopping-cart"></i>
-          <div class="header-cart-counter">24</div>
-        </div>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav"><a class="nav-item nav-link" href="#">Start</a><a class="nav-item nav-link" href="#">Contact</a><a class="nav-item nav-link" href="#">Login</a><div class="dropdown-divider"></div>
-          <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="scule-electrice-header-button" data-toggle="dropdown">Scule electrice</a>
-            <div class="dropdown-menu" aria-labelledby="scule-electrice-header-button"><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a></div>
-          </div>
-          <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="scule-de-mana-header-button" data-toggle="dropdown">Scule de mână</a>
-            <div class="dropdown-menu" aria-labelledby="scule-de-mana-header-button"><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a></div>
-          </div>
-          <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="aparate-utilaje-header-button" data-toggle="dropdown">Aparate și utilaje</a>
-            <div class="dropdown-menu" aria-labelledby="aparate-utilaje-header-button"><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a></div>
-          </div>
-          <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="piese-accesorii-header-button" data-toggle="dropdown">Piese și accesorii</a>
-            <div class="dropdown-menu" aria-labelledby="piese-accesorii-header-button"><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a><a class="dropdown-item" href="#">Lorem Ipsum</a></div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-</div>
     <div class="main container">
       <div class="row">
         <div class="main-sidebar col-3 hidden-sm-down">
           <div class="sidebar-section">
-            <div class="category-selector">
-              <div class="category-selector-header"><i class="fa fa-bars"></i>Categorii scule</div>
-              <div class="category-selector-items">
-                <div class="category-selector-item">
-                  <div class="category-selector-button" id="scule-electrice-button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#hand-drill-icon"></use>
-                    </svg>Scule electrice<i class="fa fa-chevron-right"></i>
-                  </div>
-                  <div class="category-selector-menu" aria-labelledby="scule-electrice-button">
-                    <div class="category-selector-menu-items">
-                      <h4>Aparate de măsură</h4>
-                      <ul>
-                        <li><a href="#">Nivele laser cu linii</a></li>
-                        <li><a href="#">Nivele laser cu puncte</a></li>
-                        <li><a href="#">Nivele laser rotative</a></li>
-                        <li><a href="#">Nivele optice</a></li>
-                        <li><a href="#">Receptoare</a></li>
-                        <li><a href="#">Telemetre</a></li>
-                        <li><a href="#">Teodolite electronice</a></li>
-                        <li><a href="#">Goniometre si clinometre</a></li>
-                        <li><a href="#">Suporturi, stative și accesorii</a></li>
-                      </ul>
-                      <h4>Aparate de măsură</h4>
-                      <ul>
-                        <li><a href="#">Nivele laser cu linii</a></li>
-                        <li><a href="#">Nivele laser cu puncte</a></li>
-                        <li><a href="#">Nivele laser rotative</a></li>
-                        <li><a href="#">Nivele optice</a></li>
-                      </ul>
-                      <h4>Aparate de măsură</h4>
-                      <ul>
-                        <li><a href="#">Nivele laser cu linii</a></li>
-                        <li><a href="#">Nivele laser cu puncte</a></li>
-                        <li><a href="#">Nivele laser rotative</a></li>
-                        <li><a href="#">Nivele optice</a></li>
-                        <li><a href="#">Receptoare</a></li>
-                        <li><a href="#">Telemetre</a></li>
-                        <li><a href="#">Teodolite electronice</a></li>
-                        <li><a href="#">Goniometre si clinometre</a></li>
-                        <li><a href="#">Suporturi, stative și accesorii</a></li>
-                      </ul>
+                <div class="category-selector">
+                  <div class="category-selector-header"><i class="fa fa-bars"></i>Categorii scule</div>
+                  <div class="category-selector-items">
+                    <div class="category-selector-item">
+                      <div class="category-selector-button" id="scule-electrice-button">
+                            <svg class="svg-icon">
+                              <use xlink:href="#hand-drill-icon"></use>
+                            </svg>Scule electrice<i class="fa fa-chevron-right"></i>
+                      </div>
+                      <div class="category-selector-menu" aria-labelledby="scule-electrice-button">
+                        <div class="category-selector-menu-items">
+                          <h4>Aparate de măsură</h4>
+                          <ul>
+                            <li><a href="#">Nivele laser cu linii</a></li>
+                            <li><a href="#">Nivele laser cu puncte</a></li>
+                            <li><a href="#">Nivele laser rotative</a></li>
+                            <li><a href="#">Nivele optice</a></li>
+                            <li><a href="#">Receptoare</a></li>
+                            <li><a href="#">Telemetre</a></li>
+                            <li><a href="#">Teodolite electronice</a></li>
+                            <li><a href="#">Goniometre si clinometre</a></li>
+                            <li><a href="#">Suporturi, stative și accesorii</a></li>
+                          </ul>
+                          <h4>Aparate de măsură</h4>
+                          <ul>
+                            <li><a href="#">Nivele laser cu linii</a></li>
+                            <li><a href="#">Nivele laser cu puncte</a></li>
+                            <li><a href="#">Nivele laser rotative</a></li>
+                            <li><a href="#">Nivele optice</a></li>
+                          </ul>
+                          <h4>Aparate de măsură</h4>
+                          <ul>
+                            <li><a href="#">Nivele laser cu linii</a></li>
+                            <li><a href="#">Nivele laser cu puncte</a></li>
+                            <li><a href="#">Nivele laser rotative</a></li>
+                            <li><a href="#">Nivele optice</a></li>
+                            <li><a href="#">Receptoare</a></li>
+                            <li><a href="#">Telemetre</a></li>
+                            <li><a href="#">Teodolite electronice</a></li>
+                            <li><a href="#">Goniometre si clinometre</a></li>
+                            <li><a href="#">Suporturi, stative și accesorii</a></li>
+                          </ul>
+                        </div>
+                        <div class="category-selector-menu-extra">
+                          <h4>Aparate de măsură</h4>
+                          <ul>
+                            <li><a href="#">Nivele laser linii</a></li>
+                            <li><a href="#">Nivele laser puncte</a></li>
+                            <li><a href="#">Nivele laser</a></li>
+                            <li><a href="#">Nivele optice</a></li>
+                            <li><a href="#">Receptoare</a></li>
+                            <li><a href="#">Telemetre</a></li>
+                            <li><a href="#">Teodolite electro</a></li>
+                            <li><a href="#">Goniometre</a></li>
+                            <li><a href="#">Suporturi</a></li>
+                            <li><a href="#">Receptoare</a></li>
+                            <li><a href="#">Telemetre</a></li>
+                            <li><a href="#">Teodolite electro</a></li>
+                            <li><a href="#">Goniometre</a></li>
+                            <li><a href="#">Suporturi</a></li>
+                            <li><a href="#">Receptoare</a></li>
+                            <li><a href="#">Telemetre</a></li>
+                            <li><a href="#">Teodolite electro</a></li>
+                            <li><a href="#">Goniometre</a></li>
+                            <li><a href="#">Suporturi</a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div class="category-selector-menu-extra">
-                      <h4>Aparate de măsură</h4>
-                      <ul>
-                        <li><a href="#">Nivele laser linii</a></li>
-                        <li><a href="#">Nivele laser puncte</a></li>
-                        <li><a href="#">Nivele laser</a></li>
-                        <li><a href="#">Nivele optice</a></li>
-                        <li><a href="#">Receptoare</a></li>
-                        <li><a href="#">Telemetre</a></li>
-                        <li><a href="#">Teodolite electro</a></li>
-                        <li><a href="#">Goniometre</a></li>
-                        <li><a href="#">Suporturi</a></li>
-                        <li><a href="#">Receptoare</a></li>
-                        <li><a href="#">Telemetre</a></li>
-                        <li><a href="#">Teodolite electro</a></li>
-                        <li><a href="#">Goniometre</a></li>
-                        <li><a href="#">Suporturi</a></li>
-                        <li><a href="#">Receptoare</a></li>
-                        <li><a href="#">Telemetre</a></li>
-                        <li><a href="#">Teodolite electro</a></li>
-                        <li><a href="#">Goniometre</a></li>
-                        <li><a href="#">Suporturi</a></li>
-                      </ul>
+                    <div class="category-selector-item">
+                      <div class="category-selector-button" id="scule-de-mana-button">
+                            <svg class="svg-icon">
+                              <use xlink:href="#wrench-screwdriver-icon"></use>
+                            </svg>Scule de mână<i class="fa fa-chevron-right"></i>
+                      </div>
+                      <div class="category-selector-menu" aria-labelledby="scule-de-mana-button">You know the drill...</div>
+                    </div>
+                    <div class="category-selector-item">
+                      <div class="category-selector-button" id="aparate-utilaje-button">
+                            <svg class="svg-icon">
+                              <use xlink:href="#multimeter-icon"></use>
+                            </svg>Aparate și utilaje<i class="fa fa-chevron-right"></i>
+                      </div>
+                      <div class="category-selector-menu" aria-labelledby="aparate-utilaje-button">You know the drill...</div>
+                    </div>
+                    <div class="category-selector-item">
+                      <div class="category-selector-button" id="piese-accesorii-button">
+                            <svg class="svg-icon">
+                              <use xlink:href="#drill-sencondary-icon"></use>
+                            </svg>Piese și accesorii<i class="fa fa-chevron-right"></i>
+                      </div>
+                      <div class="category-selector-menu" aria-labelledby="piese-accesorii-button">You know the drill...</div>
                     </div>
                   </div>
                 </div>
-                <div class="category-selector-item">
-                  <div class="category-selector-button" id="scule-de-mana-button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#wrench-screwdriver-icon"></use>
-                    </svg>Scule de mână<i class="fa fa-chevron-right"></i>
-                  </div>
-                  <div class="category-selector-menu" aria-labelledby="scule-de-mana-button">You know the drill...</div>
-                </div>
-                <div class="category-selector-item">
-                  <div class="category-selector-button" id="aparate-utilaje-button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#multimeter-icon"></use>
-                    </svg>Aparate și utilaje<i class="fa fa-chevron-right"></i>
-                  </div>
-                  <div class="category-selector-menu" aria-labelledby="aparate-utilaje-button">You know the drill...</div>
-                </div>
-                <div class="category-selector-item">
-                  <div class="category-selector-button" id="piese-accesorii-button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#drill-sencondary-icon"></use>
-                    </svg>Piese și accesorii<i class="fa fa-chevron-right"></i>
-                  </div>
-                  <div class="category-selector-menu" aria-labelledby="piese-accesorii-button">You know the drill...</div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="sidebar-section">
             <h5>După întrebuințare</h5>
             <ul class="usage-filter">
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#drill-icon"></use>
-                    </svg></span><span class="filter-button-label">Găurire</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#drill-icon"></use>
+                        </svg></span><span class="filter-button-label">Găurire</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#screwdriver-icon"></use>
-                    </svg></span><span class="filter-button-label">Înșurubare</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#screwdriver-icon"></use>
+                        </svg></span><span class="filter-button-label">Înșurubare</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#saw-icon"></use>
-                    </svg></span><span class="filter-button-label">Tăiere</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#saw-icon"></use>
+                        </svg></span><span class="filter-button-label">Tăiere</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#rasp-icon"></use>
-                    </svg></span><span class="filter-button-label">Șlefuire</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#rasp-icon"></use>
+                        </svg></span><span class="filter-button-label">Șlefuire</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#circular-saw-icon"></use>
-                    </svg></span><span class="filter-button-label">Frezare</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#circular-saw-icon"></use>
+                        </svg></span><span class="filter-button-label">Frezare</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#paint-icon"></use>
-                    </svg></span><span class="filter-button-label">Vopsire</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#paint-icon"></use>
+                        </svg></span><span class="filter-button-label">Vopsire</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#scissors-icon"></use>
-                    </svg></span><span class="filter-button-label">Tuns</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#scissors-icon"></use>
+                        </svg></span><span class="filter-button-label">Tuns</span></a></li>
               <li><a class="filter-button" href="#"><span class="filter-button-icon">
-                    <svg class="svg-icon">
-                      <use xlink:href="#ruler-and-pencil-icon"></use>
-                    </svg></span><span class="filter-button-label">Măsurare</span></a></li>
+                        <svg class="svg-icon">
+                          <use xlink:href="#ruler-and-pencil-icon"></use>
+                        </svg></span><span class="filter-button-label">Măsurare</span></a></li>
             </ul>
           </div>
           <div class="sidebar-section">
             <h5>După materialul prelucrat</h5>
             <ul class="material-filter">
               <li><a class="filter-button-large" href="#">
-                  <svg class="svg-icon">
-                    <use xlink:href="#wood-icon"></use>
-                  </svg><span class="filter-button-large-label">Lemn</span></a></li>
+                      <svg class="svg-icon">
+                        <use xlink:href="#wood-icon"></use>
+                      </svg><span class="filter-button-large-label">Lemn</span></a></li>
               <li><a class="filter-button-large" href="#">
-                  <svg class="svg-icon">
-                    <use xlink:href="#metal-icon"></use>
-                  </svg><span class="filter-button-large-label">Metal</span></a></li>
+                      <svg class="svg-icon">
+                        <use xlink:href="#metal-icon"></use>
+                      </svg><span class="filter-button-large-label">Metal</span></a></li>
               <li><a class="filter-button-large" href="#">
-                  <svg class="svg-icon">
-                    <use xlink:href="#stone-icon"></use>
-                  </svg><span class="filter-button-large-label">Piatra</span></a></li>
+                      <svg class="svg-icon">
+                        <use xlink:href="#stone-icon"></use>
+                      </svg><span class="filter-button-large-label">Piatra</span></a></li>
             </ul>
           </div>
           <div class="sidebar-section">
@@ -351,7 +443,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -371,7 +463,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -391,7 +483,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -411,7 +503,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -431,7 +523,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -451,7 +543,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -471,7 +563,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -491,7 +583,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -511,7 +603,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -531,7 +623,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -551,7 +643,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 
@@ -571,7 +663,7 @@
   <div class="badge-block">
     <div class="badge badge-angle badge-discount">-25%</div>
     <div class="badge badge-angle badge-new">NOU</div>
-    <div class="badge badge-stoc">badge-stoc</div>
+    <div class="badge badge-stoc badge-stoc2">badge-stoc</div>
   </div>
   <div class="product-preview-image"><img src="assets/polizor.jpg" width="150" height="150"></div>
   <div class="product-preview-title"> 

@@ -53,6 +53,9 @@ $(document).ready(function () {
         });
     });
     //
+    // $('.navbar-toggler .navbar-toggler').off( "mouseenter mouseleave" ,function () {
+    //     $('navbarNav').addClass('show');
+    // });
     // Set up sticky product on product page
 
     var $productHeader = $('.product_header');
@@ -60,6 +63,11 @@ $(document).ready(function () {
     var $productScrollPoint = 210;
 
     $(window).scroll(function () {
+        if ($(window).scrollTop() >= $(".sidebar-section").height()){
+            $(".mobile-header").addClass('fixed');
+        }else {
+            $(".mobile-header").removeClass('fixed');
+        }
         if ($(window).scrollTop() >= $productHeader.height() - 100) {
             $('#navbar_product').addClass('navbar-product-visible');
             //$productHeader.addClass('fixed');
@@ -74,6 +82,7 @@ $(document).ready(function () {
         if ($(window).scrollTop() <= $productScrollPoint){
             $('.carousel-inner').slick('reinit');
         }
+
     });
 
     // Add scrollspy to <body>

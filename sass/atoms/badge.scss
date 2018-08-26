@@ -35,6 +35,9 @@
   @include badge-variant($green);
   border-radius: 0;
   text-transform: capitalize;
+  &.badge-discount{
+    @include badge-variant($orange);
+  }
 }
 
 .badge-popular {
