@@ -181,8 +181,8 @@ $header-cart-width: 190px;
         border-radius: 100%;
         width: 1.25rem;
         height: 1.25rem;
-        padding: .1rem;
-        font-size: $description-font-size;
+        padding: .3rem .1rem;
+        font-size: $description-font-size * 0.8;
         text-align: center;
       }
     }

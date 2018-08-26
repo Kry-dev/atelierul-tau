@@ -8341,8 +8341,8 @@ h3 {
         border-radius: 100%;
         width: 1.25rem;
         height: 1.25rem;
-        padding: .1rem;
-        font-size: 0.8571rem;
+        padding: .3rem .1rem;
+        font-size: 0.68568rem;
         text-align: center; }
     .header .mobile-header .header-search {
       max-width: 40%; }

@@ -257,10 +257,11 @@ $(document).ready(function () {
     });
     $(".related-products-list .related-product .product-preview-title").height(maxColHeight);
 
+    var anchor_top = $("#tablesorter-demo").offset().top;
+    var anchor_bottom = $("#bottom_anchor").offset().top;
     function moveScroll(){
         var scroll = $(window).scrollTop();
-        var anchor_top = $("#tablesorter-demo").offset().top;
-        var anchor_bottom = $("#bottom_anchor").offset().top;
+
         if (scroll>anchor_top && scroll<anchor_bottom) {
             clone_table = $("#clone");
             if(clone_table.length == 0){
@@ -279,7 +280,10 @@ $(document).ready(function () {
             $("#clone").remove();
         }
     }
-    $(window).scroll(moveScroll);
+    if(anchor_top != true){
+        $(window).scroll(moveScroll);
+    }
+
 });
 
 
