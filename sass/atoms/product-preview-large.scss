@@ -24,9 +24,13 @@ $line-height: 1.4;
       position: absolute;
       left: 15px;
       bottom: 15px;
-    }
-    .badge-stoc.badge-discount{
 
+      @include media-breakpoint-down(lg) {
+        font-size: 75%;
+      }
+      //@include media-breakpoint-down(md) {
+      //  left: 0;
+      //}
     }
   }
   .product-preview-image {
@@ -85,10 +89,16 @@ $line-height: 1.4;
     align-items: center;
     justify-content: flex-end;
     border-top: 1px solid $border-color;
-    
     s {
       color: $light-text-color;
       margin-right: $default-spacing;
+    }
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-end;
+      s{
+        margin: 0;
+      }
     }
   }
 
